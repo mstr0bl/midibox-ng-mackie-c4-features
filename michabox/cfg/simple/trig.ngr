@@ -1,0 +1,11 @@
+if ^section == 0
+ set ^bank 0
+ log section 0 running
+endif
+
+if ^section == 1
+ set ^bank 1
+ log section 1 running
+ trigger SENDER:1
+ trigger SENDER:2
+endif

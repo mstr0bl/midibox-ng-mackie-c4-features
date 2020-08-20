@@ -1,0 +1,6 @@
+mbng_enc.c:37:5:MBNG_ENC_Init	32	static
+mbng_enc.c:63:5:MBNG_ENC_FastModeSet	0	static
+mbng_enc.c:69:5:MBNG_ENC_FastModeGet	0	static
+mbng_enc.c:79:5:MBNG_ENC_AutoSpeed	32	static
+mbng_enc.c:141:5:MBNG_ENC_NotifyChange	104	static
+mbng_enc.c:296:5:MBNG_ENC_NotifyReceivedValue	8	static

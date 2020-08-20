@@ -1,0 +1,288 @@
+RESET_HW
+
+
+
+#####################
+#Combi Name Printers#
+#####################
+
+EVENT_SENDER id=3000 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^val 0xf7" syxdump_pos=4001:1 ports=1000100000000000
+EVENT_SENDER id=3001 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 85 ^val 0xf7" syxdump_pos=4001:2 ports=1000100000000000
+EVENT_SENDER id=3002 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 86 ^val 0xf7" syxdump_pos=4001:3 ports=1000100000000000
+EVENT_SENDER id=3003 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 87 ^val 0xf7" syxdump_pos=4001:4 ports=1000100000000000
+EVENT_SENDER id=3004 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 88 ^val 0xf7" syxdump_pos=4001:5 ports=1000100000000000
+EVENT_SENDER id=3005 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 89 ^val 0xf7" syxdump_pos=4001:6 ports=1000100000000000
+EVENT_SENDER id=3006 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 90 ^val 0xf7" syxdump_pos=4001:7 ports=1000100000000000
+EVENT_SENDER id=3007 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 91 ^val 0xf7" syxdump_pos=4001:9 ports=1000100000000000
+EVENT_SENDER id=3008 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 92 ^val 0xf7" syxdump_pos=4001:10 ports=1000100000000000
+EVENT_SENDER id=3009 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 93 ^val 0xf7" syxdump_pos=4001:11 ports=1000100000000000
+
+#corner note printer
+EVENT_SENDER id=3010 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 43 0x7c 0x43 0x6f 0x6d 0x62 0x69 0x6e 0x61 0x74 0x69 0x6f 0x6e 0xf7 0xf0 0x00 0x00 0x66 0x17 0x30 99 0x7c 0x20 0x45 0x64 0x69 0x74 0x20 0x4d 0x6f 0x64 0x65 0x20 0xf7" ports=1000100000000000
+
+# Display 1
+EVENT_SENDER id= 1 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x00 ^label 0xf7" ports=1000100000000000 label="Type"
+EVENT_SENDER id= 2 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 28 ^label 0xf7" ports=1000100000000000 label="Combi Name"
+
+##############################
+#Type switcher###############
+############################
+
+# receive C4's Encoder movement 
+EVENT_RECEIVER id= 1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1
+EVENT_RECEIVER id= 2 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=2
+
+EVENT_ENC id= 1 hw_id=1 bank=0 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12 label="Type Selector"
+
+#value modifier
+EVENT_SENDER id=101 fwd_id=SENDER:201 bank=0 if_equal=BUTTON:1000:1 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0 ^val 0x00 0xf7" ports=0100010000000000
+
+# meta - bank selector - depending on top left ENCs setting
+EVENT_SENDER id=201 bank=0 type=Meta meta=RunSection:1
+# push type selector button to select
+EVENT_RECEIVER id=401 fwd_id=BUTTON:1000 type=NoteOn key=32 range=0:1 ports=1000100000000000
+EVENT_BUTTON id=1000 bank=0 if_equal_stop_on_match=RECEIVER:401:1 button_mode=OnOff value=0
+
+
+# reacts on Slot 1.1 encoder too, but takes over the role for visualisation elements (name print, LEDs)
+EVENT_ENC id= 2 hw_id=2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12 label="Visualiser"
+
+# prints name of the currently selected combi type
+EVENT_SENDER id=102 fwd_id=RECEIVER:102 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^label 0xf7" ports=1000100000000000 label="^type"
+
+# LED ring controller
+EVENT_RECEIVER id=102 fwd_id=SENDER:202 bank=0 type=CC cc=32 chn=1 ports=1000100000000000
+EVENT_SENDER id= 202 range=map50  bank=0 type=CC cc=32 chn=1 
+
+# map 50 - to map 1-5 to match the type selectors LED ring pattern
+MAP50/BYTEI 0:114 1:115 2:116 3:117 4:118
+
+
+############################
+#Parameter Name Printers####
+############################
+
+# special Label printed in Split and Velocity Switch Mode - Slot 4.1
+EVENT_SENDER id=103 hw_id=102 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0 ^label 0xf7" ports=1000100000000000 label="^thresh"
+
+#Display 2 - Single Mode
+EVENT_SENDER id= 9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 10 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 11 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 12 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 21 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 13 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 14 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 15 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 42 ^label 0xf7" ports=1000100000000000 label="       "
+EVENT_SENDER id= 16 hw_id=9 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+#Display 2 - Layer Mode
+EVENT_SENDER id= 17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 18 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 19 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 20 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 21 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 22 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 23 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 42 ^label 0xf7" ports=1000100000000000 label="Layer 1"
+EVENT_SENDER id= 24 hw_id=17 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+
+# Display 3 - Layer Mode
+EVENT_SENDER id= 25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 26 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 27 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 28 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 29 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 28 ^label 0xf7" ports=1000100000000000 label=" INT  "
+EVENT_SENDER id= 30 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label=" Tune "
+EVENT_SENDER id= 31 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Layer 2"
+EVENT_SENDER id= 32 hw_id=25 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+# Display 2 - Split Mode
+EVENT_SENDER id= 33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 34 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 35 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 36 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 37 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 38 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 39 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 42 ^label 0xf7" ports=1000100000000000 label="Lower  "
+EVENT_SENDER id= 40 hw_id=33 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+
+# Display 3 - Split Mode
+EVENT_SENDER id= 41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 42 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 43 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 44 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 45 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 46 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 47 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Upper  "
+EVENT_SENDER id= 48 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+##########
+#Encoders#
+##########
+
+# TO-Do 
+#Set up Encoder that chooses the split points in some combination types
+
+# Display 2 -  bank 1 - Single Type
+EVENT_ENC id= 9  bank=1 fwd_id=SENDER:109 type=CC chn=5 cc=8 range=0:99 syxdump_pos=4001:42
+EVENT_ENC id=10  bank=1 fwd_id=SENDER:110 type=CC chn=5 cc=9 range=0:99 syxdump_pos=4001:43
+EVENT_ENC id=11  bank=1 fwd_id=SENDER:111 type=CC chn=5 cc=10 range=0:13 syxdump_pos=4001:46
+
+# Display 2 - Layer Type
+EVENT_ENC id=17  bank=1 fwd_id=SENDER:117 type=CC chn=5 cc=8 range=0:99 syxdump_pos=4001:42
+EVENT_ENC id=18  bank=1 fwd_id=SENDER:118 type=CC chn=5 cc=9 range=0:99 syxdump_pos=4001:43
+EVENT_ENC id=19  bank=1 fwd_id=SENDER:119 type=CC chn=5 cc=10 range=0:13 syxdump_pos=4001:46
+EVENT_ENC id=20  bank=1 fwd_id=SENDER:120 type=CC chn=5 cc=11 range=0:1 syxdump_pos=4001:52
+
+# Display 3 - Layer Type
+EVENT_ENC id=25  bank=1 fwd_id=SENDER:125 type=CC chn=5 cc=16 range=0:99 syxdump_pos=4001:54
+EVENT_ENC id=26  bank=1 fwd_id=SENDER:126 type=CC chn=5 cc=17 range=0:99 syxdump_pos=4001:55
+EVENT_ENC id=27  bank=1 fwd_id=SENDER:127 type=CC chn=5 cc=18 range=0:13 syxdump_pos=4001:59
+EVENT_ENC id=28  bank=1 fwd_id=SENDER:128 type=CC chn=5 cc=19 range=0:1 syxdump_pos=4001:65
+EVENT_ENC id=29  bank=1 fwd_id=SENDER:129 type=NRPN chn=5 nrpn=20 range=-24:24 syxdump_pos=4001:57
+EVENT_ENC id=30  bank=1 fwd_id=SENDER:130 type=NRPN chn=5 nrpn=21 range=-50:50 syxdump_pos=4001:58
+
+#########################
+#Value Printers - MacDis#
+#########################
+
+# Display 1
+
+
+
+# Display 2 - Single Type 
+EVENT_SENDER id=109 		  fwd_id=SENDER:209 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" syxdump_pos=4001:42 ports=1000100000000000
+EVENT_SENDER id=110 		  fwd_id=SENDER:210 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" syxdump_pos=4001:43 ports=1000100000000000
+EVENT_SENDER id=111 		  fwd_id=SENDER:211 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" syxdump_pos=4001:46 ports=1000100000000000
+EVENT_SENDER id=112 			bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^label 0xf7"  ports=1000100000000000 label="                              "
+#EVENT_SENDER id=113 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^label 0xf7"  ports=1000100000000000 label="   M  "
+#EVENT_SENDER id=114 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^label 0xf7" ports=1000100000000000 label="      "
+#EVENT_SENDER id=115 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^label 0xf7"  ports=1000100000000000 label="      "
+#EVENT_SENDER id=116 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^label 0xf7"  ports=1000100000000000 label="      "
+
+# Display 2 - Layer Type 
+EVENT_SENDER id=117 		  fwd_id=SENDER:217 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" syxdump_pos=4001:42 ports=1000100000000000
+EVENT_SENDER id=118 		  fwd_id=SENDER:218 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" syxdump_pos=4001:43 ports=1000100000000000
+EVENT_SENDER id=119 		  fwd_id=SENDER:219 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" syxdump_pos=4001:46 ports=1000100000000000
+EVENT_SENDER id=120 		  fwd_id=SENDER:220 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^label 0xf7" syxdump_pos=4001:52 label="^enadis" ports=1000100000000000
+EVENT_SENDER id=121 		  bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^label 0xf7"  ports=1000100000000000 label="      "
+EVENT_SENDER id=122 hw_id=121 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id=123 hw_id=121 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^label 0xf7"  ports=1000100000000000 label="      "
+EVENT_SENDER id=124 hw_id=121 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^label 0xf7"  ports=1000100000000000 label="      "
+
+# Display 3 - Layer Type 
+EVENT_SENDER id=125 		  fwd_id=SENDER:225 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7" syxdump_pos=4001:54 ports=1000100000000000
+EVENT_SENDER id=126 		  fwd_id=SENDER:226 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7" syxdump_pos=4001:55 ports=1000100000000000
+EVENT_SENDER id=127 		  fwd_id=SENDER:227 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7" syxdump_pos=4001:59 ports=1000100000000000
+EVENT_SENDER id=128 		  fwd_id=SENDER:228 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^label 0xf7" syxdump_pos=4001:65 label="^enadis" ports=1000100000000000
+EVENT_SENDER id=129 		  fwd_id=SENDER:229 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7" syxdump_pos=4001:57 ports=1000100000000000 label="      "
+EVENT_SENDER id=130			  fwd_id=SENDER:230 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7" syxdump_pos=4001:58 ports=1000100000000000 
+EVENT_SENDER id=131			  bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^label 0xf7"  ports=1000100000000000 label="               "
+
+
+###########################
+#Parameter Value Modifiers#
+###########################
+# Display 2
+#EVENT_SENDER id= 209 bank=1 fwd_id=RECEIVER:109 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 1 ^val 0x00 0xf7" ports=0100010000000000
+
+######################
+#LED Ring Controllers#
+######################
+
+##########################
+#Mackie Encoder Receivers#
+##########################
+
+# Display 2 - bank 1 - Single Type
+EVENT_RECEIVER id= 9 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=9
+EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=10
+EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 
+
+# Display 2 - Layer Type
+EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=17 
+EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=18 
+EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=19 
+EVENT_RECEIVER id= 20 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=20 
+
+# display 3 - Layer Type
+EVENT_RECEIVER id= 25 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=25
+EVENT_RECEIVER id= 26 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=26
+EVENT_RECEIVER id= 27 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=27
+EVENT_RECEIVER id= 28 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=28
+EVENT_RECEIVER id= 29 bank=1 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=29
+EVENT_RECEIVER id= 30 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=30
+
+# Display 2 - Split Type
+
+# Display 3 - Split Type
+
+# Display 2 - Velocity Switch Type
+
+# Display 3 - Velocity Switch Type
+
+
+
+################################################################
+
+#single () dump requester for continuous retriggeration
+EVENT_SENDER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x19 0xf7" ports=0100010000000000 label="Current Combi Dump Request"
+#current combi dump receiver
+EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x49 ^dump 0xf7" ports=0100010000000000 label="Current Combi Dump received"
+
+#startup by entering combi edit mode and requesting current program dump
+EVENT_SENDER id= 4090 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x01 0x10 0xf7 0xf0 0x42 0x30 0x24 0x19 0xf7" ports=0100010000000000 label="CombEdit Mode enter"
+
+#Bank Selectors
+EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 if_equal=ENC:1:4 type=NoteOn key=0x0a chn=1 range=0:1
+EVENT_SENDER id=4042 if_equal_stop_on_match=RECEIVER:4042:1 type=Meta meta=IncBank meta=RunSection:1 
+EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 if_equal=ENC:1:4 type=NoteOn key=0x09 chn=1 range=0:1
+EVENT_SENDER id=4043  if_equal_stop_on_match=RECEIVER:4043:1 type=Meta key=0x09 chn=1 meta=DecBank meta=RunSection:1
+
+
+
+#display cleaners
+EVENT_SENDER id= 4095 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x30 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x30 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4094 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x31 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x31 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4093 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x32 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x32 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4092 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x33 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x33 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+
+#LED cleaners
+EVENT_SENDER id= 4089 hw_id=4089 type=CC cc=32 chn=1 value=0
+EVENT_SENDER id= 4088 hw_id=4089 type=CC cc=33 chn=1 value=0
+EVENT_SENDER id= 4087 hw_id=4089 type=CC cc=34 chn=1 value=0
+EVENT_SENDER id= 4086 hw_id=4089 type=CC cc=35 chn=1 value=0
+EVENT_SENDER id= 4085 hw_id=4089 type=CC cc=36 chn=1 value=0
+EVENT_SENDER id= 4084 hw_id=4089 type=CC cc=37 chn=1 value=0
+EVENT_SENDER id= 4083 hw_id=4089 type=CC cc=38 chn=1 value=0
+EVENT_SENDER id= 4082 hw_id=4089 type=CC cc=39 chn=1 value=0
+EVENT_SENDER id= 4081 hw_id=4089 type=CC cc=40 chn=1 value=0
+EVENT_SENDER id= 4080 hw_id=4089 type=CC cc=41 chn=1 value=0
+EVENT_SENDER id= 4079 hw_id=4089 type=CC cc=42 chn=1 value=0
+EVENT_SENDER id= 4078 hw_id=4089 type=CC cc=43 chn=1 value=0
+EVENT_SENDER id= 4077 hw_id=4089 type=CC cc=44 chn=1 value=0
+EVENT_SENDER id= 4076 hw_id=4089 type=CC cc=45 chn=1 value=0
+EVENT_SENDER id= 4075 hw_id=4089 type=CC cc=46 chn=1 value=0
+EVENT_SENDER id= 4074 hw_id=4089 type=CC cc=47 chn=1 value=0
+EVENT_SENDER id= 4073 hw_id=4089 type=CC cc=48 chn=1 value=0
+EVENT_SENDER id= 4072 hw_id=4089 type=CC cc=49 chn=1 value=0
+EVENT_SENDER id= 4071 hw_id=4089 type=CC cc=50 chn=1 value=0
+EVENT_SENDER id= 4070 hw_id=4089 type=CC cc=51 chn=1 value=0
+EVENT_SENDER id= 4069 hw_id=4089 type=CC cc=52 chn=1 value=0
+EVENT_SENDER id= 4068 hw_id=4089 type=CC cc=53 chn=1 value=0
+EVENT_SENDER id= 4067 hw_id=4089 type=CC cc=54 chn=1 value=0
+EVENT_SENDER id= 4066 hw_id=4089 type=CC cc=55 chn=1 value=0
+EVENT_SENDER id= 4065 hw_id=4089 type=CC cc=56 chn=1 value=0
+EVENT_SENDER id= 4064 hw_id=4089 type=CC cc=57 chn=1 value=0
+EVENT_SENDER id= 4063 hw_id=4089 type=CC cc=58 chn=1 value=0
+EVENT_SENDER id= 4062 hw_id=4089 type=CC cc=59 chn=1 value=0
+EVENT_SENDER id= 4061 hw_id=4089 type=CC cc=60 chn=1 value=0
+EVENT_SENDER id= 4060 hw_id=4089 type=CC cc=61 chn=1 value=0
+EVENT_SENDER id= 4059 hw_id=4089 type=CC cc=62 chn=1 value=0
+EVENT_SENDER id= 4058 hw_id=4089 type=CC cc=63 chn=1 value=0
+EVENT_SENDER id= 4057 hw_id=4089 type=CC cc=64 chn=1 value=0
+
+#home button (Control Button on C4)
+EVENT_RECEIVER id= 4091  type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10

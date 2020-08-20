@@ -1,0 +1,8 @@
+######
+#this script is considered a pre-script through which another script can be loaded by the push of the bottom right encoder
+#so this here script can be loaded in MIOS, MIOS closed, MIDI OX opened, the Encoder push
+#to see what happens on startup of the final script
+#####################################
+
+EVENT_RECEIVER id= 500 type=NoteOn key=63 fwd_id=SENDER:500
+EVENT_SENDER id= 500 type=Meta meta=RunSection:1

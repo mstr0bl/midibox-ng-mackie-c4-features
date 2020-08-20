@@ -1,0 +1,13 @@
+keyboard.c:947:14:KEYBOARD_GetNoteName	64	static
+keyboard.c:974:12:get_dec	16	static
+keyboard.c:995:12:get_on_off	8	static
+keyboard.c:98:5:KEYBOARD_Init	24	static
+keyboard.c:219:5:KEYBOARD_ConnectedNumSet	0	static
+keyboard.c:232:4:KEYBOARD_ConnectedNumGet	0	static
+keyboard.c:240:6:KEYBOARD_SRIO_ServicePrepare	24	static
+keyboard.c:313:6:KEYBOARD_SRIO_ServiceFinish	40	static
+keyboard.c:698:6:KEYBOARD_Periodic_1mS	216	static
+keyboard.c:1035:5:KEYBOARD_TerminalHelp	8	static
+keyboard.c:1841:5:KEYBOARD_TerminalPrintConfig	32	static
+keyboard.c:1919:5:KEYBOARD_TerminalPrintDelays	24	static
+keyboard.c:1096:5:KEYBOARD_TerminalParseLine	40	static

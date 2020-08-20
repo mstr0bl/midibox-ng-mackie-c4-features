@@ -1,0 +1,21 @@
+if ^section == 0
+ trigger SENDER:4095										#clear displays
+ trigger SENDER:4089										#clear LED rings
+ trigger SENDER:1											#activate LED ring indicators
+ 
+
+ trigger SENDER:10											#trigger mode names on displays
+ trigger SENDER:11
+ 
+ trigger SENDER:12											#trigger instructions
+ trigger SENDER:13
+ 
+endif
+
+if ^section == 1
+ LOAD M3RHome
+endif
+
+if ^section == 2
+ LOAD er1
+endif

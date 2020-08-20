@@ -1,0 +1,13 @@
+HW_RESET
+
+EVENT_ENC id= 1 type=CC cc=32 range=0:127
+
+#let encoder send to an led ring to test if it changes its value
+#redundant because the ENC triggers the LED with cc Nr 32 (top left C4 Enc)
+#EVENT_SENDER id= 1 type=CC chn=1 cc=40 range=0:127 
+
+#receiver for mackie knob turn (bottom right encoder)
+EVENT_RECEIVER id= 1  type=CC  chn=1  cc= 31  emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1
+
+#this script enables the bottom right C4 Enc to control ENC:1's value
+#Enc:1's value is directly shown on Enc with cc32 (top left)

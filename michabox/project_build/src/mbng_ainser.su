@@ -1,0 +1,3 @@
+mbng_ainser.c:36:5:MBNG_AINSER_Init	0	static
+mbng_ainser.c:48:5:MBNG_AINSER_NotifyChange	112	static
+mbng_ainser.c:122:5:MBNG_AINSER_NotifyReceivedValue	8	static

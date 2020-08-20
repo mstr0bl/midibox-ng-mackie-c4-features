@@ -1,0 +1,7 @@
+mbng_file_k.c:142:12:get_dec	16	static
+mbng_file_k.c:87:5:MBNG_FILE_K_Init	0	static
+mbng_file_k.c:118:5:MBNG_FILE_K_Unload	0	static
+mbng_file_k.c:131:5:MBNG_FILE_K_Valid	0	static
+mbng_file_k.c:162:5:MBNG_FILE_K_Read	112	static
+mbng_file_k.c:102:5:MBNG_FILE_K_Load	0	static
+mbng_file_k.c:301:5:MBNG_FILE_K_Write	344	static

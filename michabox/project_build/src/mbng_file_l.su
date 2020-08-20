@@ -1,0 +1,13 @@
+mbng_file_l.c:356:14:getQuotedString	8	static
+mbng_file_l.c:864:12:MBNG_FILE_L_Write_Hlp	144	static
+mbng_file_l.c:128:5:MBNG_FILE_L_Unload	0	static
+mbng_file_l.c:97:5:MBNG_FILE_L_Init	8	static
+mbng_file_l.c:143:5:MBNG_FILE_L_Valid	0	static
+mbng_file_l.c:155:5:readBinFileMD5	24	static
+mbng_file_l.c:202:5:parseBinFile	40	static
+mbng_file_l.c:278:5:generateNglFileMD5	272	static
+mbng_file_l.c:405:5:MBNG_FILE_L_Read	136	static
+mbng_file_l.c:111:5:MBNG_FILE_L_Load	0	static
+mbng_file_l.c:920:5:MBNG_FILE_L_Write	72	static
+mbng_file_l.c:966:5:MBNG_FILE_L_Debug	0	static
+mbng_file_l.c:977:13:MBNG_FILE_L_GetLabel	32	static

@@ -1,0 +1,14 @@
+RESET_HW
+
+############################################################
+#the purpose of this script is to test if EVENT RECEIVERs and SENDERs are affcted by the distinction of hw_ids
+#############################################################
+
+#prints the "MulSnd" string on 2nd display 1st slot upper line
+#has to be triggered by ngr script
+EVENT_SENDER id= 1 hw_id=1 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x00 ^label 0xf7" ports=1000100000001000 label="A"
+
+EVENT_SENDER id= 2 hw_id=1 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x00 ^label 0xf7" ports=1000100000001000 label="B"
+
+EVENT_RECEIVER id= 1 bank= 0 fwd_id=SENDER:3 type=NoteOn chn=1 key= 32 range= 0:1 
+EVENT_SENDER id=3 bank=0 type=Meta meta=CycleBankOfHwId:1 if_equal_stop_on_match=RECEIVER:1:1 value=1  range=1:2

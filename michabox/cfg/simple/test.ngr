@@ -1,0 +1,8 @@
+if ^section == 0
+ exit
+endif
+
+if ^section == 1
+ LOAD trig3.ngc
+ exit
+endif

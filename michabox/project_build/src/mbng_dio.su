@@ -1,0 +1,5 @@
+mbng_dio.c:33:5:MBNG_DIO_Init	0	static
+mbng_dio.c:45:13:MBNG_DIO_PortNameGet	24	static
+mbng_dio.c:72:5:MBNG_DIO_PortInit	16	static
+mbng_dio.c:123:4:MBNG_DIO_PortGet	8	static
+mbng_dio.c:170:5:MBNG_DIO_PortSet	8	static

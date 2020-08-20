@@ -1,0 +1,6 @@
+md5.c:76:1:md5_init_ctx	0	static
+md5.c:99:1:md5_read_ctx	16	static
+md5.c:309:1:md5_process_block	112	static
+md5.c:230:1:md5_process_bytes	32	static
+md5.c:113:1:md5_finish_ctx	24	static
+md5.c:214:1:md5_buffer	176	static

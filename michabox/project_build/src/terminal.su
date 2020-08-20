@@ -1,0 +1,10 @@
+terminal.c:114:12:get_dec	16	static
+terminal.c:203:12:TERMINAL_BrowserUploadCallback	16	static
+terminal.c:133:12:get_on_off	8	static
+terminal.c:177:5:TERMINAL_ParseFilebrowser	16	static
+terminal.c:83:5:TERMINAL_Init	8	static
+terminal.c:658:5:TERMINAL_PrintSystem	16	static
+terminal.c:688:5:TERMINAL_PrintMemoryInfo	8	static
+terminal.c:745:5:TERMINAL_PrintSdCardInfo	280	static
+terminal.c:252:5:TERMINAL_ParseLine	168	static
+terminal.c:148:5:TERMINAL_Parse	16	static

@@ -1,0 +1,6 @@
+mbng_ain.c:36:5:MBNG_AIN_Init	8	static
+mbng_ain.c:58:5:MBNG_AIN_HandleCalibration	32	static
+mbng_ain.c:107:5:MBNG_AIN_HandleAinMode	32	static
+mbng_ain.c:304:5:MBNG_AIN_NotifyChange	128	static
+mbng_ain.c:386:5:MBNG_AIN_Periodic	16	static
+mbng_ain.c:406:5:MBNG_AIN_NotifyReceivedValue	8	static

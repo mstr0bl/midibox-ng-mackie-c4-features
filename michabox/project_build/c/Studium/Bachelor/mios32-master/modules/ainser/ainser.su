@@ -1,0 +1,15 @@
+ainser.c:366:12:AINSER_SetCs	0	static
+ainser.c:105:5:AINSER_NumModulesGet	0	static
+ainser.c:114:5:AINSER_NumModulesSet	0	static
+ainser.c:127:5:AINSER_EnabledGet	0	static
+ainser.c:138:5:AINSER_EnabledSet	8	static
+ainser.c:156:5:AINSER_MuxedGet	0	static
+ainser.c:168:5:AINSER_MuxedSet	8	static
+ainser.c:53:5:AINSER_Init	24	static
+ainser.c:185:5:AINSER_NumPinsGet	0	static
+ainser.c:197:5:AINSER_NumPinsSet	0	static
+ainser.c:215:5:AINSER_DeadbandGet	0	static
+ainser.c:228:5:AINSER_DeadbandSet	0	static
+ainser.c:243:5:AINSER_PinGet	0	static
+ainser.c:259:5:AINSER_PreviousPinValueGet	0	static
+ainser.c:278:5:AINSER_Handler	64	static

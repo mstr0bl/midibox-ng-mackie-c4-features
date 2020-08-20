@@ -1,0 +1,10 @@
+mbng_file_s.c:130:5:MBNG_FILE_S_Unload	0	static
+mbng_file_s.c:97:5:MBNG_FILE_S_Init	8	static
+mbng_file_s.c:145:5:MBNG_FILE_S_Valid	0	static
+mbng_file_s.c:154:5:MBNG_FILE_S_SnapshotGet	0	static
+mbng_file_s.c:163:5:MBNG_FILE_S_SnapshotSet	0	static
+mbng_file_s.c:344:5:MBNG_FILE_S_Write	128	static
+mbng_file_s.c:515:5:MBNG_FILE_S_RequestDelayedSnapshot	0	static
+mbng_file_s.c:528:5:MBNG_FILE_S_Periodic_1s	8	static
+mbng_file_s.c:181:5:MBNG_FILE_S_Read	192	static
+mbng_file_s.c:113:5:MBNG_FILE_S_Load	0	static

@@ -1,0 +1,5 @@
+mbng_kb.c:60:5:MBNG_KB_Init	8	static
+mbng_kb.c:115:5:MBNG_KB_NotifyToggle	96	static
+mbng_kb.c:248:5:MBNG_KB_NotifyReceivedValue	8	static
+mbng_kb.c:265:5:MBNG_KB_BreakIsMakeSet	0	static
+mbng_kb.c:281:5:MBNG_KB_AllNotesOff	32	static

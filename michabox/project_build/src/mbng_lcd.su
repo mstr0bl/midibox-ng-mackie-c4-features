@@ -1,0 +1,14 @@
+mbng_lcd.c:368:12:MBNG_LCD_StreamFormattedString	152	static
+mbng_lcd.c:162:5:MBNG_LCD_Clear	8	static
+mbng_lcd.c:182:5:MBNG_LCD_FontInit	8	static
+mbng_lcd.c:211:5:MBNG_LCD_FontGet	0	static
+mbng_lcd.c:220:5:MBNG_LCD_CursorSet	32	static
+mbng_lcd.c:260:5:MBNG_LCD_PrintChar	32	static
+mbng_lcd.c:297:5:MBNG_LCD_PrintString	8	static
+mbng_lcd.c:312:5:MBNG_LCD_PrintFormattedString	144	static
+mbng_lcd.c:325:5:MBNG_LCD_PrintSpaces	16	static
+mbng_lcd.c:383:5:MBNG_LCD_ClearScreenOnNextMessage	0	static
+mbng_lcd.c:399:5:MBNG_LCD_PrintItemLabel	112	static
+mbng_lcd.c:756:5:MBNG_LCD_SpecialCharsInit	16	static
+mbng_lcd.c:106:5:MBNG_LCD_Init	16	static
+mbng_lcd.c:791:5:MBNG_LCD_SpecialCharsReInit	0	static

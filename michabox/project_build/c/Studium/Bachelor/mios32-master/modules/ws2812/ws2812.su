@@ -1,0 +1,7 @@
+ws2812.c:137:5:WS2812_Init	120	static
+ws2812.c:237:6:WS2812_DMA_IRQHandler_SetPWM	20	static
+ws2812.c:261:6:DMA1_Stream0_IRQHandler	8	static
+ws2812.c:291:5:WS2812_LED_SetRGB	0	static
+ws2812.c:322:5:WS2812_LED_GetRGB	0	static
+ws2812.c:354:5:WS2812_LED_SetHSV	32	static
+ws2812.c:426:5:WS2812_LED_GetHSV	40	static

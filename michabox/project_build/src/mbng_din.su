@@ -1,0 +1,3 @@
+mbng_din.c:35:5:MBNG_DIN_Init	0	static
+mbng_din.c:48:5:MBNG_DIN_NotifyToggle	96	static
+mbng_din.c:123:5:MBNG_DIN_NotifyReceivedValue	8	static

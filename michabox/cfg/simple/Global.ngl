@@ -1,0 +1,12 @@
+COND_LABEL enable
+COND =0   " Off  "
+COND =1   "  On  "
+COND_ELSE "on/off"
+
+COND_LABEL scale
+COND =0   "Equal Temp"
+COND =1   "Equal Temp2"
+COND =2	  "Pure Major"
+COND =3	  "Pure Minor"
+COND =4	  "User Scale"
+COND_ELSE "scale "

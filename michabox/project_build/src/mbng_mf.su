@@ -1,0 +1,4 @@
+mbng_mf.c:38:5:MBNG_MF_Init	0	static
+mbng_mf.c:73:5:MBNG_MF_MIDI_NotifyPackage	192	static
+mbng_mf.c:196:5:MBNG_MF_ReceiveSysEx	32	static
+mbng_mf.c:235:5:MBNG_MF_NotifyReceivedValue	24	static

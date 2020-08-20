@@ -1,0 +1,44 @@
+RESET_HW
+
+#home button (Control Button on C4)
+EVENT_RECEIVER id= 4000 type=NoteOn chn=1 key= 15 fwd_id=SENDER:4000
+EVENT_SENDER id= 4000 type=Meta meta=RunSection:1
+
+# press of top left encoder NoteOn G#0 run Section 2 to enter Prgrm Edit Mode
+EVENT_RECEIVER id= 1 fwd_id=SENDER:2 type=NoteOn chn=1 key= 32 range= 0:127
+EVENT_SENDER id= 2 type=Meta meta=RunSection:2
+
+#enters program edit mode and sends the current program dump request
+EVENT_SENDER id= 3 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x04 0x10 0xf7 0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="PrgrmMode enter"
+
+#receives current program sysex dump
+EVENT_RECEIVER id=2000 type=SysEx stream="0xf0 0x42 0x30 0x24 0x40 ^dump 0xf7" ports=0100010000000000 label="Current Program Dump received"
+
+#sends the current program dump request
+#EVENT_SENDER id= 1999 type=SysEx stream="0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="Current Prgrm Dump Request"
+
+#prints one of the (RECEIVER 2000's) dump's values on the C4's 2nd display
+EVENT_SENDER id=2000 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x00 ^val 0xf7" syxdump_pos=2000:15 ports=1000100000001000
+
+##############################################################################
+#push on Enc 2ndRow 1stPos turns on LED pattern in last row as long as it's pressed
+#SENDER's value has no effect
+##############################################################################
+#EVENT_RECEIVER id= 100 fwd_id=SENDER:100 type=NoteOn chn=1 key= 40 range= 0:110
+#EVENT_SENDER id= 100 type=CC chn=1 cc=0x39 value=0xa0
+
+#knob turn on top left encoder
+EVENT_RECEIVER id= 3 fwd_id=SENDER:4 type=CC chn=1 cc=0 range= 0:127 ports=1000100000001000
+#Increment command (why did this work again?..)
+EVENT_SENDER id=4 type=SysEx stream="0xf0 0x42 0x30 0x24 0xb0 0x60 0x00 0xf7" ports=0100010000000000
+
+# on press of 2nd knob 1st row m3r osc will take value 4 if in prgm edit mode
+EVENT_RECEIVER id= 4 fwd_id=SENDER:5 type=NoteOn chn=1 key= 33 range= 0:127
+EVENT_SENDER id= 5 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x03 0x04 0x00 0xf7" ports=0100010000000000
+
+# on press of 3rd knob 1st row m3r delay start will take value 10 if in prgm edit mode
+EVENT_RECEIVER id= 5 fwd_id=SENDER:6 type=NoteOn chn=1 key= 34 range= 0:127
+EVENT_SENDER id= 6 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x05 0x09 0x00 0xf7" ports=0100010000000000
+
+# misc config
+GlobalChannel 0

@@ -1,0 +1,59 @@
+RESET_HW
+
+#########################
+#Parameter Name Printers#
+#########################
+
+# Display 1 - all pages - Level modifiers
+EVENT_SENDER id= 1 		   bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label="Vol S1"
+EVENT_SENDER id= 2 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 7 ^label 0xf7" ports=1000100000000000 label="Vol S2"
+EVENT_SENDER id= 3 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 14 ^label 0xf7" ports=1000100000000000 label="Vol S3"
+EVENT_SENDER id= 4 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 21 ^label 0xf7" ports=1000100000000000 label="Vol S4"
+EVENT_SENDER id= 5 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 28 ^label 0xf7" ports=1000100000000000 label="Vol CH"
+EVENT_SENDER id= 6 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 35 ^label 0xf7" ports=1000100000000000 label="Vol OH"
+EVENT_SENDER id= 7 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 42 ^label 0xf7" ports=1000100000000000 label="Vol Cr"
+EVENT_SENDER id= 8 hw_id=1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 49 ^label 0xf7" ports=1000100000000000 label="Vol Cp"
+
+######################################################
+######################## ENCODERS ####################
+######################################################
+
+###################
+#Level modifiers#
+##################
+
+# Perc 1
+EVENT_ENC id=1 bank=0 fwd_id=SENDER:101 type=NRPN nrpn=263 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# Perc 2
+EVENT_ENC id=2 bank=0 fwd_id=SENDER:102 type=NRPN nrpn=273 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# Perc 3
+EVENT_ENC id=3 bank=0 fwd_id=SENDER:103 type=NRPN nrpn=283 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# Perc 4
+EVENT_ENC id=4 bank=0 fwd_id=SENDER:104 type=NRPN nrpn=293 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# HiHat Closed
+EVENT_ENC id=5 bank=0 fwd_id=SENDER:105 type=NRPN nrpn=303 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# HiHat Open
+EVENT_ENC id=6 bank=0 fwd_id=SENDER:106 type=NRPN nrpn=313 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# Crash
+EVENT_ENC id=7 bank=0 fwd_id=SENDER:107 type=NRPN nrpn=323 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+# Clap
+EVENT_ENC id=8 bank=0 fwd_id=SENDER:108 type=NRPN nrpn=333 nrpn_format=MsbOnly range=0:16256 chn=16 ports=0010001000000000
+
+##########################
+#Mackie Encoder Receivers#
+##########################
+
+# Display 1 - all pages - Level modifiers
+EVENT_RECEIVER id= 1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1
+EVENT_RECEIVER id= 2 bank=0 type=CC chn=1 cc=1 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=2
+EVENT_RECEIVER id= 3 bank=0 type=CC chn=1 cc=2 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=3 
+EVENT_RECEIVER id= 4 bank=0 type=CC chn=1 cc=3 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=4 
+EVENT_RECEIVER id= 5 bank=0 type=CC chn=1 cc=4 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=5 
+EVENT_RECEIVER id= 6 bank=0 type=CC chn=1 cc=5 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=6 
+EVENT_RECEIVER id= 7 bank=0 type=CC chn=1 cc=6 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=7 
+EVENT_RECEIVER id= 8 bank=0 type=CC chn=1 cc=7 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=8 
+
+#single (currentprogram) dump requester for continuous retriggeration
+EVENT_SENDER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x10 0xf7" ports=0010001000000000 label="Current Prgrm Dump Request"
+#current program dump receiver
+EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x40 ^dump 0xf7" ports=0010001000000000 label="Current Program Dump received"

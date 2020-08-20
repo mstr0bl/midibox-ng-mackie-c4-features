@@ -1,0 +1,2 @@
+mbng_dout.c:61:5:MBNG_DOUT_Init	8	static
+mbng_dout.c:78:5:MBNG_DOUT_NotifyReceivedValue	24	static

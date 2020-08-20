@@ -1,0 +1,23 @@
+if ^section == 0
+ log section 0 called
+ delay_ms 1000
+ #call screen cleaners
+ trigger SENDER:4095
+ set ^section 1
+endif
+
+if ^section == 1
+ set ^bank 1
+ log home menu called
+ #call screen cleaners
+ trigger SENDER:4095
+ #activate parameter label displayers
+endif
+
+if ^section == 2
+ set ^bank 2
+ log program edit mode called
+ #call screen cleaners
+ trigger SENDER:4095
+ #activate parameter label displayers
+endif

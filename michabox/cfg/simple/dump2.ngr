@@ -1,0 +1,24 @@
+if ^section == 0
+ set ^bank 0
+ log section 0 running
+endif
+
+if ^section == 1
+ set ^bank 1
+ log section 1 running
+ trigger SENDER:2001
+ if (id)BUTTON:14 != 0
+  log "BUTTON:14 is pressed"
+ else
+  log "BUTTON:14 de-pressed"
+ endif
+ if RECEIVER:4 > 0
+  if RECEIVER:4 < 63
+   log "less than 63"
+   set (id)ENC:14 [ENC:14 + 1]
+  else
+   log "more than 63"
+   set (id)ENC:14 [ENC:14 - 1]
+  endif
+ endif
+endif

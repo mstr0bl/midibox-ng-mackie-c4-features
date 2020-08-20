@@ -1,0 +1,21 @@
+RESET_HW
+
+#receiver to accept mackie knob push
+EVENT_RECEIVER id= 1 bank= 0 fwd_id=SENDER:1 type=NoteOn chn=1 key= 45 range= 0:1
+EVENT_SENDER id= 1 hw_id= 1 bank= 0 fwd_id=BUTTON:1 if_equal=RECEIVER:1:1
+
+EVENT_BUTTON id= 1 bank= 0 type=CC button_mode=Toggle range= 0:1
+
+
+#if the dummy encoder is not highlighted (value=0) select it and set its value to 1
+EVENT_SENDER id= 4 hw_id= 2  type=Meta meta=SendEvent:BUTTON:1:1:1
+
+#if the dummy encoder is highlighted (value=1) select it and set its value to 0
+EVENT_SENDER id= 5 hw_id= 2  type=Meta meta=SendEvent:BUTTON:1:0:0
+
+
+EVENT_RECEIVER id= 10 fwd_id=SENDER:10 type=NoteOn chn=1 if_equal=BUTTON:1:1 key= 44 range= 0:127
+EVENT_SENDER id= 10 type=CC range=0:127
+
+EVENT_RECEIVER id= 11 fwd_id=SENDER:11 type=NoteOn chn=1 if_equal=BUTTON:1:0 key= 46 range= 0:127
+EVENT_SENDER id= 11 type=CC range=0:127

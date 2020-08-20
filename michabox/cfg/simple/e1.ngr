@@ -1,0 +1,20 @@
+if ^section == 0
+ trigger SENDER:4001			#dump request
+ trigger SENDER:1				#level param label print
+endif
+
+
+if ^section == 2
+ log "was here sec.2"
+ 
+ if BUTTON:2001 == 1
+ 	set BUTTON:3030 1
+ endif
+ 
+ if BUTTON:2002 == 1
+ 	set BUTTON:3030 2
+ endif 
+
+ set ^section 0
+ 
+endif

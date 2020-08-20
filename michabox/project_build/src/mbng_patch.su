@@ -1,0 +1,3 @@
+mbng_patch.c:79:5:MBNG_PATCH_Init	40	static
+mbng_patch.c:201:5:MBNG_PATCH_Load	16	static
+mbng_patch.c:232:5:MBNG_PATCH_Store	16	static

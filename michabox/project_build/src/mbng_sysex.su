@@ -1,0 +1,5 @@
+mbng_sysex.c:146:5:MBNG_SYSEX_Init	0	static
+mbng_sysex.c:166:5:MBNG_SYSEX_SendAck	32	static
+mbng_sysex.c:285:5:MBNG_SYSEX_Cmd	8	static
+mbng_sysex.c:192:5:MBNG_SYSEX_TimeOut	0	static
+mbng_sysex.c:205:5:MBNG_SYSEX_Parser	16	static

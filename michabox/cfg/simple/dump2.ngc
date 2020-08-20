@@ -1,0 +1,43 @@
+RESET_HW
+
+EVENT_RECEIVER id= 1 bank= 0 fwd_id=SENDER:2 type=NoteOn chn=1 key= 32 range= 0:127
+EVENT_SENDER id= 2 fwd_id= SENDER:3 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x04 0x10 0xf7 0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="PrgrmMode enter"
+EVENT_SENDER id= 3 type=Meta meta=RunSection:1
+
+#sends the current program dump request
+#EVENT_RECEIVER id= 2 fwd_id=SENDER:1999 type=NoteOn chn=1 key= 33 range= 0:127
+EVENT_SENDER id= 1999 type=SysEx stream="0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="Current Prgrm Dump Request"
+
+#receives current program sysex dump
+EVENT_RECEIVER id= 2000 type=SysEx stream="0xf0 0x42 0x30 0x24 0x40 ^dump 0xf7" ports=0100010000000000 label="Current Program Dump received"
+
+#prints the "Delay" string on 2nd display 6th slot upper line
+#has to be triggered by ngr script
+EVENT_SENDER id=2001 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x23 ^label 0xf7" ports=1000100000001000 label="Delay"
+#prints Delay Start value on 2nd display 6th slot lower line
+EVENT_SENDER id=2000 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x5b ^macdis 0xf7" syxdump_pos=2000:14 ports=1000100000001000
+
+###################################################
+
+#dummy button
+EVENT_BUTTON id= 14 hw_id= 14 bank= 1 range= 0:1 button_mode=Toggle 
+#dummy encoder to store the modified value and to pass it on to a 41func
+#npt sure if the syxdump reference works
+EVENT_ENC id= 14 bank= 1 type=CC chn=1 cc=14 range= 0:89 syxdump_pos=2000:14
+
+#push of Encoder 2.6 allows Delay value's modification
+#while in program edit mode (bank 1)
+EVENT_RECEIVER id= 3 hw_id= 14 bank= 1 fwd_id=BUTTON:14 type=NoteOn chn=1 key= 45 range= 0:127
+
+#toggle button
+
+#Mackie's rotary Encoder (2.6) is now enabled by the NGR script to send his CC values to a dummy encoder, which gets in- or decremented
+EVENT_RECEIVER id= 4  type=CC chn=1 cc=13 if_equal=Button:14:1 range= 0:127 ports=1000100000001000
+
+#write func 41 param change sysex to access 
+# needs value from dummy encoder
+EVENT_SENDER id= 4 bank= 1 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x05 ^val 0x00 0xf7" ports=0100010000000000
+
+
+
+#end with dump request

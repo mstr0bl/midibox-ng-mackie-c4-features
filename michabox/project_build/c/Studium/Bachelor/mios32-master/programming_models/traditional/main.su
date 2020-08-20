@@ -1,0 +1,13 @@
+main.c:79:29:APP_Tick	0	static
+main.c:270:13:TASK_Hooks	16	static
+main.c:83:29:APP_MIDI_Tick	0	static
+main.c:237:13:TASK_MIDI_Hooks	16	static
+main.c:91:5:main	24	static
+main.c:193:6:SRIO_ServiceFinish	8	static
+main.c:207:6:vApplicationTickHook	0	static
+main.c:226:6:vApplicationIdleHook	0	static
+main.c:319:6:_abort	8	static
+main.c:360:6:vApplicationMallocFailedHook	8	static
+stdlib.h:80:7:exit	8	static
+main.c:465:6:HardFault_Handler_c	40	static
+main.c:523:6:HardFault_Handler	0	static

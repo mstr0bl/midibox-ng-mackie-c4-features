@@ -1,0 +1,11 @@
+if ^section == 0
+ if ENC:27 > 0
+  log "ENC 27 > 0"
+  set_active RECEIVER:127 1
+  set_active RECEIVER:227 0
+ elsif ENC:27 < 0
+  log "ENC 27 < 0"
+  set_active RECEIVER:127 0
+  set_active RECEIVER:227 1
+ endif
+endif

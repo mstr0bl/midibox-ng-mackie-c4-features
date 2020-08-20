@@ -1,0 +1,16 @@
+max72xx.c:397:12:MAX72XX_SetCs	0	static
+max72xx.c:116:5:MAX72XX_NumChainsGet	0	static
+max72xx.c:125:5:MAX72XX_NumChainsSet	0	static
+max72xx.c:138:5:MAX72XX_EnabledGet	0	static
+max72xx.c:149:5:MAX72XX_EnabledSet	0	static
+max72xx.c:166:5:MAX72XX_NumDevicesPerChainGet	0	static
+max72xx.c:178:5:MAX72XX_NumDevicesPerChainSet	0	static
+max72xx.c:195:5:MAX72XX_DigitSet	8	static
+max72xx.c:214:5:MAX72XX_AllDigitsSet	0	static
+max72xx.c:235:5:MAX72XX_DigitGet	0	static
+max72xx.c:253:5:MAX72XX_WriteReg	32	static
+max72xx.c:293:5:MAX72XX_WriteAllRegs	32	static
+max72xx.c:326:5:MAX72XX_UpdateDigit	32	static
+max72xx.c:362:5:MAX72XX_UpdateAllDigits	16	static
+max72xx.c:49:5:MAX72XX_Init	24	static
+max72xx.c:381:5:MAX72XX_UpdateAllChains	16	static

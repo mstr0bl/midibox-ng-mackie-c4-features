@@ -1,0 +1,63 @@
+RESET_HW
+
+####################################################
+#the focus of this script is to print the cummy encoder's value as a macdis variable
+####################################################
+
+#home button (Control Button on C4)
+EVENT_RECEIVER id= 4000 type=NoteOn chn=1 key= 15 fwd_id=SENDER:4000
+EVENT_SENDER id= 4000 if_equal_stop_on_match=RECEIVER:4000:127 type=Meta meta=RunSection:0
+
+#pgrm mode select with simultaneous dump request for currently selected program
+EVENT_RECEIVER id= 3000 bank= 0 fwd_id=SENDER:3000 type=NoteOn chn=1 key= 32 range= 1:1 
+EVENT_SENDER id= 3000 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x04 0x10 0xf7 0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="PrgrmMode enter"
+EVENT_SENDER id= 3001 hw_id= 3000 if_equal_stop_on_match=RECEIVER:3000:1 type=Meta meta=RunSection:1 meta=SetBank
+
+#single (currentprogram) dump requester for continuous retriggeration
+EVENT_SENDER id= 4001 bank=1 type=SysEx stream="0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="Current Prgrm Dump Request"
+#current program dump receiver
+EVENT_RECEIVER id= 4001 bank=1 type=SysEx stream="0xf0 0x42 0x30 0x24 0x40 ^dump 0xf7" ports=0100010000000000 label="Current Program Dump received"
+
+#prints the "MulSnd" string on 2nd display 1st slot upper line
+#has to be triggered by ngr script
+EVENT_SENDER id= 1 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x00 ^label 0xf7" ports=1000100000001000 label="MulSnd"
+
+#dummy endoder depending on what comes from CC 8
+#different MIDI chn has to be selected otherwise an unwanted  LED ring movement would occur
+EVENT_ENC id= 1 bank=1 fwd_id=SENDER:101 type=CC chn=5 range=0:89 syxdump_pos=4001:14
+
+#prints Delay Start value on 2nd display 1st slot lower line
+EVENT_SENDER id=101 fwd_id=SENDER:201 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x38 ^macdis 0xf7" ports=1000100000001000
+
+#knob turn on Mackie C4 causing relative and speed dependant value (>64 & <64)
+EVENT_RECEIVER id= 1 bank=1 type=CC chn=1 cc=8 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1 label="MultiSound value changer"
+
+
+#Sender to refresh the modified value with a 41paramChange function sysex stream
+#is set to change program parameter no.3 = m. Osc sound value
+EVENT_SENDER id= 201 fwd_id=SENDER:4001 bank=1 if_equal=RECEIVER:101:127 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x03 ^val 0x00 0xf7" ports=0100010000000000
+
+#the push of this button finally enables the sending of the sysex stream that changes the parameter's #value
+EVENT_RECEIVER id= 101 bank=1 type=NoteOn chn=1 key= 40 range= 0:127
+
+#############################################################################################
+
+#prints the "OscOct" string on 2nd display 6th slot upper line
+#has to be triggered by ngr script
+EVENT_SENDER id= 2 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x07 ^label 0xf7" ports=1000100000001000 label="OscOct"
+
+#prints  value on 2nd display 6th slot lower line
+EVENT_SENDER id=102 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x3f ^macdis 0xf7" syxdump_pos=4001:15 ports=1000100000001000
+
+#knob turn on Mackie C4 causing relative and speed dependant value (>64 & <64)
+EVENT_RECEIVER id= 2 bank=1 type=CC chn=1 cc=9 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=2 label="Oscillator Octave changer"
+
+#dummy endoder depending on what comes from CC 9
+EVENT_ENC id= 2 bank=1 fwd_id=SENDER:202 type=CC range=-1:1 syxdump_pos=4001:15
+
+#Sender to refresh the modified value with a 41paramChange function sysex stream
+#is set to change program parameter no.
+EVENT_SENDER id= 202 fwd_id=SENDER:4001 bank=1 if_equal=RECEIVER:102:127 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x04 ^val 0x00 0xf7" ports=0100010000000000
+
+#the push of this button finally enables the sending of the sysex stream that changes the OCTAVE parameter's #value
+EVENT_RECEIVER id= 102 bank=1 type=NoteOn chn=1 key= 41 range= 0:127

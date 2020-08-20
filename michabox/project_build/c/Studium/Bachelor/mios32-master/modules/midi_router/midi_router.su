@@ -1,0 +1,14 @@
+midi_router.c:98:19:MIDI_ROUTER_PortMaskGet	0	static
+midi_router.c:378:12:MIDI_ROUTER_TerminalSetRouterSyntax	8	static
+midi_router.c:344:12:get_dec	16	static
+midi_router.c:76:5:MIDI_ROUTER_Init	0	static
+midi_router.c:112:5:MIDI_ROUTER_Receive	48	static
+midi_router.c:159:5:MIDI_ROUTER_ReceiveSysEx	40	static
+midi_router.c:227:5:MIDI_ROUTER_MIDIClockInGet	8	static
+midi_router.c:244:5:MIDI_ROUTER_MIDIClockInSet	8	static
+midi_router.c:266:5:MIDI_ROUTER_MIDIClockOutGet	8	static
+midi_router.c:279:5:MIDI_ROUTER_MIDIClockOutSet	8	static
+midi_router.c:301:5:MIDI_ROUTER_SendMIDIClockEvent	32	static
+midi_router.c:391:5:MIDI_ROUTER_TerminalHelp	8	static
+midi_router.c:636:5:MIDI_ROUTER_TerminalPrintConfig	64	static
+midi_router.c:408:5:MIDI_ROUTER_TerminalParseLine	72	static

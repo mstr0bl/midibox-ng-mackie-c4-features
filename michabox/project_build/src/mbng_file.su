@@ -1,0 +1,6 @@
+mbng_file.c:61:5:MBNG_FILE_Init	8	static
+mbng_file.c:80:5:MBNG_FILE_LoadAllFiles	16	static
+mbng_file.c:102:5:MBNG_FILE_UnloadAllFiles	8	static
+mbng_file.c:117:5:MBNG_FILE_CreateDefaultFiles	8	static
+mbng_file.c:190:5:MBNG_FILE_StatusMsgSet	0	static
+mbng_file.c:206:7:MBNG_FILE_StatusMsgGet	0	static

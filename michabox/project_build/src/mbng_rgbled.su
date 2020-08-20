@@ -1,0 +1,8 @@
+mbng_rgbled.c:114:12:MBNG_RGBLED_PatternSet	48	static
+mbng_rgbled.c:44:5:MBNG_RGBLED_Init	8	static
+mbng_rgbled.c:58:5:MBNG_RGBLED_Periodic_1mS	16	static
+mbng_rgbled.c:88:5:MBNG_RGBLED_RainbowSpeedSet	0	static
+mbng_rgbled.c:94:5:MBNG_RGBLED_RainbowSpeedGet	0	static
+mbng_rgbled.c:99:5:MBNG_RGBLED_RainbowBrightnessSet	0	static
+mbng_rgbled.c:105:5:MBNG_RGBLED_RainbowBrightnessGet	0	static
+mbng_rgbled.c:182:5:MBNG_RGBLED_NotifyReceivedValue	48	static

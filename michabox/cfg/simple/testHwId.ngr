@@ -1,0 +1,12 @@
+if ^section == 0
+ if ^bank == 1
+ log bank 1 active
+ set_active SENDER:1 1
+ set_active SENDER:2 0
+ endif
+ if ^bank == 2
+ log bank 2 active
+ set_active SENDER:1 0
+ set_active SENDER:2 1
+ endif
+endif

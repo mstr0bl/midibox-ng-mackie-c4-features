@@ -1,0 +1,16 @@
+if ^section == 0
+ trigger SENDER:4090	#enter mode
+ trigger SENDER:4095	#clear displays
+ trigger SENDER:4089	#clear LED rings
+ send SysEx Out1 0xf0 0xf7
+ delay_ms 1500
+ set ^section 1
+endif
+
+if ^section == 1
+ trigger SENDER:4095	#clear displays
+endif
+
+if ^section == 10
+ LOAD Home
+endif

@@ -1,0 +1,7 @@
+msd.c:8:5:MSD_Init	0	static
+msd.c:13:5:MSD_Periodic_mS	0	static
+msd.c:18:5:MSD_CheckAvailable	0	static
+msd.c:23:5:MSD_LUN_AvailableSet	0	static
+msd.c:28:5:MSD_LUN_AvailableGet	0	static
+msd.c:33:5:MSD_RdLEDGet	0	static
+msd.c:38:5:MSD_WrLEDGet	0	static

@@ -1,0 +1,73 @@
+RESET_HW
+
+#Display 4 - PITCH EG
+EVENT_SENDER id= 25 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0x00 ^label 0xf7" ports=1000100000000000 label="StaLvl"
+EVENT_SENDER id= 27 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0x0e ^label 0xf7" ports=1000100000000000 label="AttLvl"
+
+# Display 4 - PITCH EG 
+EVENT_ENC id= 25  bank=1 fwd_id=SENDER:125 type=NRPN chn=5 nrpn=24 range=-99:99 syxdump_pos=4001:39 
+EVENT_ENC id= 27  bank=1 fwd_id=SENDER:127 type=NRPN chn=5 nrpn=26 range=-99:99 syxdump_pos=4001:42  
+
+# Display 4 - PITCH EG - display zahlenewrt
+EVENT_SENDER id=125 fwd_id=SENDER:225 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0x38 ^macdis 0xf7" syxdump_pos=4001:39 ports=1000100000000000
+EVENT_SENDER id=127 fwd_id=SENDER:227 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0x46 ^macdis 0xf7" syxdump_pos=4001:42 ports=1000100000000000
+
+# Display 4 - PITCH EG - Parameter change request an Synth
+EVENT_SENDER id= 225 bank=1 fwd_id=RECEIVER:125 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 27 ^val ^val_h 0xf7" ports=0100010000000000
+EVENT_SENDER id= 227 bank=1 fwd_id=RECEIVER:127 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 29 ^val ^val_h 0xf7" ports=0100010000000000
+
+# Display 4 - PITCH EG
+EVENT_RECEIVER id= 25 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=25
+EVENT_RECEIVER id= 27 bank=1 type=CC chn=1 cc=26 emu_enc_mode=C4Enc  emu_enc_hw_id=27 
+
+# Display 4 - LED testers ############################################
+EVENT_RECEIVER id=125 fwd_id=SENDER:325 bank=1 type=NRPN nrpn=125 range=map99 chn=1 ports=1000100000000000
+
+EVENT_SENDER id= 325 fwd_id=SENDER:425 bank=1 type=CC cc=56 chn=1
+EVENT_SENDER id= 425  bank=1 type=SysEx stream="0xf0 0x11 0x22 0x33 ^val ^val_h 0xf7"
+ 
+#EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=1 type=CC cc=58 range=map22  chn=1 ports=1000100000000000 
+#EVENT_RECEIVER id=227 hw_id=127 fwd_id=SENDER:327 bank=1 type=CC cc=58 range=map21 if_less=Enc:27:0 chn=1 ports=1000100000000000
+#EVENT_SENDER id= 327  bank=1 type=CC cc=58 chn=1 
+
+
+# RECHTER ENCODER
+# see ngr script
+EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=1 type=CC cc=58 range=map22  chn=1 ports=1000100000000000 
+EVENT_RECEIVER id=227 fwd_id=SENDER:327 bank=1 type=CC cc=58 range=map21  chn=1 ports=1000100000000000
+EVENT_SENDER id= 327  bank=1 type=CC cc=58 chn=1 
+
+######################################################################
+### Encoder Acceleration Tests########################################
+
+#push of C4 Enc 4.1 triggers a wider increment range as long as it's pushed
+
+EVENT_RECEIVER id= 3000 bank= 0 fwd_id=BUTTON:3000 type=NoteOn chn=1 key=56 range= 0:1 
+EVENT_BUTTON id= 3001 hw_id= 3000 if_equal=RECEIVER:3000:1 type=Meta meta=EncFast:25 range=0:8 
+
+######################################################################
+
+#single (currentprogram) dump requester for continuous retriggeration
+EVENT_SENDER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="Current Prgrm Dump Request"
+#current program dump receiver
+EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x40 ^dump 0xf7" ports=0100010000000000 label="Current Program Dump received"
+
+#startup by entering program edit mode and requesting current program dump
+EVENT_SENDER id= 4090 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x04 0x10 0xf7 0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="PrgrmMode enter"
+
+# MAP 99 - Anzeigewerte auf Parameterbytes mappen
+ #MAP99/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -10:22 -1:22 99:27 80:26 50:25 30:24 10:23 0:22
+ MAP99/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -1:21 99:27 80:26 50:25 30:24 1:23 0:22
+#MAP99/HWORDI 99:27 80:26 50:25 30:24 10:23 0:22 -1:22 -10:22 -20:21 -40:20 -60:19 -80:18 -99:17
+
+# MAP 100 -  Parameterbytes auf Anzeigewerte mappen
+#MAP99/HWORDI 0x9d:-99 0xff:-1 0:0x00 0x01:1 0x63:99
+
+# LED Map 20 - alternative test map for "pan-to-the-left" display
+MAP20/HWORDI 29:17 40:18 55:19 72:20 85:21 99:22
+
+#LED map 21 - pan like - adjusted for range -99:99
+MAP21/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -19:21 -18:21 -17:21 -16:21 -15:21 -14:21 -13:21 -12:21 -11:21 -10:21 -9:21 -8:21 -7:21 -6:21 -5:21 -4:21 -3:21 -2:21 -1:21 0:22 1:22 2:22 3:22 4:22 5:22 6:22 7:22 8:22 9:22 10:22 20:23 40:24 60:25 80:26 99:27
+
+# map 22 - from 0 on upwards
+MAP22/HWORDI  0:22 1:22 2:22 3:22 4:22 5:22 6:22 7:22 8:22 9:22 10:22 20:23 40:24 60:25 80:26 99:27

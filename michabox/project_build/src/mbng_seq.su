@@ -1,0 +1,11 @@
+mbng_seq.c:155:5:MBNG_SEQ_Reset	8	static
+mbng_seq.c:76:5:MBNG_SEQ_Handler	32	static
+mbng_seq.c:51:5:MBNG_SEQ_Init	8	static
+mbng_seq.c:184:5:MBNG_SEQ_SetPauseMode	0	static
+mbng_seq.c:193:5:MBNG_SEQ_PauseEnabled	0	static
+mbng_seq.c:202:5:MBNG_SEQ_PlayButton	8	static
+mbng_seq.c:227:5:MBNG_SEQ_StopButton	8	static
+mbng_seq.c:246:5:MBNG_SEQ_PauseButton	8	static
+mbng_seq.c:272:5:MBNG_SEQ_PlayStopButton	8	static
+mbng_seq.c:287:5:MBNG_SEQ_ClockDividerGet	0	static
+mbng_seq.c:292:5:MBNG_SEQ_ClockDividerSet	0	static

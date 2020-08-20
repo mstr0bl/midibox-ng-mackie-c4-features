@@ -1,0 +1,13 @@
+mbng_cv.c:79:12:MBNG_CV_PinSet	8	static
+mbng_cv.c:66:5:MBNG_CV_Update	8	static
+mbng_cv.c:104:5:MBNG_CV_PitchRangeSet	0	static
+mbng_cv.c:112:5:MBNG_CV_PitchRangeGet	0	static
+mbng_cv.c:120:5:MBNG_CV_PitchSet	0	static
+mbng_cv.c:128:5:MBNG_CV_PitchGet	0	static
+mbng_cv.c:136:5:MBNG_CV_TransposeOctaveSet	8	static
+mbng_cv.c:152:5:MBNG_CV_TransposeOctaveGet	0	static
+mbng_cv.c:163:5:MBNG_CV_TransposeSemitonesSet	8	static
+mbng_cv.c:179:5:MBNG_CV_TransposeSemitonesGet	0	static
+mbng_cv.c:192:5:MBNG_CV_NotifyReceivedValue	24	static
+mbng_cv.c:301:5:MBNG_CV_ResetAllChannels	16	static
+mbng_cv.c:47:5:MBNG_CV_Init	8	static
