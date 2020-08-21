@@ -3341,6 +3341,11 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
   s16 item_value = item->value;
   //initialize array and pointer for the 6-field Display values
   u8 macdis_array[6];
+
+  //prefill last two fields with blank spaces
+  macdis_array[4] = 0x20;
+  macdis_array[5] = 0x20;
+
   //macdis_array = (u8 *)malloc(sizeof(u8)*6);
 
 
@@ -3403,21 +3408,57 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
     	 // MIOS32_MIDI_SendDebugMessage("item_value hex = %x - item_value dec = %d",item_value,item_value);
     	 // Parse2MackieDisplayValue(item_value & 0x7f, macdis_array);
     	  int i, j, rest;
+    	  short fields;
     	  u32 num = item_value;
-    	 // MIOS32_MIDI_SendDebugMessage("num = %x", num);
 
-    	  if(item_value < 0x00){
-//    		  MIOS32_MIDI_SendDebugMessage("value < 0");
-    		  num *= -1;
-//    		  MIOS32_MIDI_SendDebugMessage("value < 0");
+    	  if(item_value == 0){
+    		  macdis_array[0] = 0x20;
+    		  macdis_array[1] = 0x20;
+    		  macdis_array[2] = 0x20;
+    		  macdis_array[3] = 0x30;
     	  }
+    	  else{
 
-
-    	  for(i=5;i>=0;i--){
-    		  if(i == 0 || i == 4 || i == 5){
-    		  macdis_array[i] = 0x20;
+    		  if(item_value > 0){					//positive value
+    		  macdis_array[0] = 0x20;
+    		  if(item_value < 100){
+    			  macdis_array[1] = 0x20;
+    			  if(item_value > 9){
+    				  fields = 2;
+    			  }
+    			  else{
+    				  fields = 1;
+    				  macdis_array[2] = 0x20;
+    			  }
     		  }
     		  else{
+    			  fields = 3;
+    		  }
+    	  }
+    	  else{										//negative value
+    		  if(item_value > -100){
+    			  macdis_array[0] = 0x20;
+    			  if(item_value > -10){
+    				  macdis_array[1] = 0x20;
+    				  macdis_array[2] = 0x2d;
+    				  fields = 1;
+    			  }
+    			  else{
+    				  macdis_array[1] = 0x2d;
+    				  fields = 2;
+    			  }
+    		  }
+    		  else{
+    			  macdis_array[0] = 0x2d;
+    			  fields = 3;
+    		  }
+    		  num *= -1;
+    	  }
+
+    	fields = 3 - fields;
+
+    	  for(i=3;i>=fields;i--){
+
     			 // MIOS32_MIDI_SendDebugMessage("i counter = %d",i);
     			  if(num != 0){
     			      		  //MIOS32_MIDI_SendDebugMessage("item_value dec = %d - num_value dec = %d",item_value,num);
@@ -3439,29 +3480,17 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
     			      		  default: macdis_array[i] = 0x2d;break;
     			      		  }
     			      	  }
-    			  else{
 
-    				  if(item_value < 0x00 && macdis_array[i+1] >= 0x31 && macdis_array[i+1] <= 0x39){
-  //  						MIOS32_MIDI_SendDebugMessage("neg. sign");
-    					  macdis_array[i] = 0x2d;
-    				  }
-    				  else{
-    					  if(macdis_array[i+1] == 0x2d){
-    						  macdis_array[i] = 0x20;
-    					  }
-    					  else{
-    				  macdis_array[i] = 0x30;
-    					  }
-    				  }
-    			  }
-    		  }
     	  }
+     }
 
     	 // u8 testsysex[9] = {0xf0, 0x42, 0x30, 0x24, 0x41, 0x1b, 0xc8, 0x00, 0xf7};
     	  for(j=0;j<6;j++){
 
     		  MBNG_EVENT_ADD_STREAM(macdis_array[j]);
     	  }
+
+
     	  //free(macdis_array);
       } break;
       default: {}
