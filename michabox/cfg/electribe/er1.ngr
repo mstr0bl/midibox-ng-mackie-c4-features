@@ -2,7 +2,7 @@ if ^section == 0
  trigger SENDER:4095			#clear displays
  delay_ms 300
  trigger SENDER:4001			#dump request
- 
+ delay_ms 750
  trigger SENDER:1				#level param label print
  trigger SENDER:25				#decay param label print
  
@@ -11,46 +11,7 @@ if ^section == 0
   trigger SENDER:9				#pitch param label print
   trigger SENDER:17
   trigger SENDER:120
-  set_active (id)RECEIVER:9 1	#pitch param C4 encoder activators
-  set_active (id)RECEIVER:10 1
-  set_active (id)RECEIVER:11 1
-  set_active (id)RECEIVER:12 1
-  set_active (id)RECEIVER:13 1
-  set_active (id)RECEIVER:14 1
-  set_active (id)RECEIVER:15 1
-  set_active (id)RECEIVER:16 1
-  set_active (id)ENC:9 1		#pitch param dummy encoder activators
-  set_active (id)ENC:10 1
-  set_active (id)ENC:11 1
-  set_active (id)ENC:12 1
-  set_active (id)ENC:13 1
-  set_active (id)ENC:14 1
-  set_active (id)ENC:15 1
-  set_active (id)ENC:16 1
-  set_active (id)SENDER:109 1	#pitch param value printer activators
-  set_active (id)SENDER:110 1
-  set_active (id)SENDER:111 1
-  set_active (id)SENDER:112 1
-  set_active (id)SENDER:113 1
-  set_active (id)SENDER:114 1
-  set_active (id)SENDER:115 1
-  set_active (id)SENDER:116 1
-  set_active (id)RECEIVER:109 1	#pitch param LED ring Receiver activators
-  set_active (id)RECEIVER:110 1
-  set_active (id)RECEIVER:111 1
-  set_active (id)RECEIVER:112 1
-  set_active (id)RECEIVER:113 1
-  set_active (id)RECEIVER:114 1
-  set_active (id)RECEIVER:115 1
-  set_active (id)RECEIVER:116 1
-  set_active (id)SENDER:309 1	#pitch param LED ring Sender activators
-  set_active (id)SENDER:310 1
-  set_active (id)SENDER:311 1
-  set_active (id)SENDER:312 1
-  set_active (id)SENDER:313 1
-  set_active (id)SENDER:314 1
-  set_active (id)SENDER:315 1
-  set_active (id)SENDER:316 1
+  
   set_active (id)RECEIVER:41 0	#delay, audio in gain, acc. settings C4 encoders deactivators
   set_active (id)RECEIVER:42 0
   set_active (id)RECEIVER:43 0
@@ -86,46 +47,7 @@ if ^section == 0
   trigger SENDER:9				#pitch param label print
   trigger SENDER:17
   trigger SENDER:121
-  set_active (id)RECEIVER:9 1	#pitch param C4 encoder activators
-  set_active (id)RECEIVER:10 1
-  set_active (id)RECEIVER:11 1
-  set_active (id)RECEIVER:12 1
-  set_active (id)RECEIVER:13 1
-  set_active (id)RECEIVER:14 1
-  set_active (id)RECEIVER:15 1
-  set_active (id)RECEIVER:16 1
-  set_active (id)ENC:9 1		#pitch param dummy encoder activators
-  set_active (id)ENC:10 1
-  set_active (id)ENC:11 1
-  set_active (id)ENC:12 1
-  set_active (id)ENC:13 1
-  set_active (id)ENC:14 1
-  set_active (id)ENC:15 1
-  set_active (id)ENC:16 1
-  set_active (id)SENDER:109 1	#pitch param value printer activators
-  set_active (id)SENDER:110 1
-  set_active (id)SENDER:111 1
-  set_active (id)SENDER:112 1
-  set_active (id)SENDER:113 1
-  set_active (id)SENDER:114 1
-  set_active (id)SENDER:115 1
-  set_active (id)SENDER:116 1
-  set_active (id)RECEIVER:109 1	#pitch param LED ring Receiver activators
-  set_active (id)RECEIVER:110 1
-  set_active (id)RECEIVER:111 1
-  set_active (id)RECEIVER:112 1
-  set_active (id)RECEIVER:113 1
-  set_active (id)RECEIVER:114 1
-  set_active (id)RECEIVER:115 1
-  set_active (id)RECEIVER:116 1
-  set_active (id)SENDER:309 1	#pitch param LED ring Sender activators
-  set_active (id)SENDER:310 1
-  set_active (id)SENDER:311 1
-  set_active (id)SENDER:312 1
-  set_active (id)SENDER:313 1
-  set_active (id)SENDER:314 1
-  set_active (id)SENDER:315 1
-  set_active (id)SENDER:316 1
+  
   set_active (id)RECEIVER:41 0	#delay, audio in gain, acc. settings C4 encoders deactivators
   set_active (id)RECEIVER:42 0
   set_active (id)RECEIVER:43 0
@@ -161,46 +83,7 @@ if ^section == 0
   trigger SENDER:33				#Delay, Audio Input Gain & Accent Settings Label printers
   trigger SENDER:41
   
-  set_active (id)RECEIVER:9 0	#pitch param C4 encoder deactivators
-  set_active (id)RECEIVER:10 0
-  set_active (id)RECEIVER:11 0
-  set_active (id)RECEIVER:12 0
-  set_active (id)RECEIVER:13 0
-  set_active (id)RECEIVER:14 0
-  set_active (id)RECEIVER:15 0
-  set_active (id)RECEIVER:16 0
-  set_active (id)ENC:9 0		#pitch param dummy encoder deactivators
-  set_active (id)ENC:10 0
-  set_active (id)ENC:11 0
-  set_active (id)ENC:12 0
-  set_active (id)ENC:13 0
-  set_active (id)ENC:14 0
-  set_active (id)ENC:15 0
-  set_active (id)ENC:16 0
-  set_active (id)SENDER:109 0	#pitch param value printer deactivators
-  set_active (id)SENDER:110 0
-  set_active (id)SENDER:111 0
-  set_active (id)SENDER:112 0
-  set_active (id)SENDER:113 0
-  set_active (id)SENDER:114 0
-  set_active (id)SENDER:115 0
-  set_active (id)SENDER:116 0
-  set_active (id)RECEIVER:109 0	#pitch param LED ring Receiver activators
-  set_active (id)RECEIVER:110 0
-  set_active (id)RECEIVER:111 0
-  set_active (id)RECEIVER:112 0
-  set_active (id)RECEIVER:113 0
-  set_active (id)RECEIVER:114 0
-  set_active (id)RECEIVER:115 0
-  set_active (id)RECEIVER:116 0
-  set_active (id)SENDER:309 0	#pitch param LED ring Sender activators
-  set_active (id)SENDER:310 0
-  set_active (id)SENDER:311 0
-  set_active (id)SENDER:312 0
-  set_active (id)SENDER:313 0
-  set_active (id)SENDER:314 0
-  set_active (id)SENDER:315 0
-  set_active (id)SENDER:316 0
+  
   set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
   set_active (id)RECEIVER:42 1
   set_active (id)RECEIVER:43 1

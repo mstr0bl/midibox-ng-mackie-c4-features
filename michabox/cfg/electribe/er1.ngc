@@ -46,7 +46,7 @@ EVENT_SENDER id= 30 hw_id=25 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 EVENT_SENDER id= 31 hw_id=25 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 42 ^label 0xf7" ports=1000100000000000 label="Dec Cr"
 EVENT_SENDER id= 32 hw_id=25 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 49 ^label 0xf7" ports=1000100000000000 label="Dec Cp"
 
-# Display 2 - page/bank 3 & 4 - Delay, Motion Sequence & Accent Settings
+# Display 2 - page/bank 3 & 4 - Delay, Audio Input Gain & Accent Settings
 EVENT_SENDER id= 33  		  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Gain 1"
 EVENT_SENDER id= 34 hw_id=33  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Gain 2"
 EVENT_SENDER id= 35 hw_id=33  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label="Delay  Type  "
@@ -140,21 +140,21 @@ EVENT_ENC id=8 bank=0 fwd_id=SENDER:108 type=NRPN nrpn=333 nrpn_format=MsbOnly r
 ##########################################
 
 # Perc 1
-EVENT_ENC id=9 fwd_id=SENDER:109 type=NRPN nrpn=258 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:14 ports=0010001000000000
+EVENT_ENC id=9 bank=1 fwd_id=SENDER:109 type=NRPN nrpn=258 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:14 ports=0010001000000000
 # Perc 2
-EVENT_ENC id=10 fwd_id=SENDER:110 type=NRPN nrpn=268 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:23 ports=0010001000000000
+EVENT_ENC id=10 bank=1 fwd_id=SENDER:110 type=NRPN nrpn=268 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:23 ports=0010001000000000
 # Perc 3
-EVENT_ENC id=11 fwd_id=SENDER:111 type=NRPN nrpn=278 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:33 ports=0010001000000000
+EVENT_ENC id=11 bank=1 fwd_id=SENDER:111 type=NRPN nrpn=278 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:33 ports=0010001000000000
 # Perc 4
-EVENT_ENC id=12 fwd_id=SENDER:112 type=NRPN nrpn=288 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:42 ports=0010001000000000
+EVENT_ENC id=12 bank=1 fwd_id=SENDER:112 type=NRPN nrpn=288 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:42 ports=0010001000000000
 # HiHat Closed
-EVENT_ENC id=13 fwd_id=SENDER:113 type=NRPN nrpn=298 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:51 ports=0010001000000000
+EVENT_ENC id=13 bank=1 fwd_id=SENDER:113 type=NRPN nrpn=298 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:51 ports=0010001000000000
 # HiHat Open
-EVENT_ENC id=14 fwd_id=SENDER:114 type=NRPN nrpn=308 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:57 ports=0010001000000000
+EVENT_ENC id=14 bank=1 fwd_id=SENDER:114 type=NRPN nrpn=308 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:57 ports=0010001000000000
 # Crash
-EVENT_ENC id=15 fwd_id=SENDER:115 type=NRPN nrpn=318 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:62 ports=0010001000000000
+EVENT_ENC id=15 bank=1 fwd_id=SENDER:115 type=NRPN nrpn=318 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:62 ports=0010001000000000
 # Clap
-EVENT_ENC id=16 fwd_id=SENDER:116 type=NRPN nrpn=328 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:68 ports=0010001000000000
+EVENT_ENC id=16 bank=1 fwd_id=SENDER:116 type=NRPN nrpn=328 nrpn_format=MsbOnly range=0:127 chn=16 syxdump_pos=4001:68 ports=0010001000000000
 
 #####################################################
 #Pitch Modulation modifiers - banks 1&2 - 3rd display 
@@ -220,20 +220,20 @@ EVENT_ENC id=32 bank=0 fwd_id=SENDER:132 type=NRPN nrpn=334 nrpn_format=MsbOnly 
 ###############################################################################
 
 # Input Gain Setters for Audio In 1 & 2
-EVENT_ENC id=41 fwd_id=SENDER:141 type=NRPN nrpn=360 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-EVENT_ENC id=42 fwd_id=SENDER:142 type=NRPN nrpn=361 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
+EVENT_ENC id=41 bank=3  fwd_id=SENDER:141 type=NRPN nrpn=360 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
+EVENT_ENC id=42 bank=3  fwd_id=SENDER:142 type=NRPN nrpn=361 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
 
 #Delay Type Switch
-EVENT_ENC id=43 fwd_id=SENDER:143 type=NRPN nrpn=363 nrpn_format=MsbOnly range=0:2 value=0 chn=16 ports=0010001000000000
+EVENT_ENC id=43 bank=3 fwd_id=SENDER:143 type=NRPN nrpn=363 nrpn_format=MsbOnly range=0:2 value=0 chn=16 ports=0010001000000000
 #EVENT_ENC id=44
 
 # Delay Depth
-EVENT_ENC id=45 fwd_id=SENDER:145 type=NRPN nrpn=356 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:5 chn=16 ports=0010001000000000
+EVENT_ENC id=45 bank=3  fwd_id=SENDER:145 type=NRPN nrpn=356 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:5 chn=16 ports=0010001000000000
 # Delay Time
-EVENT_ENC id=46 fwd_id=SENDER:146 type=NRPN nrpn=357 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:6 chn=16 ports=0010001000000000
+EVENT_ENC id=46 bank=3  fwd_id=SENDER:146 type=NRPN nrpn=357 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:6 chn=16 ports=0010001000000000
 
 # Accent Level
-EVENT_ENC id=47 fwd_id=SENDER:147 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
+EVENT_ENC id=47 bank=3 fwd_id=SENDER:147 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
 #EVENT_ENC id=48
 
 ################################################################################
@@ -336,30 +336,30 @@ EVENT_ENC id=88 fwd_id=SENDER:188 bank=7 type=NRPN nrpn=335 nrpn_format=MsbOnly 
 #########################
 
 # Display 1 - all pages - Level modifiers
-#EVENT_SENDER id=101  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=101 fwd_id=RECEIVER:101 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
 
 # TEST: FORWARD SENDER 101 TO SENDER 1001 SENDER 1 -> WRITE DISPLAY, SENDER 1001 -> WRITE LED-RING  => WORKS OUT !!!
-EVENT_SENDER id=101 fwd_id=SENDER:1001 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=1001 type=CC cc=32 chn=1 range=map3 ports=1000100000000000
+#EVENT_SENDER id=101 fwd_id=SENDER:1001 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
+#EVENT_SENDER id=1001 type=CC cc=32 chn=1 range=map3 ports=1000100000000000
 # TEST END
 
 EVENT_SENDER id=102 fwd_id=RECEIVER:102 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 63 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=103  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 70 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=104  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=105  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=106  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 91 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=107  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 98 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=108  bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 105 ^macdis 0xf7" ports=1000100000000000 
+EVENT_SENDER id=103 fwd_id=RECEIVER:103 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=104 fwd_id=RECEIVER:104 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=105 fwd_id=RECEIVER:105 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=106 fwd_id=RECEIVER:106 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=107 fwd_id=RECEIVER:107 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=108 fwd_id=RECEIVER:108 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 105 ^macdis 0xf7" ports=1000100000000000 
 
 # Display 2 - first/second page - Pitch modifiers
-EVENT_SENDER id=109 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=110 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=111 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=112 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=113 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=114 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=115 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=116 fwd_id=RECEIVER:116 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^macdis 0xf7" ports=1000100000000000 
+EVENT_SENDER id=109 bank=1 fwd_id=RECEIVER:109 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=110 bank=1 fwd_id=RECEIVER:110 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=111 bank=1 fwd_id=RECEIVER:111 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=112 bank=1 fwd_id=RECEIVER:112 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=113 bank=1 fwd_id=RECEIVER:113 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=114 bank=1 fwd_id=RECEIVER:114 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=115 bank=1 fwd_id=RECEIVER:115 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=116 bank=1 fwd_id=RECEIVER:116 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^macdis 0xf7" ports=1000100000000000 
 
 # Display 3 - first page - Pitch Modulation modifiers for Sounds 1 & 2
 EVENT_SENDER id=117  bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7"  ports=1000100000000000
@@ -385,43 +385,43 @@ EVENT_SENDER id=132 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 105 
 
 # Display 3 - second page - Pitch Modulation modifiers for Sounds 3 & 4
 EVENT_SENDER id=133 fwd_id=RECEIVER:133 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=134 fwd_id=RECEIVER:134 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7" syxdump_pos=4001:35 ports=1000100000000000
-EVENT_SENDER id=135 fwd_id=RECEIVER:135 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^label 0xf7" syxdump_pos=4001:34 label="^modtype" ports=1000100000000000
+EVENT_SENDER id=134 fwd_id=RECEIVER:134 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=135 fwd_id=RECEIVER:135 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^label 0xf7"  label="^modtype" ports=1000100000000000
 #EVENT_SENDER id=136 
 #EVENT_SENDER id=137 
-EVENT_SENDER id=138 fwd_id=RECEIVER:138 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7" syxdump_pos=4001:45 ports=1000100000000000 
-EVENT_SENDER id=139 fwd_id=RECEIVER:139 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7" syxdump_pos=4001:44 ports=1000100000000000 
-EVENT_SENDER id=140 fwd_id=RECEIVER:140 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^label 0xf7" syxdump_pos=4001:43 label="^modtype" ports=1000100000000000 
+EVENT_SENDER id=138 fwd_id=RECEIVER:138 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=139 fwd_id=RECEIVER:139 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=140 fwd_id=RECEIVER:140 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^label 0xf7"  label="^modtype" ports=1000100000000000 
 
 # Display 2 - Delay Settings, Audio Input Gain Setters, Accent Level - banks >=3
-EVENT_SENDER id=141 fwd_id=RECEIVER:141 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=142 fwd_id=RECEIVER:142 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=143 fwd_id=RECEIVER:143 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^label 0xf7" ports=1000100000000000 label="^deltyp"
+EVENT_SENDER id=141 bank=3 fwd_id=RECEIVER:141  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=142 bank=3 fwd_id=RECEIVER:142  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=143 bank=3 fwd_id=RECEIVER:143  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^label 0xf7" ports=1000100000000000 label="^deltyp"
 #EVENT_SENDER id=144 
-EVENT_SENDER id=145 fwd_id=RECEIVER:145 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=146 fwd_id=RECEIVER:146 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=147 fwd_id=RECEIVER:147 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=145 bank=3 fwd_id=RECEIVER:145  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=146 bank=3 fwd_id=RECEIVER:146  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=147 bank=3 fwd_id=RECEIVER:147  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
 #EVENT_SENDER id=148  
 
 # Pitch Modulation modifier Waveforms & Ring Mod Switches - bank 3 - 3rd display
-EVENT_SENDER id=149 bank=3 fwd_id=RECEIVER:149 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^label 0xf7" syxdump_pos=4001:15 ports=1000100000000000 label="^modwave"
-EVENT_SENDER id=150 bank=3 fwd_id=RECEIVER:150 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^label 0xf7" syxdump_pos=4001:25 ports=1000100000000000 label="^modwave"
-EVENT_SENDER id=151 bank=3 fwd_id=RECEIVER:151 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^label 0xf7" syxdump_pos=4001:34 ports=1000100000000000 label="^modwave"
-EVENT_SENDER id=152 bank=3 fwd_id=RECEIVER:152 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^label 0xf7" syxdump_pos=4001:43 ports=1000100000000000 label="^modwave"
+EVENT_SENDER id=149 bank=3 fwd_id=RECEIVER:149 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^label 0xf7"  ports=1000100000000000 label="^modwave"
+EVENT_SENDER id=150 bank=3 fwd_id=RECEIVER:150 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^label 0xf7"  ports=1000100000000000 label="^modwave"
+EVENT_SENDER id=151 bank=3 fwd_id=RECEIVER:151 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^label 0xf7"  ports=1000100000000000 label="^modwave"
+EVENT_SENDER id=152 bank=3 fwd_id=RECEIVER:152 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^label 0xf7"  ports=1000100000000000 label="^modwave"
 #EVENT_SENDER id=153
 #EVENT_SENDER id=154
 EVENT_SENDER id=155 bank=3 fwd_id=RECEIVER:155 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^label 0xf7" ports=1000100000000000 label="^enable2"
 EVENT_SENDER id=156 bank=3 fwd_id=RECEIVER:156 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^label 0xf7" ports=1000100000000000 label="^enable2"
 
 # Display 3 - fourth page - Low Boost modifiers
-EVENT_SENDER id=157 fwd_id=RECEIVER:157 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7" syxdump_pos=4001:11 ports=1000100000000000
-EVENT_SENDER id=158 fwd_id=RECEIVER:158 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7" syxdump_pos=4001:20 ports=1000100000000000
-EVENT_SENDER id=159 fwd_id=RECEIVER:159 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7" syxdump_pos=4001:29 ports=1000100000000000
-EVENT_SENDER id=160 fwd_id=RECEIVER:160 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^macdis 0xf7" syxdump_pos=4001:38 ports=1000100000000000
-EVENT_SENDER id=161 fwd_id=RECEIVER:161 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7" syxdump_pos=4001:47 ports=1000100000000000
-EVENT_SENDER id=162 fwd_id=RECEIVER:162 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7" syxdump_pos=4001:53 ports=1000100000000000 
-EVENT_SENDER id=163 fwd_id=RECEIVER:163 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7" syxdump_pos=4001:59 ports=1000100000000000 
-EVENT_SENDER id=164 fwd_id=RECEIVER:164 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^macdis 0xf7" syxdump_pos=4001:65 ports=1000100000000000 
+EVENT_SENDER id=157 fwd_id=RECEIVER:157 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=158 fwd_id=RECEIVER:158 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=159 fwd_id=RECEIVER:159 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=160 fwd_id=RECEIVER:160 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=161 fwd_id=RECEIVER:161 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=162 fwd_id=RECEIVER:162 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=163 fwd_id=RECEIVER:163 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=164 fwd_id=RECEIVER:164 bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^macdis 0xf7" ports=1000100000000000 
 
 # Display 3 - fifth page - Pan modifiers
 EVENT_SENDER id=165 fwd_id=RECEIVER:165 bank=5 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7" syxdump_pos=4001:12 ports=1000100000000000
@@ -459,112 +459,112 @@ EVENT_SENDER id=188 fwd_id=RECEIVER:188 bank=7 type=SysEx stream="0xf0 0x00 0x00
 #######################
 
 # Display 1 - Level Params
-EVENT_RECEIVER id=101 fwd_id=SENDER:301 bank=0 type=NRPN nrpn=263 chn=16 ports=1000001000000000
+EVENT_RECEIVER id=101 fwd_id=SENDER:301 bank=0 type=NRPN nrpn=263 chn=16 ports=0000001000000000
 EVENT_SENDER id= 301  bank=0 type=CC cc=32 chn=1 range=map3
 EVENT_RECEIVER id=102 fwd_id=SENDER:302 bank=0 type=NRPN nrpn=273 chn=16 ports=0000001000000000
 EVENT_SENDER id= 302  bank=0 type=CC cc=33 chn=1 range=map3
-EVENT_RECEIVER id=103 fwd_id=SENDER:303 bank=0 type=NRPN nrpn=283 chn=16 ports=0010001000000000
+EVENT_RECEIVER id=103 fwd_id=SENDER:303 bank=0 type=NRPN nrpn=283 chn=16 ports=0000001000000000
 EVENT_SENDER id= 303  bank=0 type=CC cc=34 chn=1 range=map3
-EVENT_RECEIVER id=104 fwd_id=SENDER:304 bank=0 type=NRPN nrpn=293 chn=16 ports=1000100000000000
+EVENT_RECEIVER id=104 fwd_id=SENDER:304 bank=0 type=NRPN nrpn=293 chn=16 ports=0000001000000000
 EVENT_SENDER id= 304  bank=0 type=CC cc=35 chn=1 range=map3
-EVENT_RECEIVER id=105 fwd_id=SENDER:305 bank=0 type=NRPN nrpn=303 chn=16 ports=1000100000000000
+EVENT_RECEIVER id=105 fwd_id=SENDER:305 bank=0 type=NRPN nrpn=303 chn=16 ports=0000001000000000
 EVENT_SENDER id= 305  bank=0 type=CC cc=36 chn=1 range=map3
-EVENT_RECEIVER id=106 fwd_id=SENDER:306 bank=0 type=NRPN nrpn=313 chn=16 ports=1000100000000000
+EVENT_RECEIVER id=106 fwd_id=SENDER:306 bank=0 type=NRPN nrpn=313 chn=16 ports=0000001000000000
 EVENT_SENDER id= 306  bank=0 type=CC cc=37 chn=1 range=map3
-EVENT_RECEIVER id=107 fwd_id=SENDER:307 bank=0 type=CC cc=38 chn=16 ports=1000100000000000
+EVENT_RECEIVER id=107 fwd_id=SENDER:307 bank=0 type=CC cc=38 chn=16 ports=0000001000000000
 EVENT_SENDER id= 307  bank=0 type=CC cc=38 chn=1 range=map3
-EVENT_RECEIVER id=108 fwd_id=SENDER:308 bank=0 type=CC cc=39 chn=16 ports=1000100000000000
+EVENT_RECEIVER id=108 fwd_id=SENDER:308 bank=0 type=CC cc=39 chn=16 ports=0000001000000000
 EVENT_SENDER id= 308  bank=0 type=CC cc=39 chn=1 range=map3
 
 # Display 2 - banks 1 & 2 - Pitch modifiers
-EVENT_RECEIVER id=109 fwd_id=SENDER:309  type=CC cc=40 chn=16 ports=1000100000000000
-EVENT_SENDER id= 309  type=CC cc=40 chn=1 range=map3
-EVENT_RECEIVER id=110 fwd_id=SENDER:310  type=CC cc=41 chn=16 ports=1000100000000000
-EVENT_SENDER id= 310  type=CC cc=41 chn=1 range=map3
-EVENT_RECEIVER id=111 fwd_id=SENDER:311  type=CC cc=42 chn=16 ports=1000100000000000
-EVENT_SENDER id= 311  type=CC cc=42 chn=1 range=map3
-EVENT_RECEIVER id=112 fwd_id=SENDER:312  type=CC cc=43 chn=16 ports=1000100000000000
-EVENT_SENDER id= 312  type=CC cc=43 chn=1 range=map3
-EVENT_RECEIVER id=113 fwd_id=SENDER:313  type=CC cc=44 chn=16 ports=1000100000000000
-EVENT_SENDER id= 313  type=CC cc=44 chn=1 range=map3
-EVENT_RECEIVER id=114 fwd_id=SENDER:314  type=CC cc=45 chn=16 ports=1000100000000000
-EVENT_SENDER id= 314  type=CC cc=45 chn=1 range=map3
-EVENT_RECEIVER id=115 fwd_id=SENDER:315  type=CC cc=46 chn=16 ports=1000100000000000
-EVENT_SENDER id= 315  type=CC cc=46 chn=1 range=map3
-EVENT_RECEIVER id=116 fwd_id=SENDER:316  type=CC cc=47 chn=16 ports=1000100000000000
-EVENT_SENDER id= 316  type=CC cc=47 chn=1 range=map3
+EVENT_RECEIVER id=109 bank=1 fwd_id=SENDER:309  type=CC cc=40 chn=16 ports=0000001000000000
+EVENT_SENDER id= 309  bank=1 type=CC cc=40 chn=1 range=map3
+EVENT_RECEIVER id=110 bank=1 fwd_id=SENDER:310  type=CC cc=41 chn=16 ports=0000001000000000
+EVENT_SENDER id= 310  bank=1 type=CC cc=41 chn=1 range=map3
+EVENT_RECEIVER id=111 bank=1 fwd_id=SENDER:311  type=CC cc=42 chn=16 ports=0000001000000000
+EVENT_SENDER id= 311  bank=1 type=CC cc=42 chn=1 range=map3
+EVENT_RECEIVER id=112 bank=1 fwd_id=SENDER:312  type=CC cc=43 chn=16 ports=0000001000000000
+EVENT_SENDER id= 312  bank=1 type=CC cc=43 chn=1 range=map3
+EVENT_RECEIVER id=113 bank=1 fwd_id=SENDER:313  type=CC cc=44 chn=16 ports=0000001000000000
+EVENT_SENDER id= 313  bank=1 type=CC cc=44 chn=1 range=map3
+EVENT_RECEIVER id=114 bank=1 fwd_id=SENDER:314  type=CC cc=45 chn=16 ports=0000001000000000
+EVENT_SENDER id= 314  bank=1 type=CC cc=45 chn=1 range=map3
+EVENT_RECEIVER id=115 bank=1 fwd_id=SENDER:315  type=CC cc=46 chn=16 ports=0000001000000000
+EVENT_SENDER id= 315  bank=1 type=CC cc=46 chn=1 range=map3
+EVENT_RECEIVER id=116 bank=1 fwd_id=SENDER:316  type=CC cc=47 chn=16 ports=0000001000000000
+EVENT_SENDER id= 316  bank=1 type=CC cc=47 chn=1 range=map3
 
 # Display 3 - first page/bank - Pitch Modulation modifiers for Sounds 1 & 2
-EVENT_RECEIVER id=117 fwd_id=SENDER:317 bank=1  type=CC cc=48 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=117 fwd_id=SENDER:317 bank=1  type=CC cc=48 chn=1 ports=0000001000000000
 EVENT_SENDER id= 317  bank=1 type=CC cc=48 chn=1 range=map3
-EVENT_RECEIVER id=118 fwd_id=SENDER:318 bank=1  type=CC cc=49 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=118 fwd_id=SENDER:318 bank=1  type=CC cc=49 chn=1 ports=0000001000000000
 EVENT_SENDER id= 318  bank=1 type=CC cc=49 chn=1 range=map3
-EVENT_RECEIVER id=119 fwd_id=SENDER:319 bank=1  type=CC cc=50 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=119 fwd_id=SENDER:319 bank=1  type=CC cc=50 chn=1 ports=0000001000000000
 EVENT_SENDER id= 319  bank=1 type=CC cc=50 chn=1 range=map3
-#EVENT_RECEIVER id=120 fwd_id=SENDER:320 bank=1  type=CC cc=51 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=120 fwd_id=SENDER:320 bank=1  type=CC cc=51 chn=1 ports=0000001000000000
 #EVENT_SENDER id= 320  bank=1 type=CC cc=51 chn=1 range=map3
-#EVENT_RECEIVER id=121 fwd_id=SENDER:321 bank=1  type=CC cc=52 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=121 fwd_id=SENDER:321 bank=1  type=CC cc=52 chn=1 ports=0000001000000000
 #EVENT_SENDER id= 321  bank=1 type=CC cc=52 chn=1 range=map3
-EVENT_RECEIVER id=122 fwd_id=SENDER:322 bank=1  type=CC cc=53 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=122 fwd_id=SENDER:322 bank=1  type=CC cc=53 chn=1 ports=0000001000000000
 EVENT_SENDER id= 322  bank=1 type=CC cc=53 chn=1 range=map3
-EVENT_RECEIVER id=123 fwd_id=SENDER:323 bank=1  type=CC cc=54 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=123 fwd_id=SENDER:323 bank=1  type=CC cc=54 chn=1 ports=0000001000000000
 EVENT_SENDER id= 323  bank=1 type=CC cc=54 chn=1 range=map3
-EVENT_RECEIVER id=124 fwd_id=SENDER:324 bank=1  type=CC cc=55 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=124 fwd_id=SENDER:324 bank=1  type=CC cc=55 chn=1 ports=0000001000000000
 EVENT_SENDER id= 324  bank=1 type=CC cc=55 chn=1 range=map3
 
 # Display 4 - Decay Params
-EVENT_RECEIVER id=125 fwd_id=SENDER:325 bank=0 type=CC cc=56 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=125 fwd_id=SENDER:325 bank=0 type=CC cc=56 chn=1 ports=0000001000000000
 EVENT_SENDER id= 325  bank=0 type=CC cc=56 chn=1 range=map3
-EVENT_RECEIVER id=126 fwd_id=SENDER:326 bank=0 type=CC cc=57 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=126 fwd_id=SENDER:326 bank=0 type=CC cc=57 chn=1 ports=0000001000000000
 EVENT_SENDER id= 326  bank=0 type=CC cc=57 chn=1 range=map3
-EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=0 type=CC cc=58 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=0 type=CC cc=58 chn=1 ports=0000001000000000
 EVENT_SENDER id= 327  bank=0 type=CC cc=58 chn=1 range=map3
-EVENT_RECEIVER id=128 fwd_id=SENDER:328 bank=0 type=CC cc=59 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=128 fwd_id=SENDER:328 bank=0 type=CC cc=59 chn=1 ports=0000001000000000
 EVENT_SENDER id= 328  bank=0 type=CC cc=59 chn=1 range=map3
-EVENT_RECEIVER id=129 fwd_id=SENDER:329 bank=0 type=CC cc=60 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=129 fwd_id=SENDER:329 bank=0 type=CC cc=60 chn=1 ports=0000001000000000
 EVENT_SENDER id= 329  bank=0 type=CC cc=60 chn=1 range=map3
-EVENT_RECEIVER id=130 fwd_id=SENDER:330 bank=0 type=CC cc=61 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=130 fwd_id=SENDER:330 bank=0 type=CC cc=61 chn=1 ports=0000001000000000
 EVENT_SENDER id= 330  bank=0 type=CC cc=61 chn=1 range=map3
-EVENT_RECEIVER id=131 fwd_id=SENDER:331 bank=0 type=CC cc=62 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=131 fwd_id=SENDER:331 bank=0 type=CC cc=62 chn=1 ports=0000001000000000
 EVENT_SENDER id= 331  bank=0 type=CC cc=62 chn=1 range=map3
-EVENT_RECEIVER id=132 fwd_id=SENDER:332 bank=0 type=CC cc=63 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=132 fwd_id=SENDER:332 bank=0 type=CC cc=63 chn=1 ports=0000001000000000
 EVENT_SENDER id= 332  bank=0 type=CC cc=63 chn=1 range=map3
 
 # Display 3 - second page/bank - Pitch Modulation modifiers for Sounds 3 & 4
-EVENT_RECEIVER id=133 fwd_id=SENDER:333 bank=2  type=CC cc=48 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=133 fwd_id=SENDER:333 bank=2  type=CC cc=48 chn=1 ports=0000001000000000
 EVENT_SENDER id= 333  bank=2 type=CC cc=48 chn=1 range=map3
-EVENT_RECEIVER id=134 fwd_id=SENDER:334 bank=2  type=CC cc=49 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=134 fwd_id=SENDER:334 bank=2  type=CC cc=49 chn=1 ports=0000001000000000
 EVENT_SENDER id= 334  bank=2 type=CC cc=49 chn=1 range=map3
-EVENT_RECEIVER id=135 fwd_id=SENDER:335 bank=2  type=CC cc=50 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=135 fwd_id=SENDER:335 bank=2  type=CC cc=50 chn=1 ports=0000001000000000
 EVENT_SENDER id= 335  bank=2 type=CC cc=50 chn=1 range=map3
-#EVENT_RECEIVER id=136 fwd_id=SENDER:336 bank=2  type=CC cc=51 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=136 fwd_id=SENDER:336 bank=2  type=CC cc=51 chn=1 ports=0000001000000000
 #EVENT_SENDER id= 336  bank=2 type=CC cc=51 chn=1 range=map3
-#EVENT_RECEIVER id=137 fwd_id=SENDER:337 bank=2  type=CC cc=52 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=137 fwd_id=SENDER:337 bank=2  type=CC cc=52 chn=1 ports=0000001000000000
 #EVENT_SENDER id= 337  bank=2 type=CC cc=52 chn=1 range=map3
-EVENT_RECEIVER id=138 fwd_id=SENDER:338 bank=2  type=CC cc=53 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=138 fwd_id=SENDER:338 bank=2  type=CC cc=53 chn=1 ports=0000001000000000
 EVENT_SENDER id= 338  bank=2 type=CC cc=53 chn=1 range=map3
-EVENT_RECEIVER id=139 fwd_id=SENDER:339 bank=2  type=CC cc=54 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=139 fwd_id=SENDER:339 bank=2  type=CC cc=54 chn=1 ports=0000001000000000
 EVENT_SENDER id= 339  bank=2 type=CC cc=54 chn=1 range=map3
-EVENT_RECEIVER id=140 fwd_id=SENDER:340 bank=2  type=CC cc=55 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=140 fwd_id=SENDER:340 bank=2  type=CC cc=55 chn=1 ports=0000001000000000
 EVENT_SENDER id= 340  bank=2 type=CC cc=55 chn=1 range=map3
 
 # Display 2 - banks >=3 - Audio Input 1 & 2 Gain, Delay, Accent Level modifiers
-EVENT_RECEIVER id=141 fwd_id=SENDER:341  type=CC cc=40 chn=1 ports=1000100000000000
-EVENT_SENDER id= 341  type=CC cc=40 chn=1 range=map3
-EVENT_RECEIVER id=142 fwd_id=SENDER:342  type=CC cc=41 chn=1 ports=1000100000000000
-EVENT_SENDER id= 342  type=CC cc=41 chn=1 range=map3
-EVENT_RECEIVER id=143 fwd_id=SENDER:343  type=CC cc=42 chn=1 ports=1000100000000000
-EVENT_SENDER id= 343  type=CC cc=42 chn=1 range=map3
-#EVENT_RECEIVER id=144 fwd_id=SENDER:344  type=CC cc=43 chn=1 ports=1000100000000000
-#EVENT_SENDER id= 344  type=CC cc=43 chn=1 range=map3
-EVENT_RECEIVER id=145 fwd_id=SENDER:345  type=CC cc=44 chn=1 ports=1000100000000000
-EVENT_SENDER id= 345  type=CC cc=44 chn=1 range=map3
-EVENT_RECEIVER id=146 fwd_id=SENDER:346  type=CC cc=45 chn=1 ports=1000100000000000
-EVENT_SENDER id= 346  type=CC cc=45 chn=1 range=map3
-EVENT_RECEIVER id=147 fwd_id=SENDER:347  type=CC cc=46 chn=1 ports=1000100000000000
-EVENT_SENDER id= 347  type=CC cc=46 chn=1 range=map3
-#EVENT_RECEIVER id=148 fwd_id=SENDER:348  type=CC cc=47 chn=1 ports=1000100000000000
-#EVENT_SENDER id= 348  type=CC cc=47 chn=1 range=map3
+EVENT_RECEIVER id=141 bank=3 fwd_id=SENDER:341  type=NRPN nrpn=360 chn=16 ports=0000001000000000
+EVENT_SENDER id= 341  bank=3 type=CC cc=40 chn=1 range=map3
+EVENT_RECEIVER id=142 bank=3 fwd_id=SENDER:342  type=NRPN nrpn=361 chn=16 ports=0000001000000000
+EVENT_SENDER id= 342  bank=3 type=CC cc=41 chn=1 range=map3
+EVENT_RECEIVER id=143 bank=3 fwd_id=SENDER:343  type=NRPN nrpn=363 chn=16 ports=0000001000000000
+EVENT_SENDER id= 343  bank=3 type=CC cc=42 chn=1 range=map3
+#EVENT_RECEIVER id=144 
+#EVENT_SENDER id= 344  
+EVENT_RECEIVER id=145 bank=3 fwd_id=SENDER:345  type=NRPN nrpn=356 chn=16 ports=0000001000000000
+EVENT_SENDER id= 345  bank=3 type=CC cc=44 chn=1 range=map3
+EVENT_RECEIVER id=146 bank=3 fwd_id=SENDER:346  type=NRPN nrpn=357 chn=16 ports=0000001000000000
+EVENT_SENDER id= 346  bank=3 type=CC cc=45 chn=1 range=map3
+EVENT_RECEIVER id=147 bank=3 fwd_id=SENDER:347  type=NRPN nrpn=362 chn=16 ports=0000001000000000
+EVENT_SENDER id= 347  bank=3 type=CC cc=46 chn=1 range=map3
+#EVENT_RECEIVER id=148 
+#EVENT_SENDER id= 348  
 
 # Pitch Modulation modifier Waveforms & Ring Mod Switches - bank 3 - 3rd display
 
@@ -701,13 +701,17 @@ EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x40 ^dump
 EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 type=NoteOn key=0x0a chn=1 range=0:1
 EVENT_SENDER id=4042 if_equal_stop_on_match=RECEIVER:4042:1 type=Meta meta=IncBank meta=RunSection:0
 EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 type=NoteOn key=0x09 chn=1 range=0:1
-EVENT_SENDER id=4043 if_equal_stop_on_match=RECEIVER:4043:1 type=Meta chn=1 meta=DecBank meta=RunSection:0
+EVENT_SENDER id=4043 if_equal_stop_on_match=RECEIVER:4043:1 type=Meta meta=DecBank meta=RunSection:0
 
 #Program Selectors
 EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
 EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
 EVENT_ENC id=4040 hw_id=128 type=NRPN nrpn=22 chn=5 fwd_id=SENDER:4041 value=0
 EVENT_SENDER id=4041 type=ProgramChange fwd_id=SENDER:4001 chn=16 ports=0010001000000000
+
+#home button (Control Button on C4)
+EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10
 
 #LED map 3 - left to right fill
 MAP3/BYTEI 0:33 10:34 24:35 35:36 48:37 58:38 70:39 84:40 100:41 115:42 127:43

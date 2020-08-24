@@ -4151,7 +4151,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     }
 
     //MICHA
-    MIOS32_MIDI_SendDebugMessage("Sender Id = %d", item->id & 0xfff);
+    //MIOS32_MIDI_SendDebugMessage("Sender Id = %d", item->id & 0xfff);
 
     // map?
     {
@@ -4175,7 +4175,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     int receiver_ix = item->id & 0xfff;
 
     //MICHA
-        MIOS32_MIDI_SendDebugMessage("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
+        //MIOS32_MIDI_SendDebugMessage("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
 
     if( debug_verbose_level >= DEBUG_VERBOSE_LEVEL_INFO ) {
       DEBUG_MSG("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
