@@ -1,0 +1,34 @@
+COND_LABEL motseq
+COND =0   " Off         |"
+COND =1   "Smooth       |"
+COND =2   "Trig Hold    |"
+COND_ELSE " else        |"
+
+COND_LABEL deltyp
+COND =0   "NonLin      "
+COND =1   "MotSeq      "
+COND =2   "Tempo       "
+COND_ELSE " else       "
+
+COND_LABEL enable
+COND =0   " Off  "
+COND =1   "  On  "
+COND_ELSE "on/off"
+
+COND_LABEL enable2
+COND =63  " Off  "
+COND =64  "  On  "
+COND_ELSE "on/off"
+
+COND_LABEL modtype
+COND =0	  " Saw  "
+COND =1   "Square"
+COND =2   " Tri  "
+COND =3   " S&H  "
+COND =4   "Noise "
+COND =5   " Env  "
+
+COND_LABEL modwave
+COND =63  " SINE "
+COND =64  " TRI  "
+COND_ELSE "modwav"

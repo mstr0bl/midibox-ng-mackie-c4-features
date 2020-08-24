@@ -1,0 +1,13 @@
+RESET_HW
+
+
+# Slot 2.1 Encoder Press for er 1 dump
+#pgrm mode select with simultaneous dump request for currently selected program
+EVENT_RECEIVER id= 3001 bank= 1 fwd_id=SENDER:3002 type=NoteOn chn=1 key= 40 range= 0:1 
+EVENT_SENDER id= 3002 if_equal_stop_on_match=RECEIVER:3001:1 type=Meta meta=RunSection:1
+
+#ER 1 Dump
+EVENT_SENDER id= 4001 bank=1 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x10 0xf7" ports=0000001000000000 label="Current Prgrm Dump Request"
+#current program dump receiver
+EVENT_RECEIVER id= 1 bank=1 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x40 ^dump 0xf7" ports=0000001000000000 label="Current Program Dump received"
+#EVENT_SENDER id= 4002 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x40 ^dump 0xf7"

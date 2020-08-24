@@ -1,0 +1,9 @@
+if ^section == 0
+ set ^section 1
+ exit
+endif
+
+if ^section == 1
+ trigger (id)SENDER:4001
+ exit
+endif

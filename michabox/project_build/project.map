@@ -7297,7 +7297,7 @@ END GROUP
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 0x080400d8                __exidx_end = .
 
-.rodata         0x080400d8    0x13fd0
+.rodata         0x080400d8    0x13f88
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.1
                 0x080400d8       0xbd project_build/src/app.o
@@ -7322,400 +7322,399 @@ END GROUP
  .rodata.CSWTCH.257
                 0x080402c4       0x20 project_build/src/mbng_event.o
  .rodata.str1.1
-                0x080402e4     0x112f project_build/src/mbng_event.o
-                               0x119e (size before relaxing)
- *fill*         0x08041413        0x1 00
+                0x080402e4     0x10e8 project_build/src/mbng_event.o
+                               0x1157 (size before relaxing)
  .rodata.CSWTCH.294
-                0x08041414       0xe8 project_build/src/mbng_event.o
+                0x080413cc       0xe8 project_build/src/mbng_event.o
  .rodata.CSWTCH.280
-                0x080414fc       0x2c project_build/src/mbng_event.o
+                0x080414b4       0x2c project_build/src/mbng_event.o
  .rodata.CSWTCH.253
-                0x08041528       0x3c project_build/src/mbng_event.o
+                0x080414e0       0x3c project_build/src/mbng_event.o
  .rodata.CSWTCH.272
-                0x08041564       0x20 project_build/src/mbng_event.o
+                0x0804151c       0x20 project_build/src/mbng_event.o
  .rodata.str1.1
-                0x08041584       0x6b project_build/src/mbng_din.o
+                0x0804153c       0x6b project_build/src/mbng_din.o
  .rodata.str1.1
-                0x080415ef       0x27 project_build/src/mbng_dout.o
- *fill*         0x08041616        0x2 00
+                0x080415a7       0x27 project_build/src/mbng_dout.o
+ *fill*         0x080415ce        0x2 00
  .rodata.dim_pattern
-                0x08041618       0x40 project_build/src/mbng_dout.o
- .rodata        0x08041658        0xc project_build/src/mbng_dio.o
+                0x080415d0       0x40 project_build/src/mbng_dout.o
+ .rodata        0x08041610        0xc project_build/src/mbng_dio.o
  .rodata.str1.1
-                0x08041664        0xf project_build/src/mbng_dio.o
+                0x0804161c        0xf project_build/src/mbng_dio.o
                                  0x13 (size before relaxing)
  .rodata.str1.1
-                0x08041673       0x29 project_build/src/mbng_rgbled.o
+                0x0804162b       0x29 project_build/src/mbng_rgbled.o
  .rodata.str1.1
-                0x0804169c       0xae project_build/src/mbng_enc.o
+                0x08041654       0xae project_build/src/mbng_enc.o
  .rodata.str1.1
-                0x0804174a       0xa0 project_build/src/mbng_ain.o
+                0x08041702       0xa0 project_build/src/mbng_ain.o
                                  0xa1 (size before relaxing)
  .rodata.str1.1
-                0x080417ea       0x71 project_build/src/mbng_ainser.o
+                0x080417a2       0x71 project_build/src/mbng_ainser.o
  .rodata.str1.1
-                0x0804185b       0x47 project_build/src/mbng_kb.o
+                0x08041813       0x47 project_build/src/mbng_kb.o
                                  0x6d (size before relaxing)
  .rodata.dout_matrix_pattern_preload
-                0x080418a2       0x88 project_build/src/mbng_matrix.o
+                0x0804185a       0x88 project_build/src/mbng_matrix.o
  .rodata.selection_4rows
-                0x0804192a       0x20 project_build/src/mbng_matrix.o
-                0x0804192a                selection_4rows
+                0x080418e2       0x20 project_build/src/mbng_matrix.o
+                0x080418e2                selection_4rows
  .rodata.lc_meter_pattern_preload
-                0x0804194a       0x22 project_build/src/mbng_matrix.o
+                0x08041902       0x22 project_build/src/mbng_matrix.o
  .rodata.selection_16rows
-                0x0804196c       0x20 project_build/src/mbng_matrix.o
-                0x0804196c                selection_16rows
+                0x08041924       0x20 project_build/src/mbng_matrix.o
+                0x08041924                selection_16rows
  .rodata.str1.1
-                0x0804198c       0xb2 project_build/src/mbng_matrix.o
+                0x08041944       0xb2 project_build/src/mbng_matrix.o
  .rodata.digit_patterns
-                0x08041a3e       0x40 project_build/src/mbng_matrix.o
+                0x080419f6       0x40 project_build/src/mbng_matrix.o
  .rodata.selection_8rows
-                0x08041a7e       0x20 project_build/src/mbng_matrix.o
-                0x08041a7e                selection_8rows
+                0x08041a36       0x20 project_build/src/mbng_matrix.o
+                0x08041a36                selection_8rows
  .rodata.str1.1
-                0x08041a9e       0xc1 project_build/src/mbng_cv.o
+                0x08041a56       0xc1 project_build/src/mbng_cv.o
  .rodata.str1.1
-                0x08041b5f       0x7d project_build/src/mbng_mf.o
- .rodata        0x08041bdc       0x24 project_build/src/mbng_lcd.o
+                0x08041b17       0x7d project_build/src/mbng_mf.o
+ .rodata        0x08041b94       0x24 project_build/src/mbng_lcd.o
  .rodata.str1.1
-                0x08041c00       0x59 project_build/src/mbng_lcd.o
+                0x08041bb8       0x59 project_build/src/mbng_lcd.o
                                  0x7a (size before relaxing)
  .rodata.charset_horiz_bars
-                0x08041c59       0x40 project_build/src/mbng_lcd.o
+                0x08041c11       0x40 project_build/src/mbng_lcd.o
  .rodata.charset_vert_bars
-                0x08041c99       0x40 project_build/src/mbng_lcd.o
+                0x08041c51       0x40 project_build/src/mbng_lcd.o
  .rodata.str1.1
-                0x08041cd9      0x172 project_build/src/mbng_file.o
- .rodata        0x08041e4b        0xd project_build/src/mbng_file_c.o
+                0x08041c91      0x172 project_build/src/mbng_file.o
+ .rodata        0x08041e03        0xd project_build/src/mbng_file_c.o
  .rodata.str1.1
-                0x08041e58     0x48cb project_build/src/mbng_file_c.o
+                0x08041e10     0x48cb project_build/src/mbng_file_c.o
                                0x4a2b (size before relaxing)
  .rodata.str1.1
-                0x08046723      0xdd3 project_build/src/mbng_file_l.o
+                0x080466db      0xdd3 project_build/src/mbng_file_l.o
                                 0xdfd (size before relaxing)
  .rodata.str1.1
-                0x080474f6      0x368 project_build/src/mbng_file_s.o
+                0x080474ae      0x368 project_build/src/mbng_file_s.o
                                 0x36a (size before relaxing)
  .rodata.str1.1
-                0x0804785e     0x16cf project_build/src/mbng_file_r.o
+                0x08047816     0x16cf project_build/src/mbng_file_r.o
                                0x170c (size before relaxing)
  .rodata.str1.1
-                0x08048f2d      0x23b project_build/src/mbng_file_k.o
+                0x08048ee5      0x23b project_build/src/mbng_file_k.o
                                 0x241 (size before relaxing)
  .rodata.str1.1
-                0x08049168     0x130c project_build/src/terminal.o
+                0x08049120     0x130c project_build/src/terminal.o
                                0x1407 (size before relaxing)
- .rodata        0x0804a474       0x24 project_build/src/scs_config.o
+ .rodata        0x0804a42c       0x24 project_build/src/scs_config.o
  .rodata.pageMON
-                0x0804a498       0x24 project_build/src/scs_config.o
-                0x0804a498                pageMON
+                0x0804a450       0x24 project_build/src/scs_config.o
+                0x0804a450                pageMON
  .rodata.pageVAR
-                0x0804a4bc       0xb4 project_build/src/scs_config.o
-                0x0804a4bc                pageVAR
+                0x0804a474       0xb4 project_build/src/scs_config.o
+                0x0804a474                pageVAR
  .rodata.pageROUT
-                0x0804a570       0xb4 project_build/src/scs_config.o
-                0x0804a570                pageROUT
+                0x0804a528       0xb4 project_build/src/scs_config.o
+                0x0804a528                pageROUT
  .rodata.pageOSC
-                0x0804a624       0xfc project_build/src/scs_config.o
-                0x0804a624                pageOSC
+                0x0804a5dc       0xfc project_build/src/scs_config.o
+                0x0804a5dc                pageOSC
  .rodata.str1.1
-                0x0804a720      0x204 project_build/src/scs_config.o
+                0x0804a6d8      0x204 project_build/src/scs_config.o
                                 0x237 (size before relaxing)
  .rodata.pageDsk
-                0x0804a924       0x48 project_build/src/scs_config.o
-                0x0804a924                pageDsk
+                0x0804a8dc       0x48 project_build/src/scs_config.o
+                0x0804a8dc                pageDsk
  .rodata.pageNetw
-                0x0804a96c       0xb4 project_build/src/scs_config.o
-                0x0804a96c                pageNetw
+                0x0804a924       0xb4 project_build/src/scs_config.o
+                0x0804a924                pageNetw
  .rodata.pageSnap
-                0x0804aa20       0x90 project_build/src/scs_config.o
-                0x0804aa20                pageSnap
+                0x0804a9d8       0x90 project_build/src/scs_config.o
+                0x0804a9d8                pageSnap
  .rodata.pageMClk
-                0x0804aab0       0x90 project_build/src/scs_config.o
-                0x0804aab0                pageMClk
+                0x0804aa68       0x90 project_build/src/scs_config.o
+                0x0804aa68                pageMClk
  .rodata.rootMode0
-                0x0804ab40       0xa0 project_build/src/scs_config.o
-                0x0804ab40                rootMode0
+                0x0804aaf8       0xa0 project_build/src/scs_config.o
+                0x0804aaf8                rootMode0
  .rodata.pageLearn
-                0x0804abe0       0x24 project_build/src/scs_config.o
-                0x0804abe0                pageLearn
+                0x0804ab98       0x24 project_build/src/scs_config.o
+                0x0804ab98                pageLearn
  .rodata.pageRun
-                0x0804ac04       0x6c project_build/src/scs_config.o
-                0x0804ac04                pageRun
+                0x0804abbc       0x6c project_build/src/scs_config.o
+                0x0804abbc                pageRun
  .rodata.str1.1
-                0x0804ac70      0x139 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
+                0x0804ac28      0x139 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
                                 0x15e (size before relaxing)
  .rodata.str1.1
-                0x0804ada9        0x5 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
+                0x0804ad61        0x5 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
  .rodata.str1.1
-                0x0804adae       0xb0 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
+                0x0804ad66       0xb0 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
  .rodata.mios32_dout_reverse_tab
-                0x0804ae5e      0x100 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
-                0x0804ae5e                mios32_dout_reverse_tab
- .rodata        0x0804af5e        0x4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+                0x0804ae16      0x100 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
+                0x0804ae16                mios32_dout_reverse_tab
+ .rodata        0x0804af16        0x4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
  .rodata.str1.1
-                0x0804af62       0x78 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+                0x0804af1a       0x78 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
                                  0x9b (size before relaxing)
  .rodata.default_parameters.9903
-                0x0804afda        0xa project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
- .rodata        0x0804afe4       0x28 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804af92        0xa project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+ .rodata        0x0804af9c       0x28 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
  .rodata.mios32_midi_pcktype_num_bytes
-                0x0804b00c       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
-                0x0804b00c                mios32_midi_pcktype_num_bytes
+                0x0804afc4       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804afc4                mios32_midi_pcktype_num_bytes
  .rodata.str1.1
-                0x0804b01c      0x106 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804afd4      0x106 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
                                 0x137 (size before relaxing)
  .rodata.mios32_midi_expected_bytes_system
-                0x0804b122       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
-                0x0804b122                mios32_midi_expected_bytes_system
+                0x0804b0da       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804b0da                mios32_midi_expected_bytes_system
  .rodata.mios32_midi_expected_bytes_common
-                0x0804b132        0x8 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
-                0x0804b132                mios32_midi_expected_bytes_common
+                0x0804b0ea        0x8 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804b0ea                mios32_midi_expected_bytes_common
  .rodata.mios32_midi_sysex_header
-                0x0804b13a        0x5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
-                0x0804b13a                mios32_midi_sysex_header
+                0x0804b0f2        0x5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+                0x0804b0f2                mios32_midi_sysex_header
  .rodata.str1.1
-                0x0804b13f      0x1dd project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
+                0x0804b0f7      0x1dd project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
  .rodata.CSWTCH.22
-                0x0804b31c        0x3 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
+                0x0804b2d4        0x3 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
  .rodata.str1.1
-                0x0804b31f       0x61 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
+                0x0804b2d7       0x61 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
  .rodata.str1.1
-                0x0804b380       0x11 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
- *fill*         0x0804b391        0x3 00
+                0x0804b338       0x11 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
+ *fill*         0x0804b349        0x3 00
  .rodata.j5_pin
-                0x0804b394       0x40 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
+                0x0804b34c       0x40 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
  .rodata.j10_pin
-                0x0804b3d4       0x80 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
+                0x0804b38c       0x80 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
  .rodata.timer_base
-                0x0804b454        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+                0x0804b40c        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
  .rodata.timer_irq_chn
-                0x0804b460        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
- .rodata.rcc    0x0804b46c        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+                0x0804b418        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+ .rodata.rcc    0x0804b424        0xc project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
  .rodata.adc_chn_map
-                0x0804b478       0x60 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
+                0x0804b430       0x60 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
  .rodata.USBH_USR_Callbacks
-                0x0804b4d8       0x48 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b490       0x48 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.MIOS32_USB_CLASS_cb
-                0x0804b520       0x30 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b4d8       0x30 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.USBD_LangIDDesc
-                0x0804b550        0x4 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b508        0x4 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.MIOS32_USB_DeviceDescriptor
-                0x0804b554       0x12 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b50c       0x12 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.MIOS32_USB_ConfigDescriptor_SingleUSB
-                0x0804b566       0xc5 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
- *fill*         0x0804b62b        0x1 00
+                0x0804b51e       0xc5 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+ *fill*         0x0804b5e3        0x1 00
  .rodata.USR_desc
-                0x0804b62c       0x1c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b5e4       0x1c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.str1.1
-                0x0804b648       0x1a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b600       0x1a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.MIOS32_USB_ConfigDescriptor
-                0x0804b662       0xc5 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
- *fill*         0x0804b727        0x1 00
+                0x0804b61a       0xc5 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+ *fill*         0x0804b6df        0x1 00
  .rodata.USBD_USR_Callbacks
-                0x0804b728       0x1c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+                0x0804b6e0       0x1c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
  .rodata.MIOS32_MIDI_USBH_Callbacks
-                0x0804b744       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
-                0x0804b744                MIOS32_MIDI_USBH_Callbacks
+                0x0804b6fc       0x10 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
+                0x0804b6fc                MIOS32_MIDI_USBH_Callbacks
  .rodata.str1.1
-                0x0804b754        0x7 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
- .rodata        0x0804b75b       0x80 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
+                0x0804b70c        0x7 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
+ .rodata        0x0804b713       0x80 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
  .rodata.str1.1
-                0x0804b7db        0x4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
+                0x0804b793        0x4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
  .rodata.CSWTCH.36
-                0x0804b7df        0x3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
- .rodata        0x0804b7e2        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
+                0x0804b797        0x3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
+ .rodata        0x0804b79a        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
  .rodata.str1.1
-                0x0804b7e6      0x634 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
+                0x0804b79e      0x634 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
                                 0x678 (size before relaxing)
  .rodata.GLCD_FONT_NORMAL
-                0x0804be1a      0x304 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
-                0x0804be1a                GLCD_FONT_NORMAL
+                0x0804bdd2      0x304 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
+                0x0804bdd2                GLCD_FONT_NORMAL
  .rodata.GLCD_FONT_NORMAL_INV
-                0x0804c11e      0x304 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
-                0x0804c11e                GLCD_FONT_NORMAL_INV
+                0x0804c0d6      0x304 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
+                0x0804c0d6                GLCD_FONT_NORMAL_INV
  .rodata.GLCD_FONT_BIG
-                0x0804c422     0x1804 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
-                0x0804c422                GLCD_FONT_BIG
+                0x0804c3da     0x1804 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
+                0x0804c3da                GLCD_FONT_BIG
  .rodata.GLCD_FONT_SMALL
-                0x0804dc26      0x204 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
-                0x0804dc26                GLCD_FONT_SMALL
+                0x0804dbde      0x204 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
+                0x0804dbde                GLCD_FONT_SMALL
  .rodata.GLCD_FONT_TINY
-                0x0804de2a      0x204 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
-                0x0804de2a                GLCD_FONT_TINY
+                0x0804dde2      0x204 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
+                0x0804dde2                GLCD_FONT_TINY
  .rodata.GLCD_FONT_KNOB_ICONS
-                0x0804e02e      0x484 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
-                0x0804e02e                GLCD_FONT_KNOB_ICONS
+                0x0804dfe6      0x484 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
+                0x0804dfe6                GLCD_FONT_KNOB_ICONS
  .rodata.GLCD_FONT_METER_ICONS_H
-                0x0804e4b2      0x384 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
-                0x0804e4b2                GLCD_FONT_METER_ICONS_H
+                0x0804e46a      0x384 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
+                0x0804e46a                GLCD_FONT_METER_ICONS_H
  .rodata.GLCD_FONT_METER_ICONS_V
-                0x0804e836      0x384 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
-                0x0804e836                GLCD_FONT_METER_ICONS_V
+                0x0804e7ee      0x384 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
+                0x0804e7ee                GLCD_FONT_METER_ICONS_V
  .rodata.str1.1
-                0x0804ebba      0x4dd project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
+                0x0804eb72      0x4dd project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
                                 0x522 (size before relaxing)
  .rodata.str1.1
-                0x0804f097       0x2a project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+                0x0804f04f       0x2a project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
                                  0x35 (size before relaxing)
  .rodata.in_ports
-                0x0804f0c1       0x66 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+                0x0804f079       0x66 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
  .rodata.out_ports
-                0x0804f127       0x66 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+                0x0804f0df       0x66 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
  .rodata.clk_ports
-                0x0804f18d       0x60 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+                0x0804f145       0x60 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
  .rodata.str1.1
-                0x0804f1ed      0x610 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+                0x0804f1a5      0x610 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
                                 0x653 (size before relaxing)
  .rodata.note_name
-                0x0804f7fd       0x24 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+                0x0804f7b5       0x24 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
  .rodata.CSWTCH.29
-                0x0804f821       0x12 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+                0x0804f7d9       0x12 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
  .rodata.str1.1
-                0x0804f833      0x106 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
+                0x0804f7eb      0x106 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
  .rodata.broadcast_ethaddr
-                0x0804f939        0x6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
+                0x0804f8f1        0x6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
  .rodata.str1.1
-                0x0804f93f      0x18b project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
+                0x0804f8f7      0x18b project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
                                 0x190 (size before relaxing)
- .rodata.xid    0x0804faca        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+ .rodata.xid    0x0804fa82        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
  .rodata.magic_cookie
-                0x0804face        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+                0x0804fa86        0x4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
  .rodata.str1.1
-                0x0804fad2        0xb project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
- *fill*         0x0804fadd        0x3 00
+                0x0804fa8a        0xb project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+ *fill*         0x0804fa95        0x3 00
  .rodata.parse_event
-                0x0804fae0       0xc0 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+                0x0804fa98       0xc0 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
  .rodata.parse_mcmpp_value
-                0x0804fba0       0x20 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+                0x0804fb58       0x20 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
  .rodata.str1.1
-                0x0804fbc0       0xaf project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+                0x0804fb78       0xaf project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
                                 0x121 (size before relaxing)
- *fill*         0x0804fc6f        0x1 00
+ *fill*         0x0804fc27        0x1 00
  .rodata.parse_mcmpp
-                0x0804fc70       0x70 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+                0x0804fc28       0x70 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
  .rodata.parse_root
-                0x0804fce0      0x170 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+                0x0804fc98      0x170 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
  .rodata.str1.1
-                0x0804fe50      0x162 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+                0x0804fe08      0x162 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
                                 0x16a (size before relaxing)
  .rodata.short_mode_names
-                0x0804ffb2       0x1e project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+                0x0804ff6a       0x1e project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
  .rodata.full_mode_names
-                0x0804ffd0       0x7e project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+                0x0804ff88       0x7e project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
  .rodata.str1.1
-                0x0805004e      0xa59 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
+                0x08050006      0xa59 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
                                 0xacf (size before relaxing)
- .rodata        0x08050aa7       0x24 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
+ .rodata        0x08050a5f       0x24 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
  .rodata.str1.1
-                0x08050acb     0x1749 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
+                0x08050a83     0x1749 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
                                0x185f (size before relaxing)
- .rodata        0x08052214        0x8 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
+ .rodata        0x080521cc        0x8 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
  .rodata.hz_v_table
-                0x0805221c      0x100 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+                0x080521d4      0x100 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
  .rodata.if_name
-                0x0805231c       0x1c project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+                0x080522d4       0x1c project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
  .rodata.str1.1
-                0x08052338      0x79a project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+                0x080522f0      0x79a project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
                                 0x7df (size before relaxing)
  .rodata.cali_desc
-                0x08052ad2       0x46 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+                0x08052a8a       0x46 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
  .rodata.str1.1
-                0x08052b18       0xdd project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
- *fill*         0x08052bf5        0x1 00
+                0x08052ad0       0xdd project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
+ *fill*         0x08052bad        0x1 00
  .rodata.cstbl.4638
-                0x08052bf6       0x16 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+                0x08052bae       0x16 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
  .rodata.sstbl.4637
-                0x08052c0c       0x2c project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+                0x08052bc4       0x2c project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
  .rodata.cvt.4405
-                0x08052c38       0x80 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+                0x08052bf0       0x80 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
  .rodata.str1.1
-                0x08052cb8       0x33 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+                0x08052c70       0x33 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
  .rodata.str1.1
-                0x08052ceb      0xfd8 project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
+                0x08052ca3      0xfd8 project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
                                0x1007 (size before relaxing)
  .rodata.fillbuf
-                0x08053cc3       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
+                0x08053c7b       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
  .rodata.str1.1
-                0x08053d03      0x101 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
+                0x08053cbb      0x101 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
  .rodata.animation_l_brackets
-                0x08053e04        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053dbc        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.animation_r_brackets
-                0x08053e0d        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053dc5        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.animation_l_stars
-                0x08053e16        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053dce        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.animation_r_stars
-                0x08053e1f        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053dd7        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.animation_l_arrows
-                0x08053e28        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053de0        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.animation_r_arrows
-                0x08053e31        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053de9        0x9 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .rodata.str1.1
-                0x08053e3a       0xa7 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+                0x08053df2       0xa7 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
                                  0xc1 (size before relaxing)
  .rodata.charset_hbars
-                0x08053ee1       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+                0x08053e99       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
  .rodata.charset_menu
-                0x08053f21       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+                0x08053ed9       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
  .rodata.charset_vbars
-                0x08053f61       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+                0x08053f19       0x40 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
  .rodata._ctype_
-                0x08053fa1      0x101 c:/toolchain/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m\libc_s.a(lib_a-ctype_.o)
-                0x08053fa1                _ctype_
-                0x080540a4                . = ALIGN (0x4)
- *fill*         0x080540a2        0x2 00
+                0x08053f59      0x101 c:/toolchain/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m\libc_s.a(lib_a-ctype_.o)
+                0x08053f59                _ctype_
+                0x0805405c                . = ALIGN (0x4)
+ *fill*         0x0805405a        0x2 00
  *(.init)
-                0x080540a4                . = ALIGN (0x4)
-                0x080540a4                __preinit_array_start = .
+                0x0805405c                . = ALIGN (0x4)
+                0x0805405c                __preinit_array_start = .
  *(.preinit_array)
-                0x080540a4                __preinit_array_end = .
-                0x080540a4                . = ALIGN (0x4)
-                0x080540a4                __init_array_start = .
+                0x0805405c                __preinit_array_end = .
+                0x0805405c                . = ALIGN (0x4)
+                0x0805405c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
-                0x080540a4                __init_array_end = .
-                0x080540a4                . = ALIGN (0x4)
+                0x0805405c                __init_array_end = .
+                0x0805405c                . = ALIGN (0x4)
  *(.fini)
-                0x080540a4                . = ALIGN (0x4)
-                0x080540a4                __fini_array_start = .
+                0x0805405c                . = ALIGN (0x4)
+                0x0805405c                __fini_array_start = .
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x080540a4                __fini_array_end = .
-                0x080540a4                . = ALIGN (0x4)
+                0x0805405c                __fini_array_end = .
+                0x0805405c                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x080540a4                . = ALIGN (0x4)
+                0x0805405c                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
  *(.init .init.*)
  *(.fini .fini.*)
-                0x080540a4                PROVIDE (__preinit_array_start, .)
+                0x0805405c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x080540a4                PROVIDE (__preinit_array_end, .)
-                0x080540a4                PROVIDE (__init_array_start, .)
+                0x0805405c                PROVIDE (__preinit_array_end, .)
+                0x0805405c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x080540a4                PROVIDE (__init_array_end, .)
-                0x080540a4                PROVIDE (__fini_array_start, .)
+                0x0805405c                PROVIDE (__init_array_end, .)
+                0x0805405c                PROVIDE (__fini_array_start, .)
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x080540a4                PROVIDE (__fini_array_end, .)
-                0x080540a8                . = ALIGN (0x8)
- *fill*         0x080540a4        0x4 00
+                0x0805405c                PROVIDE (__fini_array_end, .)
+                0x08054060                . = ALIGN (0x8)
+ *fill*         0x0805405c        0x4 00
  *(.rom)
  *(.rom.b)
-                0x080540a8                _etext = .
-                0x080540a8                _sidata = _etext
+                0x08054060                _etext = .
+                0x08054060                _sidata = _etext
 
-.rel.dyn        0x080540a8        0x0
+.rel.dyn        0x08054060        0x0
  .rel.iplt      0x00000000        0x0 project_build/src/app.o
 
-.data           0x20000000       0xe0 load address 0x080540a8
+.data           0x20000000       0xe0 load address 0x08054060
                 0x20000000                __ram_start = .
                 0x20000000                _sdata = .
                 0x20000000                . = ALIGN (0x80)
@@ -7799,10 +7798,10 @@ END GROUP
                 0x200000e0                . = ALIGN (0x4)
                 0x200000e0                _edata = .
 
-.igot.plt       0x200000e0        0x0 load address 0x08054188
+.igot.plt       0x200000e0        0x0 load address 0x08054140
  .igot.plt      0x00000000        0x0 project_build/src/app.o
 
-.bss            0x200000e0    0x1bf58 load address 0x08054188
+.bss            0x200000e0    0x1bf58 load address 0x08054140
                 0x200000e0                . = ALIGN (0x4)
                 0x200000e0                _sbss = .
  *(.shbss)
@@ -8717,7 +8716,7 @@ END GROUP
                 0x200000e0                PROVIDE (__bss_start__, _sbss)
                 0x2001c038                PROVIDE (__bss_end__, _ebss)
 
-._usrstack      0x2001c038      0x100 load address 0x08054188
+._usrstack      0x2001c038      0x100 load address 0x08054140
                 0x2001c038                . = ALIGN (0x4)
                 0x2001c038                _susrstack = .
                 0x2001c138                . = (. + _Minimum_Stack_Size)
@@ -8726,7 +8725,7 @@ END GROUP
                 0x2001c138                _eusrstack = .
                 0x2001c138                __ram_end = .
 
-.data_ccm       0x10000000        0x0 load address 0x08054188
+.data_ccm       0x10000000        0x0 load address 0x08054140
                 0x10000000                __ram_start_ccm = .
                 0x10000000                _sdata_ccm = .
                 0x10000000                . = ALIGN (0x4)
@@ -8738,7 +8737,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata_ccm = .
 
-.bss_cmm        0x10000000     0x3000 load address 0x08054188
+.bss_cmm        0x10000000     0x3000 load address 0x08054140
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sbss_ccm = .
  *(.shbss_cmm)
@@ -9516,134 +9515,134 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x99b9b
+.debug_info     0x00000000    0x99ba7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x2250 project_build/src/app.o
  .debug_info    0x00002250      0x728 project_build/src/mbng_sysex.o
  .debug_info    0x00002978      0xdea project_build/src/mbng_patch.o
- .debug_info    0x00003762     0x87a9 project_build/src/mbng_event.o
- .debug_info    0x0000bf0b      0xb9d project_build/src/mbng_din.o
- .debug_info    0x0000caa8      0xcbd project_build/src/mbng_dout.o
- .debug_info    0x0000d765      0x474 project_build/src/mbng_dio.o
- .debug_info    0x0000dbd9      0xc9a project_build/src/mbng_rgbled.o
- .debug_info    0x0000e873      0xf91 project_build/src/mbng_enc.o
- .debug_info    0x0000f804     0x1180 project_build/src/mbng_ain.o
- .debug_info    0x00010984      0xce7 project_build/src/mbng_ainser.o
- .debug_info    0x0001166b     0x11d4 project_build/src/mbng_kb.o
- .debug_info    0x0001283f     0x2147 project_build/src/mbng_matrix.o
- .debug_info    0x00014986     0x10f8 project_build/src/mbng_cv.o
- .debug_info    0x00015a7e     0x149e project_build/src/mbng_mf.o
- .debug_info    0x00016f1c     0x1cf0 project_build/src/mbng_lcd.o
- .debug_info    0x00018c0c      0xb49 project_build/src/mbng_seq.o
- .debug_info    0x00019755      0x775 project_build/src/mbng_file.o
- .debug_info    0x00019eca     0xc70e project_build/src/mbng_file_c.o
- .debug_info    0x000265d8     0x2432 project_build/src/mbng_file_l.o
- .debug_info    0x00028a0a     0x15e5 project_build/src/mbng_file_s.o
- .debug_info    0x00029fef     0x5ea2 project_build/src/mbng_file_r.o
- .debug_info    0x0002fe91      0xb90 project_build/src/mbng_file_k.o
- .debug_info    0x00030a21     0x3031 project_build/src/terminal.o
- .debug_info    0x00033a52     0x381a project_build/src/scs_config.o
- .debug_info    0x0003726c      0xe6e project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
- .debug_info    0x000380da      0xa7a project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
- .debug_info    0x00038b54     0x1f26 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
- .debug_info    0x0003aa7a      0x2be project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
- .debug_info    0x0003ad38     0x15d3 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
- .debug_info    0x0003c30b      0x326 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
- .debug_info    0x0003c631      0x7f9 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x0003ce2a      0x162 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
- .debug_info    0x0003cf8c      0x65f project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
- .debug_info    0x0003d5eb      0x346 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
- .debug_info    0x0003d931      0x503 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
- .debug_info    0x0003de34      0x720 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
- .debug_info    0x0003e554      0xc9a project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
- .debug_info    0x0003f1ee     0x28c9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
- .debug_info    0x00041ab7     0x1413 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
- .debug_info    0x00042eca      0x995 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
- .debug_info    0x0004385f      0x93c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
- .debug_info    0x0004419b      0x9e0 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
- .debug_info    0x00044b7b      0x5a4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
- .debug_info    0x0004511f      0x255 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
- .debug_info    0x00045374      0x381 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
- .debug_info    0x000456f5     0x12cb project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
- .debug_info    0x000469c0     0x1a36 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
- .debug_info    0x000483f6      0x15b project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
- .debug_info    0x00048551       0xce project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_bsl.o
- .debug_info    0x0004861f      0xd74 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
- .debug_info    0x00049393      0x76f project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
- .debug_info    0x00049b02     0x178b project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
- .debug_info    0x0004b28d     0x1167 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
- .debug_info    0x0004c3f4      0x9fb project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
- .debug_info    0x0004cdef      0x575 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
- .debug_info    0x0004d364      0x4ae project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
- .debug_info    0x0004d812     0x113e project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
- .debug_info    0x0004e950     0x30e8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
- .debug_info    0x00051a38     0x27f7 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
- .debug_info    0x0005422f     0x1666 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
- .debug_info    0x00055895     0x133a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
- .debug_info    0x00056bcf      0x6e4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
- .debug_info    0x000572b3      0x593 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_info    0x00057846      0xd63 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
- .debug_info    0x000585a9      0x6e5 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
- .debug_info    0x00058c8e      0x7af project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_info    0x0005943d      0x371 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
- .debug_info    0x000597ae      0x74a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_info    0x00059ef8      0xc4e project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_info    0x0005ab46      0x588 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
- .debug_info    0x0005b0ce      0xd61 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_info    0x0005be2f     0x14a4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
- .debug_info    0x0005d2d3      0xc80 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
- .debug_info    0x0005df53     0x2272 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_info    0x000601c5      0xb78 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_info    0x00060d3d     0x185a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
- .debug_info    0x00062597     0x1235 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
- .debug_info    0x000637cc     0x1838 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
- .debug_info    0x00065004     0x23da project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
- .debug_info    0x000673de     0x114b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
- .debug_info    0x00068529     0x1cf3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
- .debug_info    0x0006a21c     0x214f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
- .debug_info    0x0006c36b     0x39d6 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
- .debug_info    0x0006fd41     0x16af project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
- .debug_info    0x000713f0     0x2844 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
- .debug_info    0x00073c34     0x142f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
- .debug_info    0x00075063     0x293c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
- .debug_info    0x0007799f     0x1b87 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
- .debug_info    0x00079526     0x2577 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
- .debug_info    0x0007ba9d       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
- .debug_info    0x0007bb6b       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
- .debug_info    0x0007bc39       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
- .debug_info    0x0007bd07       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
- .debug_info    0x0007bdd5       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
- .debug_info    0x0007bea3       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
- .debug_info    0x0007bf71       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
- .debug_info    0x0007c03f       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
- .debug_info    0x0007c10d     0x189c project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
- .debug_info    0x0007d9a9      0xc23 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
- .debug_info    0x0007e5cc     0x10c0 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
- .debug_info    0x0007f68c     0x131b project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
- .debug_info    0x000809a7      0x5b1 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
- .debug_info    0x00080f58      0x147 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
- .debug_info    0x0008109f       0xea project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/clock-arch.o
- .debug_info    0x00081189      0x378 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
- .debug_info    0x00081501     0x16f9 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
- .debug_info    0x00082bfa      0xaeb project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
- .debug_info    0x000836e5     0x167a project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
- .debug_info    0x00084d5f     0x10cf project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
- .debug_info    0x00085e2e     0x13f4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
- .debug_info    0x00087222     0x2351 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
- .debug_info    0x00089573      0x8f4 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
- .debug_info    0x00089e67     0x2386 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
- .debug_info    0x0008c1ed      0xa55 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
- .debug_info    0x0008cc42     0x1381 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
- .debug_info    0x0008dfc3      0x4c6 project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
- .debug_info    0x0008e489      0x6d9 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
- .debug_info    0x0008eb62     0x2b62 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
- .debug_info    0x000916c4     0x3d31 project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
- .debug_info    0x000953f5      0x6c2 project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
- .debug_info    0x00095ab7      0x8fe project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
- .debug_info    0x000963b5      0xc25 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
- .debug_info    0x00096fda      0x20b project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
- .debug_info    0x000971e5     0x2095 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
- .debug_info    0x0009927a      0x921 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+ .debug_info    0x00003762     0x87b5 project_build/src/mbng_event.o
+ .debug_info    0x0000bf17      0xb9d project_build/src/mbng_din.o
+ .debug_info    0x0000cab4      0xcbd project_build/src/mbng_dout.o
+ .debug_info    0x0000d771      0x474 project_build/src/mbng_dio.o
+ .debug_info    0x0000dbe5      0xc9a project_build/src/mbng_rgbled.o
+ .debug_info    0x0000e87f      0xf91 project_build/src/mbng_enc.o
+ .debug_info    0x0000f810     0x1180 project_build/src/mbng_ain.o
+ .debug_info    0x00010990      0xce7 project_build/src/mbng_ainser.o
+ .debug_info    0x00011677     0x11d4 project_build/src/mbng_kb.o
+ .debug_info    0x0001284b     0x2147 project_build/src/mbng_matrix.o
+ .debug_info    0x00014992     0x10f8 project_build/src/mbng_cv.o
+ .debug_info    0x00015a8a     0x149e project_build/src/mbng_mf.o
+ .debug_info    0x00016f28     0x1cf0 project_build/src/mbng_lcd.o
+ .debug_info    0x00018c18      0xb49 project_build/src/mbng_seq.o
+ .debug_info    0x00019761      0x775 project_build/src/mbng_file.o
+ .debug_info    0x00019ed6     0xc70e project_build/src/mbng_file_c.o
+ .debug_info    0x000265e4     0x2432 project_build/src/mbng_file_l.o
+ .debug_info    0x00028a16     0x15e5 project_build/src/mbng_file_s.o
+ .debug_info    0x00029ffb     0x5ea2 project_build/src/mbng_file_r.o
+ .debug_info    0x0002fe9d      0xb90 project_build/src/mbng_file_k.o
+ .debug_info    0x00030a2d     0x3031 project_build/src/terminal.o
+ .debug_info    0x00033a5e     0x381a project_build/src/scs_config.o
+ .debug_info    0x00037278      0xe6e project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
+ .debug_info    0x000380e6      0xa7a project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
+ .debug_info    0x00038b60     0x1f26 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
+ .debug_info    0x0003aa86      0x2be project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
+ .debug_info    0x0003ad44     0x15d3 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
+ .debug_info    0x0003c317      0x326 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_info    0x0003c63d      0x7f9 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_info    0x0003ce36      0x162 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
+ .debug_info    0x0003cf98      0x65f project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
+ .debug_info    0x0003d5f7      0x346 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
+ .debug_info    0x0003d93d      0x503 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
+ .debug_info    0x0003de40      0x720 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
+ .debug_info    0x0003e560      0xc9a project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+ .debug_info    0x0003f1fa     0x28c9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+ .debug_info    0x00041ac3     0x1413 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
+ .debug_info    0x00042ed6      0x995 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
+ .debug_info    0x0004386b      0x93c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
+ .debug_info    0x000441a7      0x9e0 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
+ .debug_info    0x00044b87      0x5a4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
+ .debug_info    0x0004512b      0x255 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
+ .debug_info    0x00045380      0x381 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
+ .debug_info    0x00045701     0x12cb project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
+ .debug_info    0x000469cc     0x1a36 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
+ .debug_info    0x00048402      0x15b project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
+ .debug_info    0x0004855d       0xce project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_bsl.o
+ .debug_info    0x0004862b      0xd74 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
+ .debug_info    0x0004939f      0x76f project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
+ .debug_info    0x00049b0e     0x178b project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
+ .debug_info    0x0004b299     0x1167 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
+ .debug_info    0x0004c400      0x9fb project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+ .debug_info    0x0004cdfb      0x575 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
+ .debug_info    0x0004d370      0x4ae project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
+ .debug_info    0x0004d81e     0x113e project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
+ .debug_info    0x0004e95c     0x30e8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+ .debug_info    0x00051a44     0x27f7 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
+ .debug_info    0x0005423b     0x1666 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
+ .debug_info    0x000558a1     0x133a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
+ .debug_info    0x00056bdb      0x6e4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
+ .debug_info    0x000572bf      0x593 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_info    0x00057852      0xd63 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
+ .debug_info    0x000585b5      0x6e5 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
+ .debug_info    0x00058c9a      0x7af project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_info    0x00059449      0x371 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
+ .debug_info    0x000597ba      0x74a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_info    0x00059f04      0xc4e project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_info    0x0005ab52      0x588 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
+ .debug_info    0x0005b0da      0xd61 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_info    0x0005be3b     0x14a4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
+ .debug_info    0x0005d2df      0xc80 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
+ .debug_info    0x0005df5f     0x2272 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_info    0x000601d1      0xb78 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_info    0x00060d49     0x185a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
+ .debug_info    0x000625a3     0x1235 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
+ .debug_info    0x000637d8     0x1838 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
+ .debug_info    0x00065010     0x23da project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
+ .debug_info    0x000673ea     0x114b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
+ .debug_info    0x00068535     0x1cf3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
+ .debug_info    0x0006a228     0x214f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
+ .debug_info    0x0006c377     0x39d6 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
+ .debug_info    0x0006fd4d     0x16af project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
+ .debug_info    0x000713fc     0x2844 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
+ .debug_info    0x00073c40     0x142f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
+ .debug_info    0x0007506f     0x293c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
+ .debug_info    0x000779ab     0x1b87 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
+ .debug_info    0x00079532     0x2577 project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
+ .debug_info    0x0007baa9       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
+ .debug_info    0x0007bb77       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
+ .debug_info    0x0007bc45       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
+ .debug_info    0x0007bd13       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
+ .debug_info    0x0007bde1       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
+ .debug_info    0x0007beaf       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
+ .debug_info    0x0007bf7d       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
+ .debug_info    0x0007c04b       0xce project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
+ .debug_info    0x0007c119     0x189c project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
+ .debug_info    0x0007d9b5      0xc23 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+ .debug_info    0x0007e5d8     0x10c0 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+ .debug_info    0x0007f698     0x131b project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
+ .debug_info    0x000809b3      0x5b1 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
+ .debug_info    0x00080f64      0x147 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
+ .debug_info    0x000810ab       0xea project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/clock-arch.o
+ .debug_info    0x00081195      0x378 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
+ .debug_info    0x0008150d     0x16f9 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
+ .debug_info    0x00082c06      0xaeb project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+ .debug_info    0x000836f1     0x167a project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+ .debug_info    0x00084d6b     0x10cf project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+ .debug_info    0x00085e3a     0x13f4 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
+ .debug_info    0x0008722e     0x2351 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
+ .debug_info    0x0008957f      0x8f4 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
+ .debug_info    0x00089e73     0x2386 project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+ .debug_info    0x0008c1f9      0xa55 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
+ .debug_info    0x0008cc4e     0x1381 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
+ .debug_info    0x0008dfcf      0x4c6 project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
+ .debug_info    0x0008e495      0x6d9 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
+ .debug_info    0x0008eb6e     0x2b62 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+ .debug_info    0x000916d0     0x3d31 project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
+ .debug_info    0x00095401      0x6c2 project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
+ .debug_info    0x00095ac3      0x8fe project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
+ .debug_info    0x000963c1      0xc25 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
+ .debug_info    0x00096fe6      0x20b project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
+ .debug_info    0x000971f1     0x2095 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+ .debug_info    0x00099286      0x921 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
 
 .debug_abbrev   0x00000000    0x150fb
  *(.debug_abbrev)
@@ -9774,134 +9773,134 @@ END GROUP
  .debug_abbrev  0x00014a45      0x419 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
  .debug_abbrev  0x00014e5e      0x29d project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
 
-.debug_line     0x00000000    0x274fc
+.debug_line     0x00000000    0x274ff
  *(.debug_line)
  .debug_line    0x00000000      0xad9 project_build/src/app.o
  .debug_line    0x00000ad9      0x294 project_build/src/mbng_sysex.o
  .debug_line    0x00000d6d      0x570 project_build/src/mbng_patch.o
- .debug_line    0x000012dd     0x2023 project_build/src/mbng_event.o
- .debug_line    0x00003300      0x252 project_build/src/mbng_din.o
- .debug_line    0x00003552      0x2a5 project_build/src/mbng_dout.o
- .debug_line    0x000037f7      0x253 project_build/src/mbng_dio.o
- .debug_line    0x00003a4a      0x325 project_build/src/mbng_rgbled.o
- .debug_line    0x00003d6f      0x322 project_build/src/mbng_enc.o
- .debug_line    0x00004091      0x37e project_build/src/mbng_ain.o
- .debug_line    0x0000440f      0x275 project_build/src/mbng_ainser.o
- .debug_line    0x00004684      0x3c8 project_build/src/mbng_kb.o
- .debug_line    0x00004a4c      0x7a4 project_build/src/mbng_matrix.o
- .debug_line    0x000051f0      0x3d2 project_build/src/mbng_cv.o
- .debug_line    0x000055c2      0x3b1 project_build/src/mbng_mf.o
- .debug_line    0x00005973      0x7f4 project_build/src/mbng_lcd.o
- .debug_line    0x00006167      0x381 project_build/src/mbng_seq.o
- .debug_line    0x000064e8      0x338 project_build/src/mbng_file.o
- .debug_line    0x00006820     0x1e80 project_build/src/mbng_file_c.o
- .debug_line    0x000086a0      0x7a6 project_build/src/mbng_file_l.o
- .debug_line    0x00008e46      0x46a project_build/src/mbng_file_s.o
- .debug_line    0x000092b0     0x1206 project_build/src/mbng_file_r.o
- .debug_line    0x0000a4b6      0x3fa project_build/src/mbng_file_k.o
- .debug_line    0x0000a8b0      0x8f0 project_build/src/terminal.o
- .debug_line    0x0000b1a0      0xbbd project_build/src/scs_config.o
- .debug_line    0x0000bd5d      0x59d project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
- .debug_line    0x0000c2fa      0x221 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
- .debug_line    0x0000c51b      0x8b5 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
- .debug_line    0x0000cdd0      0x1f6 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
- .debug_line    0x0000cfc6      0x5a7 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
- .debug_line    0x0000d56d      0x283 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
- .debug_line    0x0000d7f0      0x450 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x0000dc40       0xcf project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
- .debug_line    0x0000dd0f      0x328 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
- .debug_line    0x0000e037      0x269 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
- .debug_line    0x0000e2a0      0x312 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
- .debug_line    0x0000e5b2      0x3bc project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
- .debug_line    0x0000e96e      0x4f5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
- .debug_line    0x0000ee63      0xa26 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
- .debug_line    0x0000f889      0x592 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
- .debug_line    0x0000fe1b      0x3f9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
- .debug_line    0x00010214      0x3b6 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
- .debug_line    0x000105ca      0x32e project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
- .debug_line    0x000108f8      0x283 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
- .debug_line    0x00010b7b      0x1e9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
- .debug_line    0x00010d64      0x263 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
- .debug_line    0x00010fc7      0x430 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
- .debug_line    0x000113f7      0x679 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
- .debug_line    0x00011a70      0x1c5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
- .debug_line    0x00011c35      0x18d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_bsl.o
- .debug_line    0x00011dc2      0x42d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
- .debug_line    0x000121ef      0x1f9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
- .debug_line    0x000123e8      0x575 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
- .debug_line    0x0001295d      0x707 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
- .debug_line    0x00013064      0x2ed project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
- .debug_line    0x00013351      0x24c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
- .debug_line    0x0001359d      0x234 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
- .debug_line    0x000137d1      0x44a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
- .debug_line    0x00013c1b      0x8a8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
- .debug_line    0x000144c3      0x50b project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
- .debug_line    0x000149ce      0x5d9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
- .debug_line    0x00014fa7      0x537 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
- .debug_line    0x000154de      0x3b4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
- .debug_line    0x00015892      0x26f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_line    0x00015b01      0x5a1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
- .debug_line    0x000160a2      0x396 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
- .debug_line    0x00016438      0x41c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_line    0x00016854      0x2d3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
- .debug_line    0x00016b27      0x37a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_line    0x00016ea1      0x527 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_line    0x000173c8      0x319 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
- .debug_line    0x000176e1      0x5ad project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_line    0x00017c8e      0x8e3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
- .debug_line    0x00018571      0x4c2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
- .debug_line    0x00018a33      0xaf2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_line    0x00019525      0x4de project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_line    0x00019a03      0x3c3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
- .debug_line    0x00019dc6      0x2c0 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
- .debug_line    0x0001a086      0x39b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
- .debug_line    0x0001a421      0x414 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
- .debug_line    0x0001a835      0x2a0 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
- .debug_line    0x0001aad5      0x344 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
- .debug_line    0x0001ae19      0x473 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
- .debug_line    0x0001b28c      0x978 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
- .debug_line    0x0001bc04      0x36e project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
- .debug_line    0x0001bf72      0x318 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
- .debug_line    0x0001c28a      0x2a2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
- .debug_line    0x0001c52c      0x42f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
- .debug_line    0x0001c95b      0x25b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
- .debug_line    0x0001cbb6      0x8be project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
- .debug_line    0x0001d474      0x181 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
- .debug_line    0x0001d5f5      0x185 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
- .debug_line    0x0001d77a      0x17e project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
- .debug_line    0x0001d8f8      0x180 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
- .debug_line    0x0001da78      0x17f project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
- .debug_line    0x0001dbf7      0x185 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
- .debug_line    0x0001dd7c      0x188 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
- .debug_line    0x0001df04      0x188 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
- .debug_line    0x0001e08c      0x6c8 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
- .debug_line    0x0001e754      0x4c3 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
- .debug_line    0x0001ec17      0x48f project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
- .debug_line    0x0001f0a6      0x889 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
- .debug_line    0x0001f92f      0x372 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
- .debug_line    0x0001fca1       0xfe project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
- .debug_line    0x0001fd9f      0x148 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/clock-arch.o
- .debug_line    0x0001fee7      0x2f6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
- .debug_line    0x000201dd      0x6b9 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
- .debug_line    0x00020896      0x432 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
- .debug_line    0x00020cc8      0x6f3 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
- .debug_line    0x000213bb      0x412 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
- .debug_line    0x000217cd      0x407 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
- .debug_line    0x00021bd4      0x820 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
- .debug_line    0x000223f4      0x401 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
- .debug_line    0x000227f5      0x9ea project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
- .debug_line    0x000231df      0x463 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
- .debug_line    0x00023642      0x424 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
- .debug_line    0x00023a66      0x35c project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
- .debug_line    0x00023dc2      0x2ab project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
- .debug_line    0x0002406d      0xb13 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
- .debug_line    0x00024b80      0xd2b project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
- .debug_line    0x000258ab      0x2dd project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
- .debug_line    0x00025b88      0x4cc project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
- .debug_line    0x00026054      0x4cf project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
- .debug_line    0x00026523      0x1e6 project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
- .debug_line    0x00026709      0x98a project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
- .debug_line    0x00027093      0x469 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+ .debug_line    0x000012dd     0x2026 project_build/src/mbng_event.o
+ .debug_line    0x00003303      0x252 project_build/src/mbng_din.o
+ .debug_line    0x00003555      0x2a5 project_build/src/mbng_dout.o
+ .debug_line    0x000037fa      0x253 project_build/src/mbng_dio.o
+ .debug_line    0x00003a4d      0x325 project_build/src/mbng_rgbled.o
+ .debug_line    0x00003d72      0x322 project_build/src/mbng_enc.o
+ .debug_line    0x00004094      0x37e project_build/src/mbng_ain.o
+ .debug_line    0x00004412      0x275 project_build/src/mbng_ainser.o
+ .debug_line    0x00004687      0x3c8 project_build/src/mbng_kb.o
+ .debug_line    0x00004a4f      0x7a4 project_build/src/mbng_matrix.o
+ .debug_line    0x000051f3      0x3d2 project_build/src/mbng_cv.o
+ .debug_line    0x000055c5      0x3b1 project_build/src/mbng_mf.o
+ .debug_line    0x00005976      0x7f4 project_build/src/mbng_lcd.o
+ .debug_line    0x0000616a      0x381 project_build/src/mbng_seq.o
+ .debug_line    0x000064eb      0x338 project_build/src/mbng_file.o
+ .debug_line    0x00006823     0x1e80 project_build/src/mbng_file_c.o
+ .debug_line    0x000086a3      0x7a6 project_build/src/mbng_file_l.o
+ .debug_line    0x00008e49      0x46a project_build/src/mbng_file_s.o
+ .debug_line    0x000092b3     0x1206 project_build/src/mbng_file_r.o
+ .debug_line    0x0000a4b9      0x3fa project_build/src/mbng_file_k.o
+ .debug_line    0x0000a8b3      0x8f0 project_build/src/terminal.o
+ .debug_line    0x0000b1a3      0xbbd project_build/src/scs_config.o
+ .debug_line    0x0000bd60      0x59d project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
+ .debug_line    0x0000c2fd      0x221 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
+ .debug_line    0x0000c51e      0x8b5 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
+ .debug_line    0x0000cdd3      0x1f6 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
+ .debug_line    0x0000cfc9      0x5a7 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
+ .debug_line    0x0000d570      0x283 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_line    0x0000d7f3      0x450 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_line    0x0000dc43       0xcf project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
+ .debug_line    0x0000dd12      0x328 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
+ .debug_line    0x0000e03a      0x269 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
+ .debug_line    0x0000e2a3      0x312 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
+ .debug_line    0x0000e5b5      0x3bc project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
+ .debug_line    0x0000e971      0x4f5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+ .debug_line    0x0000ee66      0xa26 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+ .debug_line    0x0000f88c      0x592 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
+ .debug_line    0x0000fe1e      0x3f9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
+ .debug_line    0x00010217      0x3b6 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
+ .debug_line    0x000105cd      0x32e project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
+ .debug_line    0x000108fb      0x283 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
+ .debug_line    0x00010b7e      0x1e9 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
+ .debug_line    0x00010d67      0x263 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
+ .debug_line    0x00010fca      0x430 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
+ .debug_line    0x000113fa      0x679 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
+ .debug_line    0x00011a73      0x1c5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
+ .debug_line    0x00011c38      0x18d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_bsl.o
+ .debug_line    0x00011dc5      0x42d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
+ .debug_line    0x000121f2      0x1f9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
+ .debug_line    0x000123eb      0x575 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
+ .debug_line    0x00012960      0x707 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
+ .debug_line    0x00013067      0x2ed project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+ .debug_line    0x00013354      0x24c project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
+ .debug_line    0x000135a0      0x234 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
+ .debug_line    0x000137d4      0x44a project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
+ .debug_line    0x00013c1e      0x8a8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+ .debug_line    0x000144c6      0x50b project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
+ .debug_line    0x000149d1      0x5d9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
+ .debug_line    0x00014faa      0x537 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
+ .debug_line    0x000154e1      0x3b4 project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
+ .debug_line    0x00015895      0x26f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_line    0x00015b04      0x5a1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
+ .debug_line    0x000160a5      0x396 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
+ .debug_line    0x0001643b      0x41c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_line    0x00016857      0x2d3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
+ .debug_line    0x00016b2a      0x37a project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_line    0x00016ea4      0x527 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_line    0x000173cb      0x319 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
+ .debug_line    0x000176e4      0x5ad project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_line    0x00017c91      0x8e3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
+ .debug_line    0x00018574      0x4c2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
+ .debug_line    0x00018a36      0xaf2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_line    0x00019528      0x4de project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_line    0x00019a06      0x3c3 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
+ .debug_line    0x00019dc9      0x2c0 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
+ .debug_line    0x0001a089      0x39b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
+ .debug_line    0x0001a424      0x414 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
+ .debug_line    0x0001a838      0x2a0 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
+ .debug_line    0x0001aad8      0x344 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
+ .debug_line    0x0001ae1c      0x473 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
+ .debug_line    0x0001b28f      0x978 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
+ .debug_line    0x0001bc07      0x36e project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
+ .debug_line    0x0001bf75      0x318 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
+ .debug_line    0x0001c28d      0x2a2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
+ .debug_line    0x0001c52f      0x42f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
+ .debug_line    0x0001c95e      0x25b project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
+ .debug_line    0x0001cbb9      0x8be project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
+ .debug_line    0x0001d477      0x181 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal.o
+ .debug_line    0x0001d5f8      0x185 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_normal_inv.o
+ .debug_line    0x0001d77d      0x17e project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_big.o
+ .debug_line    0x0001d8fb      0x180 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_small.o
+ .debug_line    0x0001da7b      0x17f project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_tiny.o
+ .debug_line    0x0001dbfa      0x185 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_knob_icons.o
+ .debug_line    0x0001dd7f      0x188 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_h.o
+ .debug_line    0x0001df07      0x188 project_build//c/Studium/Bachelor/mios32-master/modules/glcd_font/glcd_font_meter_icons_v.o
+ .debug_line    0x0001e08f      0x6c8 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
+ .debug_line    0x0001e757      0x4c3 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+ .debug_line    0x0001ec1a      0x48f project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+ .debug_line    0x0001f0a9      0x889 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
+ .debug_line    0x0001f932      0x372 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
+ .debug_line    0x0001fca4       0xfe project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
+ .debug_line    0x0001fda2      0x148 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/clock-arch.o
+ .debug_line    0x0001feea      0x2f6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
+ .debug_line    0x000201e0      0x6b9 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
+ .debug_line    0x00020899      0x432 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+ .debug_line    0x00020ccb      0x6f3 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+ .debug_line    0x000213be      0x412 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+ .debug_line    0x000217d0      0x407 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
+ .debug_line    0x00021bd7      0x820 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
+ .debug_line    0x000223f7      0x401 project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
+ .debug_line    0x000227f8      0x9ea project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+ .debug_line    0x000231e2      0x463 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
+ .debug_line    0x00023645      0x424 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
+ .debug_line    0x00023a69      0x35c project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
+ .debug_line    0x00023dc5      0x2ab project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
+ .debug_line    0x00024070      0xb13 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+ .debug_line    0x00024b83      0xd2b project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
+ .debug_line    0x000258ae      0x2dd project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
+ .debug_line    0x00025b8b      0x4cc project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
+ .debug_line    0x00026057      0x4cf project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
+ .debug_line    0x00026526      0x1e6 project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
+ .debug_line    0x0002670c      0x98a project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+ .debug_line    0x00027096      0x469 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
 
 .debug_frame    0x00000000     0xbb04
  *(.debug_frame)
@@ -10296,124 +10295,124 @@ END GROUP
  .debug_str     0x00019634       0xe8 project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
                                 0x534 (size before relaxing)
 
-.debug_loc      0x00000000    0x4bfe9
+.debug_loc      0x00000000    0x4bf96
  *(.debug_loc)
  .debug_loc     0x00000000      0x737 project_build/src/app.o
  .debug_loc     0x00000737      0x465 project_build/src/mbng_sysex.o
  .debug_loc     0x00000b9c      0x203 project_build/src/mbng_patch.o
- .debug_loc     0x00000d9f     0x590e project_build/src/mbng_event.o
- .debug_loc     0x000066ad      0x1be project_build/src/mbng_din.o
- .debug_loc     0x0000686b      0x5a9 project_build/src/mbng_dout.o
- .debug_loc     0x00006e14      0x27e project_build/src/mbng_dio.o
- .debug_loc     0x00007092      0x631 project_build/src/mbng_rgbled.o
- .debug_loc     0x000076c3      0x5e5 project_build/src/mbng_enc.o
- .debug_loc     0x00007ca8      0xcbe project_build/src/mbng_ain.o
- .debug_loc     0x00008966      0x20d project_build/src/mbng_ainser.o
- .debug_loc     0x00008b73      0x512 project_build/src/mbng_kb.o
- .debug_loc     0x00009085     0x1803 project_build/src/mbng_matrix.o
- .debug_loc     0x0000a888      0x603 project_build/src/mbng_cv.o
- .debug_loc     0x0000ae8b      0x720 project_build/src/mbng_mf.o
- .debug_loc     0x0000b5ab      0xfc1 project_build/src/mbng_lcd.o
- .debug_loc     0x0000c56c      0x282 project_build/src/mbng_seq.o
- .debug_loc     0x0000c7ee      0x277 project_build/src/mbng_file.o
- .debug_loc     0x0000ca65     0x4b9c project_build/src/mbng_file_c.o
- .debug_loc     0x00011601     0x13bf project_build/src/mbng_file_l.o
- .debug_loc     0x000129c0      0x73c project_build/src/mbng_file_s.o
- .debug_loc     0x000130fc     0x4511 project_build/src/mbng_file_r.o
- .debug_loc     0x0001760d      0x438 project_build/src/mbng_file_k.o
- .debug_loc     0x00017a45      0xec1 project_build/src/terminal.o
- .debug_loc     0x00018906     0x1b66 project_build/src/scs_config.o
- .debug_loc     0x0001a46c      0x2da project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
- .debug_loc     0x0001a746      0x302 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
- .debug_loc     0x0001aa48     0x12c2 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
- .debug_loc     0x0001bd0a      0x12a project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
- .debug_loc     0x0001be34      0xf7b project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
- .debug_loc     0x0001cdaf       0xc7 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
- .debug_loc     0x0001ce76      0x9eb project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_loc     0x0001d861       0x3e project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
- .debug_loc     0x0001d89f      0x1ce project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
- .debug_loc     0x0001da6d      0x259 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
- .debug_loc     0x0001dcc6      0x72e project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
- .debug_loc     0x0001e3f4      0x46a project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
- .debug_loc     0x0001e85e      0x860 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
- .debug_loc     0x0001f0be     0x2156 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
- .debug_loc     0x00021214      0xe9c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
- .debug_loc     0x000220b0      0x65d project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
- .debug_loc     0x0002270d      0x585 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
- .debug_loc     0x00022c92      0x2ca project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
- .debug_loc     0x00022f5c      0x129 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
- .debug_loc     0x00023085       0xa5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
- .debug_loc     0x0002312a      0x129 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
- .debug_loc     0x00023253      0x66c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
- .debug_loc     0x000238bf      0xf06 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
- .debug_loc     0x000247c5       0x42 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
- .debug_loc     0x00024807      0x1e0 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
- .debug_loc     0x000249e7      0x150 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
- .debug_loc     0x00024b37      0x7e0 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
- .debug_loc     0x00025317      0xc0d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
- .debug_loc     0x00025f24      0x2c9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
- .debug_loc     0x000261ed       0x98 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
- .debug_loc     0x00026285       0x5f project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
- .debug_loc     0x000262e4      0x464 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
- .debug_loc     0x00026748      0x785 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
- .debug_loc     0x00026ecd      0x6c3 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
- .debug_loc     0x00027590      0x9c8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
- .debug_loc     0x00027f58      0x679 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
- .debug_loc     0x000285d1      0x83b project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
- .debug_loc     0x00028e0c      0x18c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_loc     0x00028f98      0xe11 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
- .debug_loc     0x00029da9      0x612 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
- .debug_loc     0x0002a3bb      0x65f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_loc     0x0002aa1a      0x218 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
- .debug_loc     0x0002ac32      0x414 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_loc     0x0002b046      0xbc1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_loc     0x0002bc07      0x1b2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
- .debug_loc     0x0002bdb9      0xadf project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_loc     0x0002c898     0x14b8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
- .debug_loc     0x0002dd50      0x838 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
- .debug_loc     0x0002e588     0x2041 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_loc     0x000305c9      0x98f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_loc     0x00030f58      0x5e2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
- .debug_loc     0x0003153a      0x2b8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
- .debug_loc     0x000317f2      0x851 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
- .debug_loc     0x00032043      0x4c2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
- .debug_loc     0x00032505      0x2c9 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
- .debug_loc     0x000327ce      0x790 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
- .debug_loc     0x00032f5e      0x9fe project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
- .debug_loc     0x0003395c     0x18b7 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
- .debug_loc     0x00035213      0x6e8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
- .debug_loc     0x000358fb      0x6b4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
- .debug_loc     0x00035faf      0x2a1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
- .debug_loc     0x00036250      0xd0c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
- .debug_loc     0x00036f5c      0x3be project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
- .debug_loc     0x0003731a     0x12be project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
- .debug_loc     0x000385d8      0xd8a project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
- .debug_loc     0x00039362      0x775 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
- .debug_loc     0x00039ad7      0xa96 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
- .debug_loc     0x0003a56d      0x72f project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
- .debug_loc     0x0003ac9c      0x1b3 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
- .debug_loc     0x0003ae4f       0xdb project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
- .debug_loc     0x0003af2a       0xd6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
- .debug_loc     0x0003b000      0xa45 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
- .debug_loc     0x0003ba45      0x373 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
- .debug_loc     0x0003bdb8     0x1033 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
- .debug_loc     0x0003cdeb      0xb97 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
- .debug_loc     0x0003d982      0xbc0 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
- .debug_loc     0x0003e542     0x1709 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
- .debug_loc     0x0003fc4b      0x6cd project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
- .debug_loc     0x00040318     0x171b project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
- .debug_loc     0x00041a33      0x989 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
- .debug_loc     0x000423bc      0x933 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
- .debug_loc     0x00042cef      0x577 project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
- .debug_loc     0x00043266      0x3ad project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
- .debug_loc     0x00043613     0x3288 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
- .debug_loc     0x0004689b     0x268e project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
- .debug_loc     0x00048f29      0x93b project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
- .debug_loc     0x00049864      0x51e project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
- .debug_loc     0x00049d82      0x6d9 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
- .debug_loc     0x0004a45b       0xa5 project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
- .debug_loc     0x0004a500     0x147f project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
- .debug_loc     0x0004b97f      0x66a project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
+ .debug_loc     0x00000d9f     0x58bb project_build/src/mbng_event.o
+ .debug_loc     0x0000665a      0x1be project_build/src/mbng_din.o
+ .debug_loc     0x00006818      0x5a9 project_build/src/mbng_dout.o
+ .debug_loc     0x00006dc1      0x27e project_build/src/mbng_dio.o
+ .debug_loc     0x0000703f      0x631 project_build/src/mbng_rgbled.o
+ .debug_loc     0x00007670      0x5e5 project_build/src/mbng_enc.o
+ .debug_loc     0x00007c55      0xcbe project_build/src/mbng_ain.o
+ .debug_loc     0x00008913      0x20d project_build/src/mbng_ainser.o
+ .debug_loc     0x00008b20      0x512 project_build/src/mbng_kb.o
+ .debug_loc     0x00009032     0x1803 project_build/src/mbng_matrix.o
+ .debug_loc     0x0000a835      0x603 project_build/src/mbng_cv.o
+ .debug_loc     0x0000ae38      0x720 project_build/src/mbng_mf.o
+ .debug_loc     0x0000b558      0xfc1 project_build/src/mbng_lcd.o
+ .debug_loc     0x0000c519      0x282 project_build/src/mbng_seq.o
+ .debug_loc     0x0000c79b      0x277 project_build/src/mbng_file.o
+ .debug_loc     0x0000ca12     0x4b9c project_build/src/mbng_file_c.o
+ .debug_loc     0x000115ae     0x13bf project_build/src/mbng_file_l.o
+ .debug_loc     0x0001296d      0x73c project_build/src/mbng_file_s.o
+ .debug_loc     0x000130a9     0x4511 project_build/src/mbng_file_r.o
+ .debug_loc     0x000175ba      0x438 project_build/src/mbng_file_k.o
+ .debug_loc     0x000179f2      0xec1 project_build/src/terminal.o
+ .debug_loc     0x000188b3     0x1b66 project_build/src/scs_config.o
+ .debug_loc     0x0001a419      0x2da project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/main.o
+ .debug_loc     0x0001a6f3      0x302 project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/strtol.o
+ .debug_loc     0x0001a9f5     0x12c2 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/tasks.o
+ .debug_loc     0x0001bcb7      0x12a project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/list.o
+ .debug_loc     0x0001bde1      0xf7b project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/queue.o
+ .debug_loc     0x0001cd5c       0xc7 project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_loc     0x0001ce23      0x9eb project_build//c/Studium/Bachelor/mios32-master/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_loc     0x0001d80e       0x3e project_build//c/Studium/Bachelor/mios32-master/programming_models/traditional/startup_stm32f4xx.o
+ .debug_loc     0x0001d84c      0x1ce project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_srio.o
+ .debug_loc     0x0001da1a      0x259 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_din.o
+ .debug_loc     0x0001dc73      0x72e project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_dout.o
+ .debug_loc     0x0001e3a1      0x46a project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc.o
+ .debug_loc     0x0001e80b      0x860 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_lcd.o
+ .debug_loc     0x0001f06b     0x2156 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_midi.o
+ .debug_loc     0x000211c1      0xe9c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_osc.o
+ .debug_loc     0x0002205d      0x65d project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_com.o
+ .debug_loc     0x000226ba      0x585 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_uart_midi.o
+ .debug_loc     0x00022c3f      0x2ca project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_spi_midi.o
+ .debug_loc     0x00022f09      0x129 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_midi.o
+ .debug_loc     0x00023032       0xa5 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_iic_bs.o
+ .debug_loc     0x000230d7      0x129 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_mf.o
+ .debug_loc     0x00023200      0x66c project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_sdcard.o
+ .debug_loc     0x0002386c      0xf06 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_enc28j60.o
+ .debug_loc     0x00024772       0x42 project_build//c/Studium/Bachelor/mios32-master/mios32/common/mios32_timestamp.o
+ .debug_loc     0x000247b4      0x1e0 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_sys.o
+ .debug_loc     0x00024994      0x150 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_irq.o
+ .debug_loc     0x00024ae4      0x7e0 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_spi.o
+ .debug_loc     0x000252c4      0xc0d project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_board.o
+ .debug_loc     0x00025ed1      0x2c9 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_timer.o
+ .debug_loc     0x0002619a       0x98 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_stopwatch.o
+ .debug_loc     0x00026232       0x5f project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_delay.o
+ .debug_loc     0x00026291      0x464 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_ain.o
+ .debug_loc     0x000266f5      0x785 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb.o
+ .debug_loc     0x00026e7a      0x6c3 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_usb_midi.o
+ .debug_loc     0x0002753d      0x9c8 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_uart.o
+ .debug_loc     0x00027f05      0x679 project_build//c/Studium/Bachelor/mios32-master/mios32/STM32F4xx/mios32_iic.o
+ .debug_loc     0x0002857e      0x83b project_build//c/Studium/Bachelor/mios32-master/mios32/common/printf-stdarg.o
+ .debug_loc     0x00028db9      0x18c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_loc     0x00028f45      0xe11 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.o
+ .debug_loc     0x00029d56      0x612 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.o
+ .debug_loc     0x0002a368      0x65f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_loc     0x0002a9c7      0x218 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.o
+ .debug_loc     0x0002abdf      0x414 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_loc     0x0002aff3      0xbc1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_loc     0x0002bbb4      0x1b2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.o
+ .debug_loc     0x0002bd66      0xadf project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_loc     0x0002c845     0x14b8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.o
+ .debug_loc     0x0002dcfd      0x838 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.o
+ .debug_loc     0x0002e535     0x2041 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_loc     0x00030576      0x98f project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_loc     0x00030f05      0x5e2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_core.o
+ .debug_loc     0x000314e7      0x2b8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_ioreq.o
+ .debug_loc     0x0003179f      0x851 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_Device_Library/Core/src/usbd_req.o
+ .debug_loc     0x00031ff0      0x4c2 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_core.o
+ .debug_loc     0x000324b2      0x2c9 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_hcs.o
+ .debug_loc     0x0003277b      0x790 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_ioreq.o
+ .debug_loc     0x00032f0b      0x9fe project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_HOST_Library/Core/src/usbh_stdreq.o
+ .debug_loc     0x00033909     0x18b7 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_core.o
+ .debug_loc     0x000351c0      0x6e8 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd.o
+ .debug_loc     0x000358a8      0x6b4 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_dcd_int.o
+ .debug_loc     0x00035f5c      0x2a1 project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd.o
+ .debug_loc     0x000361fd      0xd0c project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_hcd_int.o
+ .debug_loc     0x00036f09      0x3be project_build//c/Studium/Bachelor/mios32-master/drivers/STM32F4xx/v1.1.0/STM32_USB_OTG_Driver/src/usb_otg.o
+ .debug_loc     0x000372c7     0x12be project_build//c/Studium/Bachelor/mios32-master/modules/app_lcd/universal/app_lcd.o
+ .debug_loc     0x00038585      0xd8a project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_router.o
+ .debug_loc     0x0003930f      0x775 project_build//c/Studium/Bachelor/mios32-master/modules/midi_router/midi_port.o
+ .debug_loc     0x00039a84      0xa96 project_build//c/Studium/Bachelor/mios32-master/modules/midimon/midimon.o
+ .debug_loc     0x0003a51a      0x72f project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip.o
+ .debug_loc     0x0003ac49      0x1b3 project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/uip_arp.o
+ .debug_loc     0x0003adfc       0xdb project_build//c/Studium/Bachelor/mios32-master/modules/uip/uip/timer.o
+ .debug_loc     0x0003aed7       0xd6 project_build//c/Studium/Bachelor/mios32-master/modules/uip/mios32/STM32F4xx/network-device.o
+ .debug_loc     0x0003afad      0xa45 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_task.o
+ .debug_loc     0x0003b9f2      0x373 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/dhcpc.o
+ .debug_loc     0x0003bd65     0x1033 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_server.o
+ .debug_loc     0x0003cd98      0xb97 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/osc_client.o
+ .debug_loc     0x0003d92f      0xbc0 project_build//c/Studium/Bachelor/mios32-master/modules/uip_task_standard/uip_terminal.o
+ .debug_loc     0x0003e4ef     0x1709 project_build//c/Studium/Bachelor/mios32-master/modules/keyboard/keyboard.o
+ .debug_loc     0x0003fbf8      0x6cd project_build//c/Studium/Bachelor/mios32-master/modules/ainser/ainser.o
+ .debug_loc     0x000402c5     0x171b project_build//c/Studium/Bachelor/mios32-master/modules/aout/aout.o
+ .debug_loc     0x000419e0      0x989 project_build//c/Studium/Bachelor/mios32-master/modules/max72xx/max72xx.o
+ .debug_loc     0x00042369      0x933 project_build//c/Studium/Bachelor/mios32-master/modules/ws2812/ws2812.o
+ .debug_loc     0x00042c9c      0x577 project_build//c/Studium/Bachelor/mios32-master/modules/notestack/notestack.o
+ .debug_loc     0x00043213      0x3ad project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/diskio.o
+ .debug_loc     0x000435c0     0x3288 project_build//c/Studium/Bachelor/mios32-master/modules/fatfs/src/ff.o
+ .debug_loc     0x00046848     0x268e project_build//c/Studium/Bachelor/mios32-master/modules/file/file.o
+ .debug_loc     0x00048ed6      0x93b project_build//c/Studium/Bachelor/mios32-master/modules/md5/md5.o
+ .debug_loc     0x00049811      0x51e project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_bpm.o
+ .debug_loc     0x00049d2f      0x6d9 project_build//c/Studium/Bachelor/mios32-master/modules/sequencer/seq_midi_out.o
+ .debug_loc     0x0004a408       0xa5 project_build//c/Studium/Bachelor/mios32-master/modules/msd/STM32F4xx/msd.o
+ .debug_loc     0x0004a4ad     0x147f project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs.o
+ .debug_loc     0x0004b92c      0x66a project_build//c/Studium/Bachelor/mios32-master/modules/scs/scs_lcd.o
 
 .debug_macinfo
  *(.debug_macinfo)

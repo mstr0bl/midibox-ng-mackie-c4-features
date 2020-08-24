@@ -1,0 +1,54 @@
+if ^section == 0
+ trigger SENDER:4095	#clear displays
+ trigger SENDER:4089	#clear LED rings
+ delay_ms 300
+ trigger SENDER:4090	#enter mode
+ 
+ set ^section 1
+endif
+
+if ^section == 1
+ trigger SENDER:3000	#trigger Headline Information
+
+ if ^bank == 1
+  
+ trigger SENDER:2
+ trigger SENDER:3
+ trigger SENDER:4
+
+ trigger SENDER:9
+ delay_ms 100
+ 
+ trigger SENDER:17
+ delay_ms 100
+ 
+ trigger SENDER:25
+ delay_ms 100
+ 
+ endif
+ 
+ if ^bank == 2
+  log "bank = 2"
+  trigger SENDER:33
+  trigger SENDER:41
+  delay_ms 100
+ 
+ endif
+ 
+ if ^bank == 3
+  log "bank = 3"
+  trigger SENDER:49
+  trigger SENDER:57
+ endif
+ 
+ if ^bank == 4
+  log "bank = 4"
+  trigger SENDER:65
+  trigger SENDER:73
+ endif
+ 
+endif
+
+if ^section == 10
+ LOAD M3RHome
+endif

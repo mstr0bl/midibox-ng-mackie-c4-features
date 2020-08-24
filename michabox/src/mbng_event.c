@@ -4151,7 +4151,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     }
 
     //MICHA
-    //MIOS32_MIDI_SendDebugMessage("Sender Id = %d", item->id & 0xfff);
+    MIOS32_MIDI_SendDebugMessage("Sender Id = %d", item->id & 0xfff);
 
     // map?
     {
@@ -4173,6 +4173,9 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
 
   case MBNG_EVENT_CONTROLLER_RECEIVER: {
     int receiver_ix = item->id & 0xfff;
+
+    //MICHA
+        MIOS32_MIDI_SendDebugMessage("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
 
     if( debug_verbose_level >= DEBUG_VERBOSE_LEVEL_INFO ) {
       DEBUG_MSG("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
@@ -4237,7 +4240,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     			  case 0x08: incrementer = 4; break;
     			  case 0x0c: incrementer = 8; break;
     			  case 0x0f: incrementer = 12; break;
-    			  default: MIOS32_MIDI_SendDebugMessage("enc mode c4 item value < 0x40 default case");
+    			  default: //MIOS32_MIDI_SendDebugMessage("enc mode c4 item value < 0x40 default case");
     				  incrementer = 1; break;
     			  }
     		  }
@@ -4248,7 +4251,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     			  case 0x48: incrementer = -4; break;
     			  case 0x4c: incrementer = -8; break;
     			  case 0x4f: incrementer = -12; break;
-    			  default: MIOS32_MIDI_SendDebugMessage("enc mode c4 item value > 0x40 default case");
+    			  default: //MIOS32_MIDI_SendDebugMessage("enc mode c4 item value > 0x40 default case");
     				  incrementer = -1; break;
     			  }
     		  }
@@ -4842,6 +4845,8 @@ s32 MBNG_EVENT_MIDI_NotifyPackage(mios32_midi_port_t port, mios32_midi_package_t
       // first byte is matching - now we've a bit more time for checking
       
       if( (pool_item->hw_id & 0xf000) == MBNG_EVENT_CONTROLLER_SENDER ) { // a sender doesn't receive
+    	  //Micha
+    	  //MIOS32_MIDI_SendDebugMessage("SENDER Nr: %d", pool_item->hw_id & 0xf000);
 	pool_ptr += pool_item->len;
 	continue;
       }
@@ -4959,11 +4964,15 @@ s32 MBNG_EVENT_ReceiveSysEx(mios32_midi_port_t port, u8 midi_in)
     if( event_type == MBNG_EVENT_TYPE_SYSEX ) {
       u8 parse_sysex = 1;
 
-      if( (pool_item->hw_id & 0xf000) == MBNG_EVENT_CONTROLLER_SENDER ) // a sender doesn't receive
-	parse_sysex = 0;
+      if( (pool_item->hw_id & 0xf000) == MBNG_EVENT_CONTROLLER_SENDER ){ // a sender doesn't receive
+    	 // MIOS32_MIDI_SendDebugMessage("Sysex not parsed because of SENDER:%d - midi_in dec = %d",pool_item->hw_id & 0xf000,midi_in);
+    	  parse_sysex = 0;
+      }
 
-      if( !(pool_item->enabled_ports & port_mask) ) // port not enabled
-	parse_sysex = 0;
+      if( !(pool_item->enabled_ports & port_mask) ){ // port not enabled
+    	  //MIOS32_MIDI_SendDebugMessage("Sysex not parsed because Port:%X is not enabled",port_mask);
+    	  parse_sysex = 0;
+      }
 
       // receiving a SysEx dump?
       if( pool_item->sysex_runtime_var.dump ) {
