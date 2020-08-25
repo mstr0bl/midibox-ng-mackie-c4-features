@@ -26,11 +26,11 @@ EVENT_SENDER id=3012 hw_id=3000 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x
 ############################
 
 #Display 1 - OSC Params
-#EVENT_SENDER id= 1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label="MulSnd" 
+EVENT_SENDER id= 1 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label="MulSnd" 
 EVENT_SENDER id= 2 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 7 ^label 0xf7" ports=1000100000000000 label="OscLvl"
 EVENT_SENDER id= 3 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 14 ^label 0xf7" ports=1000100000000000 label="F Cut  "
 EVENT_SENDER id= 4 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 21 ^label 0xf7" ports=1000100000000000 label="F Int "
-#EVENT_SENDER id= 5 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label=" Drum " 
+EVENT_SENDER id= 5 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label=" Drum " 
 #EVENT_SENDER id= 6 
 #EVENT_SENDER id= 7 
 #EVENT_SENDER id= 8 
@@ -135,18 +135,17 @@ EVENT_SENDER id= 80 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 #Encoders############
 #####################
 # Display 1 - OSC Params
-#NOTE:depending on ENC3s value either ENC1 or ENC7 is active!!! -> either drums or multisounds are chosen
-EVENT_ENC id= 1 bank=0 fwd_id=SENDER:101 if_equal=ENC:5:0 type=CC chn=5 cc=0 range=0:89 syxdump_pos=4001:14 label="Multi Sound"
-EVENT_ENC id= 2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=1 range=0:89 syxdump_pos=4001:66
+EVENT_ENC id= 1 bank=0 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:89 syxdump_pos=4001:14 
+EVENT_ENC id= 2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=1 range=0:99 syxdump_pos=4001:66
 EVENT_ENC id= 3 bank=0 fwd_id=SENDER:103 type=CC chn=5 cc=2 range=0:89 syxdump_pos=4001:49
 EVENT_ENC id= 4 bank=0 fwd_id=SENDER:104 type=CC chn=5 cc=3 range=0:89 syxdump_pos=4001:52
 
 ##### MultiSound/Drum Switch Implementation#####
-EVENT_ENC id= 5 bank=0 fwd_id=SENDER:105 type=CC if_equal=BUTTON:1000:1 chn=5 cc=0 range=map25 syxdump_pos=4001:12 label="Mode Switcher"			
-EVENT_ENC id= 6 bank=0 fwd_id=SENDER:106 if_equal=ENC:5:2 type=CC chn=5 cc=0 range=0:3 syxdump_pos=4001:14  label="Drums"	
+#EVENT_ENC id= 5 bank=0 fwd_id=SENDER:105 type=CC if_equal=BUTTON:1000:1 chn=5 cc=0 range=map25 syxdump_pos=4001:12 label="Mode Switcher"			
+#EVENT_ENC id= 6 bank=0 fwd_id=SENDER:106 if_equal=ENC:5:2 type=CC chn=5 cc=0 range=0:3 syxdump_pos=4001:14  label="Drums"	
 
-EVENT_RECEIVER id= 1000 fwd_id=BUTTON:1000 bank=0 type=NoteOn key=32 range=0:1 ports=1000100000000000
-EVENT_BUTTON id= 1000 bank=0 if_equal_stop_on_match=RECEIVER:1000:1 button_mode=OnOff value=0
+#EVENT_RECEIVER id= 1000 fwd_id=BUTTON:1000 bank=0 type=NoteOn key=32 range=0:1 ports=1000100000000000
+#EVENT_BUTTON id= 1000 bank=0 if_equal_stop_on_match=RECEIVER:1000:1 button_mode=OnOff value=0
 
 MAP25/BYTE 0 2	
 
@@ -251,12 +250,12 @@ EVENT_ENC id= 77  bank=4 fwd_id=SENDER:177 type=CC chn=5 cc=28 range=0:89 syxdum
 #Value Printers - MacDis#
 #########################
 # Display 1 - OSC Params
-EVENT_SENDER id=101 fwd_id=SENDER:201 bank=0 if_equal=ENC:5:0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x38 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=101 fwd_id=SENDER:201 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x38 ^macdis 0xf7"  ports=1000100000000000
 EVENT_SENDER id=102 fwd_id=SENDER:202 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x3f ^macdis 0xf7"ports=1000100000000000
 EVENT_SENDER id=103 fwd_id=SENDER:203 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x46 ^macdis 0xf7" ports=1000100000000000
 EVENT_SENDER id=104 fwd_id=SENDER:204 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x4d ^macdis 0xf7"  ports=1000100000000000
 EVENT_SENDER id=105 fwd_id=SENDER:205 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7"  label="^mode" ports=1000100000000000
-EVENT_SENDER id=106 fwd_id=SENDER:206 bank=0 if_equal=ENC:5:2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7" ports=1000100000000000
+#EVENT_SENDER id=106 fwd_id=SENDER:206 bank=0 if_equal=ENC:5:2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7" ports=1000100000000000
 #EVENT_SENDER id=107 fwd_id=SENDER:207 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x62 ^label 0xf7" ports=1000100000000000 label="      "
 #EVENT_SENDER id=108 fwd_id=SENDER:208 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0x69 ^label 0xf7" ports=1000100000000000 label="      "
 
@@ -356,12 +355,15 @@ EVENT_SENDER id=177 fwd_id=SENDER:277 bank=4 type=SysEx stream="0xf0 0x00 0x00 0
 ###########################
 
 # Display 1 - OSC Params
-EVENT_SENDER id= 201 bank=0 fwd_id=RECEIVER:101 if_equal=ENC:5:0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 3 ^val 0x00 0xf7" ports=0100010000000000
+EVENT_SENDER id= 201 bank=0 fwd_id=RECEIVER:101 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 3 ^val 0x00 0xf7" ports=0100010000000000
 EVENT_SENDER id= 202 bank=0 fwd_id=RECEIVER:102 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 50 ^val 0x00 0xf7" ports=0100010000000000
 EVENT_SENDER id= 203 bank=0 fwd_id=RECEIVER:103 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 35 ^val 0x00 0xf7" ports=0100010000000000
 EVENT_SENDER id= 204 bank=0 fwd_id=RECEIVER:104 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 38 ^val 0x00 0xf7" ports=0100010000000000
-EVENT_SENDER id= 205 bank=0 					type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0 ^val 0x00 0xf7" ports=0100010000000000
-EVENT_SENDER id= 206 bank=0 fwd_id=RECEIVER:106 if_equal=ENC:5:2 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 3 ^val 0x00 0xf7" ports=0100010000000000
+
+#205 is the Mode Switcher which still needs to be placed somewhere
+
+#EVENT_SENDER id= 205 bank=0 					type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0 ^val 0x00 0xf7" ports=0100010000000000
+#EVENT_SENDER id= 206 bank=0 if_equal=ENC:5:2 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 3 ^val 0x00 0xf7" ports=0100010000000000
 #EVENT_SENDER id= 207 bank=1 fwd_id=RECEIVER:107 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x09 ^val 0x00 0xf7" ports=0100010000000000
 #EVENT_SENDER id= 208 bank=1 fwd_id=RECEIVER:108 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0x0a ^val 0x00 0xf7" ports=0100010000000000
 
@@ -462,71 +464,71 @@ EVENT_SENDER id= 277 bank=4 fwd_id=RECEIVER:177 type=SysEx stream="0xf0 0x42 0x3
 ######################
 
 # Display 1 - OSC Params
-EVENT_RECEIVER id=101 fwd_id=SENDER:301 if_equal=ENC:5:0 bank=0 type=CC cc=32 chn=1 ports=1000100000000000
-EVENT_SENDER id= 301  bank=0 if_equal=ENC:5:0 type=CC cc=32 chn=1 range=map11
-EVENT_RECEIVER id=102 fwd_id=SENDER:302 bank=0 type=CC cc=33 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=101 fwd_id=SENDER:301 bank=0 type=CC cc=0 chn=5 ports=0000100000000000
+EVENT_SENDER id= 301  bank=0 type=CC cc=32 chn=1 range=map11
+EVENT_RECEIVER id=102 fwd_id=SENDER:302 bank=0 type=CC cc=1 chn=5 ports=0000100000000000
 EVENT_SENDER id= 302  bank=0 type=CC cc=33 chn=1 range=map31
-EVENT_RECEIVER id=103 fwd_id=SENDER:303 bank=0 type=CC cc=34 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=103 fwd_id=SENDER:303 bank=0 type=CC cc=2 chn=5 ports=0000100000000000
 EVENT_SENDER id= 303  bank=0 type=CC cc=34 chn=1 range=map31
-EVENT_RECEIVER id=104 fwd_id=SENDER:304 bank=0 type=CC cc=35 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=104 fwd_id=SENDER:304 bank=0 type=CC cc=3 chn=5 ports=0000100000000000
 EVENT_SENDER id= 304  bank=0 type=CC cc=35 chn=1 range=map31
 #EVENT_RECEIVER id=105 fwd_id=SENDER:305 bank=0 type=CC cc=36 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 305  bank=0 type=CC cc=36 chn=1 range=0:1
-EVENT_RECEIVER id=106 fwd_id=SENDER:306 if_equal=ENC:5:2 bank=0 type=CC cc=32 chn=1 ports=1000100000000000
-EVENT_SENDER id= 306  bank=0 if_equal=ENC:5:2 type=CC cc=32 chn=1 range=map11
+#EVENT_RECEIVER id=106 fwd_id=SENDER:306 if_equal=ENC:5:2 bank=0 type=CC cc=32 chn=1 ports=1000100000000000
+#EVENT_SENDER id= 306  bank=0 if_equal=ENC:5:2 type=CC cc=32 chn=1 range=map11
 #EVENT_RECEIVER id=107 fwd_id=SENDER:307 bank=0 type=CC cc=38 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 307  bank=0 type=CC cc=38 chn=1 range=map11
 #EVENT_RECEIVER id=108 fwd_id=SENDER:308 bank=0 type=CC cc=39 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 308  bank=0 type=CC cc=39 chn=1 range=map11
 
 # Display 2 - VDA & VDF Attack and Decay Time Params
-EVENT_RECEIVER id=109 fwd_id=SENDER:309 bank=0 type=CC cc=40 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=109 fwd_id=SENDER:309 bank=0 type=CC cc=8 chn=5 ports=0000100000000000
 EVENT_SENDER id= 309  bank=0 type=CC cc=40 chn=1 range=map31
-#EVENT_RECEIVER id=110 fwd_id=SENDER:310 bank=0 type=CC cc=41 chn=1 ports=1000100000000000
-#EVENT_SENDER id= 310  bank=0 type=CC cc=41 chn=1 range=0:1
-EVENT_RECEIVER id=111 fwd_id=SENDER:311 bank=0 type=CC cc=42 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=110 
+#EVENT_SENDER id= 310  
+EVENT_RECEIVER id=111 fwd_id=SENDER:311 bank=0 type=CC cc=10 chn=5 ports=0000100000000000
 EVENT_SENDER id= 311  bank=0 type=CC cc=42 chn=1 range=map31
-#EVENT_RECEIVER id=112 fwd_id=SENDER:312 bank=0 type=CC cc=43 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=112 fwd_id=SENDER:312 bank=0 type=CC cc=43 chn=5 ports=0000100000000000
 #EVENT_SENDER id= 312  bank=0 type=CC cc=43 chn=1 range=map31
-EVENT_RECEIVER id=113 fwd_id=SENDER:313 bank=0 type=CC cc=44 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=113 fwd_id=SENDER:313 bank=0 type=CC cc=12 chn=5 ports=0000100000000000
 EVENT_SENDER id= 313  bank=0 type=CC cc=44 chn=1 range=map31
-#EVENT_RECEIVER id=114 fwd_id=SENDER:314 bank=0 type=CC cc=45 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=114 fwd_id=SENDER:314 bank=0 type=CC cc=45 chn=5 ports=0000100000000000
 #EVENT_SENDER id= 314  bank=0 type=CC cc=45 chn=1 range=map11
-EVENT_RECEIVER id=115 fwd_id=SENDER:315 bank=0 type=CC cc=46 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=115 fwd_id=SENDER:315 bank=0 type=CC cc=14 chn=5 ports=0000100000000000
 EVENT_SENDER id= 315  bank=0 type=CC cc=46 chn=1 range=map31
-#EVENT_RECEIVER id=116 fwd_id=SENDER:316 bank=0 type=CC cc=47 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=116 fwd_id=SENDER:316 bank=0 type=CC cc=47 chn=5 ports=0000100000000000
 #EVENT_SENDER id= 316  bank=0 type=CC cc=47 chn=1 range=map11
 
 # Display 3 bank 1 - VDA EG
-EVENT_RECEIVER id=117 fwd_id=SENDER:317 bank=1 type=CC cc=48 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=117 fwd_id=SENDER:317 bank=1 type=CC cc=16 chn=5 ports=0000100000000000
 EVENT_SENDER id= 317  bank=1 type=CC cc=48 chn=1 range=map31
-EVENT_RECEIVER id=118 fwd_id=SENDER:318 bank=1 type=CC cc=49 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=118 fwd_id=SENDER:318 bank=1 type=CC cc=17 chn=5 ports=0000100000000000
 EVENT_SENDER id= 318  bank=1 type=CC cc=49 chn=1 range=map31
-EVENT_RECEIVER id=119 fwd_id=SENDER:319 bank=1 type=CC cc=50 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=119 fwd_id=SENDER:319 bank=1 type=CC cc=18 chn=5 ports=0000100000000000
 EVENT_SENDER id= 319  bank=1 type=CC cc=50 chn=1 range=map31
-EVENT_RECEIVER id=120 fwd_id=SENDER:320 bank=1 type=CC cc=51 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=120 fwd_id=SENDER:320 bank=1 type=CC cc=19 chn=5 ports=0000100000000000
 EVENT_SENDER id= 320  bank=1 type=CC cc=51 chn=1 range=map31
-EVENT_RECEIVER id=121 fwd_id=SENDER:321 bank=1 type=CC cc=52 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=121 fwd_id=SENDER:321 bank=1 type=CC cc=20 chn=5 ports=0000100000000000
 EVENT_SENDER id= 321  bank=1 type=CC cc=52 chn=1 range=map31
-#EVENT_RECEIVER id=122 fwd_id=SENDER:322 bank=1 type=CC cc=53 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=122 fwd_id=SENDER:322 bank=1 type=CC cc=53 chn=1 ports=0000100000000000
 #EVENT_SENDER id= 322  bank=1 type=CC cc=53 chn=1 range=map11
-#EVENT_RECEIVER id=123 fwd_id=SENDER:323 bank=1 type=CC cc=54 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=123 fwd_id=SENDER:323 bank=1 type=CC cc=54 chn=1 ports=0000100000000000
 #EVENT_SENDER id= 323  bank=1 type=CC cc=54 chn=1 range=map11
-#EVENT_RECEIVER id=124 fwd_id=SENDER:324 bank=1 type=CC cc=55 chn=1 ports=1000100000000000
+#EVENT_RECEIVER id=124 fwd_id=SENDER:324 bank=1 type=CC cc=55 chn=1 ports=0000100000000000
 #EVENT_SENDER id= 324  bank=1 type=CC cc=55 chn=1 range=map11
 
 # Display 4 bank 1 - VDF EG 
-EVENT_RECEIVER id=125 fwd_id=SENDER:325 bank=1 type=NRPN nrpn=56 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=125 fwd_id=SENDER:325 bank=1 type=NRPN nrpn=56 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 325  bank=1 type=CC cc=56 chn=1 
-EVENT_RECEIVER id=126 fwd_id=SENDER:326 bank=1 type=NRPN nrpn=57 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=126 fwd_id=SENDER:326 bank=1 type=NRPN nrpn=57 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 326  bank=1 type=CC cc=57 chn=1 
-EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=1 type=CC cc=58 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=127 fwd_id=SENDER:327 bank=1 type=CC cc=58 chn=5 ports=0000100000000000
 EVENT_SENDER id= 327  bank=1 type=CC cc=58 chn=1 range=map31
-EVENT_RECEIVER id=128 fwd_id=SENDER:328 bank=1 type=NRPN nrpn=59 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=128 fwd_id=SENDER:328 bank=1 type=NRPN nrpn=59 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 328  bank=1 type=CC cc=59 chn=1 
-EVENT_RECEIVER id=129 fwd_id=SENDER:329 bank=1 type=CC cc=60 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=129 fwd_id=SENDER:329 bank=1 type=CC cc=60 chn=5 ports=0000100000000000
 EVENT_SENDER id= 329  bank=1 type=CC cc=60 chn=1 range=map31
-EVENT_RECEIVER id=130 fwd_id=SENDER:330 bank=1 type=NRPN nrpn=61 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=130 fwd_id=SENDER:330 bank=1 type=NRPN nrpn=61 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 330  bank=1 type=CC cc=61 chn=1 
 #EVENT_RECEIVER id=131 fwd_id=SENDER:331 bank=1 type=CC cc=62 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 331  bank=1 type=CC cc=62 chn=1 range=map21
@@ -534,15 +536,15 @@ EVENT_SENDER id= 330  bank=1 type=CC cc=61 chn=1
 #EVENT_SENDER id= 332  bank=1 type=CC cc=63 chn=1 range=map21
 
 # Display 3 bank 2 - VDA
-EVENT_RECEIVER id=133 fwd_id=SENDER:333 bank=2 type=CC cc=48 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=133 fwd_id=SENDER:333 bank=2 type=CC cc=48 chn=5 ports=0000100000000000
 EVENT_SENDER id= 333  bank=2 type=CC cc=48 chn=1 range=map11
-EVENT_RECEIVER id=134 fwd_id=SENDER:334 bank=2 type=NRPN nrpn=49 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=134 fwd_id=SENDER:334 bank=2 type=NRPN nrpn=49 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 334  bank=2 type=CC cc=49 chn=1 
-EVENT_RECEIVER id=135 fwd_id=SENDER:335 bank=2 type=NRPN nrpn=50 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=135 fwd_id=SENDER:335 bank=2 type=NRPN nrpn=50 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 335  bank=2 type=CC cc=50 chn=1 
-EVENT_RECEIVER id=136 fwd_id=SENDER:336 bank=2 type=CC cc=51 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=136 fwd_id=SENDER:336 bank=2 type=CC cc=51 chn=5 ports=0000100000000000
 EVENT_SENDER id= 336  bank=2 type=CC cc=51 chn=1 range=map11
-EVENT_RECEIVER id=137 fwd_id=SENDER:337 bank=2 type=CC cc=52 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=137 fwd_id=SENDER:337 bank=2 type=CC cc=52 chn=5 ports=0000100000000000
 EVENT_SENDER id= 337  bank=2 type=CC cc=52 chn=1 range=map31
 #EVENT_RECEIVER id=138 fwd_id=SENDER:338 bank=2 type=CC cc=53 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 338  bank=2 type=CC cc=53 chn=1 range=map31
@@ -552,15 +554,15 @@ EVENT_SENDER id= 337  bank=2 type=CC cc=52 chn=1 range=map31
 #EVENT_SENDER id= 340  bank=2 type=CC cc=55 chn=1 range=map31
 
 # Display 4 bank 2 - VDF 
-EVENT_RECEIVER id=141 fwd_id=SENDER:341 bank=2 type=CC cc=56 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=141 fwd_id=SENDER:341 bank=2 type=CC cc=56 chn=5 ports=0000100000000000
 EVENT_SENDER id= 341  bank=2 type=CC cc=56 chn=1 range=map11
-EVENT_RECEIVER id=142 fwd_id=SENDER:342 bank=2 type=NRPN nrpn=57 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=142 fwd_id=SENDER:342 bank=2 type=NRPN nrpn=57 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 342  bank=2 type=CC cc=57 chn=1 
-EVENT_RECEIVER id=143 fwd_id=SENDER:343 bank=2 type=CC cc=58 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=143 fwd_id=SENDER:343 bank=2 type=CC cc=58 chn=5 ports=0000100000000000
 EVENT_SENDER id= 343  bank=2 type=CC cc=58 chn=1 range=map31
-EVENT_RECEIVER id=144 fwd_id=SENDER:344 bank=2 type=CC cc=59 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=144 fwd_id=SENDER:344 bank=2 type=CC cc=59 chn=5 ports=0000100000000000
 EVENT_SENDER id= 344  bank=2 type=CC cc=59 chn=1 range=map21
-EVENT_RECEIVER id=145 fwd_id=SENDER:345 bank=2 type=NRPN nrpn=60 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=145 fwd_id=SENDER:345 bank=2 type=NRPN nrpn=60 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 345  bank=2 type=CC cc=60 chn=1 
 #EVENT_RECEIVER id=146 fwd_id=SENDER:346 bank=2 type=CC cc=61 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 346  bank=2 type=CC cc=61 chn=1 range=map21
@@ -570,17 +572,17 @@ EVENT_SENDER id= 345  bank=2 type=CC cc=60 chn=1
 #EVENT_SENDER id= 348  bank=2 type=CC cc=63 chn=1 range=map21
 
 # Display 3 bank 3 - Pitch EG
-EVENT_RECEIVER id=149 fwd_id=SENDER:349 bank=3 type=NRPN nrpn=48 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=149 fwd_id=SENDER:349 bank=3 type=NRPN nrpn=48 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 349  bank=3 type=CC cc=48 chn=1 
-EVENT_RECEIVER id=150 fwd_id=SENDER:350 bank=3 type=CC cc=49 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=150 fwd_id=SENDER:350 bank=3 type=CC cc=49 chn=5 ports=0000100000000000
 EVENT_SENDER id= 350  bank=3 type=CC cc=49 chn=1 range=map31
-EVENT_RECEIVER id=151 fwd_id=SENDER:351 bank=3 type=NRPN nrpn=50 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=151 fwd_id=SENDER:351 bank=3 type=NRPN nrpn=50 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 351  bank=3 type=CC cc=50 chn=1 
-EVENT_RECEIVER id=152 fwd_id=SENDER:352 bank=3 type=CC cc=51 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=152 fwd_id=SENDER:352 bank=3 type=CC cc=51 chn=5 ports=0000100000000000
 EVENT_SENDER id= 352  bank=3 type=CC cc=51 chn=1 range=map31
-EVENT_RECEIVER id=153 fwd_id=SENDER:353 bank=3 type=CC cc=52 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=153 fwd_id=SENDER:353 bank=3 type=CC cc=52 chn=5 ports=0000100000000000
 EVENT_SENDER id= 353  bank=3 type=CC cc=52 chn=1 range=map31
-EVENT_RECEIVER id=154 fwd_id=SENDER:354 bank=3 type=NRPN nrpn=53 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=154 fwd_id=SENDER:354 bank=3 type=NRPN nrpn=53 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 354  bank=3 type=CC cc=53 chn=1 
 #EVENT_RECEIVER id=155 fwd_id=SENDER:355 bank=3 type=CC cc=54 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 355  bank=2 type=CC cc=54 chn=1 range=map31
@@ -588,17 +590,17 @@ EVENT_SENDER id= 354  bank=3 type=CC cc=53 chn=1
 #EVENT_SENDER id= 356  bank=2 type=CC cc=55 chn=1 range=map21
 
 # Display 4 bank 3 - remaining Pitch EG and remaining Osc params
-EVENT_RECEIVER id=157 fwd_id=SENDER:357 bank=3 type=CC cc=56 chn=1  ports=1000100000000000
+EVENT_RECEIVER id=157 fwd_id=SENDER:357 bank=3 type=CC cc=56 chn=5  ports=0000100000000000
 EVENT_SENDER id= 357  bank=3 type=CC cc=56 chn=1 range=map31 
-EVENT_RECEIVER id=158 fwd_id=SENDER:358 bank=3 type=NRPN nrpn=57 chn=1 range=map99 ports=1000100000000000
+EVENT_RECEIVER id=158 fwd_id=SENDER:358 bank=3 type=NRPN nrpn=57 chn=5 range=map99 ports=0000100000000000
 EVENT_SENDER id= 358  bank=3 type=CC cc=57 chn=1 
-EVENT_RECEIVER id=159 fwd_id=SENDER:359 bank=3 type=CC cc=58 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=159 fwd_id=SENDER:359 bank=3 type=CC cc=58 chn=5 ports=0000100000000000
 EVENT_SENDER id= 359  bank=3 type=CC cc=58 chn=1 range=map11
-EVENT_RECEIVER id=160 fwd_id=SENDER:360 bank=3 type=CC cc=59 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=160 fwd_id=SENDER:360 bank=3 type=CC cc=59 chn=5 ports=0000100000000000
 EVENT_SENDER id= 360  bank=3 type=CC cc=59 chn=1 range=map11
-EVENT_RECEIVER id=161 fwd_id=SENDER:361 bank=3 type=CC cc=60 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=161 fwd_id=SENDER:361 bank=3 type=CC cc=60 chn=5 ports=0000100000000000
 EVENT_SENDER id= 361  bank=3 type=CC cc=60 chn=1 range=map31
-EVENT_RECEIVER id=162 fwd_id=SENDER:362 bank=3 type=CC cc=61 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=162 fwd_id=SENDER:362 bank=3 type=CC cc=61 chn=5 ports=0000100000000000
 EVENT_SENDER id= 362  bank=3 type=CC cc=61 chn=1 range=map11
 #EVENT_RECEIVER id=163 fwd_id=SENDER:363 bank=3 type=CC cc=62 chn=1 ports=1000100000000000
 #EVENT_SENDER id= 363  bank=3 type=CC cc=62 chn=1 range=map31
@@ -606,15 +608,15 @@ EVENT_SENDER id= 362  bank=3 type=CC cc=61 chn=1 range=map11
 #EVENT_SENDER id= 364  bank=3 type=CC cc=63 chn=1 range=map21
 
 # Display 3 bank 4 - Cutoff MG
-EVENT_RECEIVER id=165 fwd_id=SENDER:365 bank=4 type=CC cc=48 chn=1  ports=1000100000000000
+EVENT_RECEIVER id=165 fwd_id=SENDER:365 bank=4 type=CC cc=48 chn=5  ports=0000100000000000
 EVENT_SENDER id= 365  bank=4 type=CC cc=48 chn=1 range=map11
-EVENT_RECEIVER id=166 fwd_id=SENDER:366 bank=4 type=CC cc=49 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=166 fwd_id=SENDER:366 bank=4 type=CC cc=49 chn=5 ports=0000100000000000
 EVENT_SENDER id= 366  bank=4 type=CC cc=49 chn=1 range=map11
-EVENT_RECEIVER id=167 fwd_id=SENDER:367 bank=4 type=CC cc=50 chn=1  ports=1000100000000000
+EVENT_RECEIVER id=167 fwd_id=SENDER:367 bank=4 type=CC cc=50 chn=5  ports=0000100000000000
 EVENT_SENDER id= 367  bank=4 type=CC cc=50 chn=1 range=map31
-EVENT_RECEIVER id=168 fwd_id=SENDER:368 bank=4 type=CC cc=51 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=168 fwd_id=SENDER:368 bank=4 type=CC cc=51 chn=5 ports=0000100000000000
 EVENT_SENDER id= 368  bank=4 type=CC cc=51 chn=1 range=map31
-EVENT_RECEIVER id=169 fwd_id=SENDER:369 bank=4 type=CC cc=52 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=169 fwd_id=SENDER:369 bank=4 type=CC cc=52 chn=5 ports=0000100000000000
 EVENT_SENDER id= 369  bank=4 type=CC cc=52 chn=1 range=map31
 #EVENT_RECEIVER id=170 fwd_id=SENDER:370 bank=4 type=NRPN nrpn=53 chn=1 range=map99 ports=1000100000000000
 #EVENT_SENDER id= 370  bank=4 type=CC cc=53 chn=1 
@@ -624,15 +626,15 @@ EVENT_SENDER id= 369  bank=4 type=CC cc=52 chn=1 range=map31
 #EVENT_SENDER id= 372  bank=4 type=CC cc=55 chn=1 range=map21
 
 # Display 3 bank 4 - Cutoff MG
-EVENT_RECEIVER id=173 fwd_id=SENDER:373 bank=4 type=CC cc=56 chn=1  ports=1000100000000000
+EVENT_RECEIVER id=173 fwd_id=SENDER:373 bank=4 type=CC cc=56 chn=5  ports=0000100000000000
 EVENT_SENDER id= 373  bank=4 type=CC cc=56 chn=1 range=map11
-EVENT_RECEIVER id=174 fwd_id=SENDER:374 bank=4 type=CC cc=57 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=174 fwd_id=SENDER:374 bank=4 type=CC cc=57 chn=5 ports=0000100000000000
 EVENT_SENDER id= 374  bank=4 type=CC cc=57 chn=1 range=map11
-EVENT_RECEIVER id=175 fwd_id=SENDER:375 bank=4 type=CC cc=58 chn=1  ports=1000100000000000
+EVENT_RECEIVER id=175 fwd_id=SENDER:375 bank=4 type=CC cc=58 chn=5  ports=0000100000000000
 EVENT_SENDER id= 375  bank=4 type=CC cc=58 chn=1 range=map31
-EVENT_RECEIVER id=176 fwd_id=SENDER:376 bank=4 type=CC cc=59 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=176 fwd_id=SENDER:376 bank=4 type=CC cc=59 chn=5 ports=0000100000000000
 EVENT_SENDER id= 376  bank=4 type=CC cc=59 chn=1 range=map31
-EVENT_RECEIVER id=177 fwd_id=SENDER:377 bank=4 type=CC cc=60 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=177 fwd_id=SENDER:377 bank=4 type=CC cc=60 chn=5 ports=0000100000000000
 EVENT_SENDER id= 377  bank=4 type=CC cc=60 chn=1 range=map31
 #EVENT_RECEIVER id=178 fwd_id=SENDER:378 bank=4 type=NRPN nrpn=53 chn=1 range=map99 ports=1000100000000000
 #EVENT_SENDER id= 378  bank=4 type=CC cc=61 chn=1 
@@ -779,7 +781,7 @@ EVENT_SENDER id=4050 type=SysEx if_equal_stop_on_match=RECEIVER:4050:1 stream="0
 EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 type=NoteOn key=0x0a chn=1 range=0:1
 EVENT_SENDER id=4042 if_equal_stop_on_match=RECEIVER:4042:1 type=Meta meta=IncBank meta=RunSection:1
 EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 type=NoteOn key=0x09 chn=1 range=0:1
-EVENT_SENDER id=4043 if_equal_stop_on_match=RECEIVER:4043:1 type=Meta key=0x09 chn=1 meta=DecBank meta=RunSection:1
+EVENT_SENDER id=4043 if_equal_stop_on_match=RECEIVER:4043:1 type=Meta meta=DecBank meta=RunSection:1
 
 # Keyboard / Note triggering 
 #ROUTER n= 1   src_port=USB1  src_chn= 1   dst_port=OUT2  dst_chn=17
