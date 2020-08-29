@@ -1,0 +1,276 @@
+RESET_HW
+
+############################
+#Parameter Name Printers####
+############################
+
+# Trigger these per hw_id in NGR-Script
+
+# Display 1 - bank 1
+EVENT_SENDER id= 1 			bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^label 0xf7" ports=1000100000000000 label="Prm. 1"
+EVENT_SENDER id= 2 hw_id=1  bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 7 ^label 0xf7" ports=1000100000000000 label="Prm. 2"
+EVENT_SENDER id= 3 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 14 ^label 0xf7" ports=1000100000000000 label="Prm. 3"
+EVENT_SENDER id= 4 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 21 ^label 0xf7" ports=1000100000000000 label="Prm. 4"
+EVENT_SENDER id= 5 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 28 ^label 0xf7" ports=1000100000000000 label="Prm. 5"
+EVENT_SENDER id= 6 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 35 ^label 0xf7" ports=1000100000000000 label="Prm. 6"
+EVENT_SENDER id= 7 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 42 ^label 0xf7" ports=1000100000000000 label="Prm. 7"
+EVENT_SENDER id= 8 hw_id=1	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 49 ^label 0xf7" ports=1000100000000000 label="Prm. 8"
+
+# Display 2 - bank 1
+EVENT_SENDER id= 9 			bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Prm. 9"
+EVENT_SENDER id= 10 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Prm.10"
+EVENT_SENDER id= 11 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label="Prm.11"
+EVENT_SENDER id= 12 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 21 ^label 0xf7" ports=1000100000000000 label="Prm.12"
+EVENT_SENDER id= 13 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 28 ^label 0xf7" ports=1000100000000000 label="Prm.13"
+EVENT_SENDER id= 14 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 35 ^label 0xf7" ports=1000100000000000 label="Prm.14"
+EVENT_SENDER id= 15 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 42 ^label 0xf7" ports=1000100000000000 label="Prm.15"
+EVENT_SENDER id= 16 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 49 ^label 0xf7" ports=1000100000000000 label="Prm.16"
+
+# Display 3 - bank 1
+
+# Display 4 - bank 1
+
+# Display 1 - bank 2
+
+# Display 2 - bank 2
+
+# Display 3 - bank 2
+
+# Display 4 - bank 2
+
+#####################
+#Dummy Encoders######
+#####################
+
+# Display 1 - bank 1
+
+# Display 2 - bank 1
+
+# Display 3 - bank 1
+
+# Display 4 - bank 1
+
+# Display 1 - bank 2
+
+# Display 2 - bank 2
+
+# Display 3 - bank 2
+
+# Display 4 - bank 2
+
+#########################
+#Value Printers - MacDis#
+#########################
+
+# Display 1 - bank 1
+
+# Display 2 - bank 1
+
+# Display 3 - bank 1
+
+# Display 4 - bank 1
+
+# Display 1 - bank 2
+
+# Display 2 - bank 2
+
+# Display 3 - bank 2
+
+# Display 4 - bank 2
+
+######################
+#LED Ring Controllers#
+######################
+
+# Display 1 - bank 1
+
+# Display 2 - bank 1
+
+# Display 3 - bank 1
+
+# Display 4 - bank 1
+
+# Display 1 - bank 2
+
+# Display 2 - bank 2
+
+# Display 3 - bank 2
+
+# Display 4 - bank 2
+
+##########################
+#Mackie Encoder Receivers#
+##########################
+
+# Display 1 - bank 1
+EVENT_RECEIVER id= 1 bank=1 type=CC chn=1 cc=0 emu_enc_mode=C4Enc  emu_enc_hw_id=1
+EVENT_RECEIVER id= 2 bank=1 type=CC chn=1 cc=1 emu_enc_mode=C4Enc  emu_enc_hw_id=2
+EVENT_RECEIVER id= 3 bank=1 type=CC chn=1 cc=2 emu_enc_mode=C4Enc  emu_enc_hw_id=3 
+EVENT_RECEIVER id= 4 bank=1 type=CC chn=1 cc=3 emu_enc_mode=C4Enc  emu_enc_hw_id=4 
+EVENT_RECEIVER id= 5 bank=1 type=CC chn=1 cc=4 emu_enc_mode=C4Enc  emu_enc_hw_id=5 
+EVENT_RECEIVER id= 6 bank=1 type=CC chn=1 cc=5 emu_enc_mode=C4Enc  emu_enc_hw_id=6 
+EVENT_RECEIVER id= 7 bank=1 type=CC chn=1 cc=6 emu_enc_mode=C4Enc  emu_enc_hw_id=7 
+EVENT_RECEIVER id= 8 bank=1 type=CC chn=1 cc=7 emu_enc_mode=C4Enc  emu_enc_hw_id=8 
+
+# Display 2 - bank 1
+EVENT_RECEIVER id= 9  bank=1 type=CC chn=1 cc=8  emu_enc_mode=C4Enc  emu_enc_hw_id=9
+EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9  emu_enc_mode=C4Enc  emu_enc_hw_id=10
+EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 
+EVENT_RECEIVER id= 12 bank=1 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=12 
+EVENT_RECEIVER id= 13 bank=1 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=13 
+EVENT_RECEIVER id= 14 bank=1 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=14 
+EVENT_RECEIVER id= 15 bank=1 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=15 
+EVENT_RECEIVER id= 16 bank=1 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=16 
+
+# Display 3 - bank 1
+EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=17
+EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=18
+EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=19 
+EVENT_RECEIVER id= 20 bank=1 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=20 
+EVENT_RECEIVER id= 21 bank=1 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=21 
+EVENT_RECEIVER id= 22 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=22 
+EVENT_RECEIVER id= 23 bank=1 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=23 
+EVENT_RECEIVER id= 24 bank=1 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=24 
+
+# Display 4 - bank 1
+EVENT_RECEIVER id= 25 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=25
+EVENT_RECEIVER id= 26 bank=1 type=CC chn=1 cc=25 emu_enc_mode=C4Enc  emu_enc_hw_id=26
+EVENT_RECEIVER id= 27 bank=1 type=CC chn=1 cc=26 emu_enc_mode=C4Enc  emu_enc_hw_id=27 
+EVENT_RECEIVER id= 28 bank=1 type=CC chn=1 cc=27 emu_enc_mode=C4Enc  emu_enc_hw_id=28 
+EVENT_RECEIVER id= 29 bank=1 type=CC chn=1 cc=28 emu_enc_mode=C4Enc  emu_enc_hw_id=29 
+EVENT_RECEIVER id= 30 bank=1 type=CC chn=1 cc=29 emu_enc_mode=C4Enc  emu_enc_hw_id=30 
+EVENT_RECEIVER id= 31 bank=1 type=CC chn=1 cc=30 emu_enc_mode=C4Enc  emu_enc_hw_id=31 
+EVENT_RECEIVER id= 32 bank=1 type=CC chn=1 cc=31 emu_enc_mode=C4Enc  emu_enc_hw_id=32 
+
+# Display 1 - bank 2
+EVENT_RECEIVER id= 33 bank=2 type=CC chn=1 cc=0 emu_enc_mode=C4Enc  emu_enc_hw_id=33 
+EVENT_RECEIVER id= 34 bank=2 type=CC chn=1 cc=1 emu_enc_mode=C4Enc  emu_enc_hw_id=34
+EVENT_RECEIVER id= 35 bank=2 type=CC chn=1 cc=2 emu_enc_mode=C4Enc  emu_enc_hw_id=35 
+EVENT_RECEIVER id= 36 bank=2 type=CC chn=1 cc=3 emu_enc_mode=C4Enc  emu_enc_hw_id=36 
+EVENT_RECEIVER id= 37 bank=2 type=CC chn=1 cc=4 emu_enc_mode=C4Enc  emu_enc_hw_id=37 
+EVENT_RECEIVER id= 38 bank=2 type=CC chn=1 cc=5 emu_enc_mode=C4Enc  emu_enc_hw_id=38 
+EVENT_RECEIVER id= 39 bank=2 type=CC chn=1 cc=6 emu_enc_mode=C4Enc  emu_enc_hw_id=39 
+EVENT_RECEIVER id= 40 bank=2 type=CC chn=1 cc=7 emu_enc_mode=C4Enc  emu_enc_hw_id=40 
+
+# Display 2 - bank 2
+EVENT_RECEIVER id= 41 bank=2 type=CC chn=1 cc=8 emu_enc_mode=C4Enc   emu_enc_hw_id=41 
+EVENT_RECEIVER id= 42 bank=2 type=CC chn=1 cc=9 emu_enc_mode=C4Enc   emu_enc_hw_id=42
+EVENT_RECEIVER id= 43 bank=2 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=43 
+EVENT_RECEIVER id= 44 bank=2 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=44 
+EVENT_RECEIVER id= 45 bank=2 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=45 
+EVENT_RECEIVER id= 46 bank=2 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=46 
+EVENT_RECEIVER id= 47 bank=2 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=47 
+EVENT_RECEIVER id= 48 bank=2 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=48 
+
+# Display 3 - bank 2
+EVENT_RECEIVER id= 49 bank=2 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=49 
+EVENT_RECEIVER id= 50 bank=2 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=50
+EVENT_RECEIVER id= 51 bank=2 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=51 
+EVENT_RECEIVER id= 52 bank=2 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=52 
+EVENT_RECEIVER id= 53 bank=2 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=53 
+EVENT_RECEIVER id= 54 bank=2 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=54 
+EVENT_RECEIVER id= 55 bank=2 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=55 
+EVENT_RECEIVER id= 56 bank=2 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=56 
+
+# Display 4 - bank 2
+EVENT_RECEIVER id= 57 bank=2 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=57
+EVENT_RECEIVER id= 58 bank=2 type=CC chn=1 cc=25 emu_enc_mode=C4Enc  emu_enc_hw_id=58
+EVENT_RECEIVER id= 59 bank=2 type=CC chn=1 cc=26 emu_enc_mode=C4Enc  emu_enc_hw_id=59 
+EVENT_RECEIVER id= 60 bank=2 type=CC chn=1 cc=27 emu_enc_mode=C4Enc  emu_enc_hw_id=60 
+EVENT_RECEIVER id= 61 bank=2 type=CC chn=1 cc=28 emu_enc_mode=C4Enc  emu_enc_hw_id=61 
+EVENT_RECEIVER id= 62 bank=2 type=CC chn=1 cc=29 emu_enc_mode=C4Enc  emu_enc_hw_id=62 
+EVENT_RECEIVER id= 63 bank=2 type=CC chn=1 cc=30 emu_enc_mode=C4Enc  emu_enc_hw_id=63 
+EVENT_RECEIVER id= 64 bank=2 type=CC chn=1 cc=31 emu_enc_mode=C4Enc  emu_enc_hw_id=64 
+
+# zeilen- und pageNavigatoren (ENC?)
+
+#####################################################################################
+###	M3R related configs
+#####################################################################################
+
+# Choose ports settings and Dump Request/Receive commands according to your setup
+
+# Program Parameter Dump Request - can be triggered on various ways (NGR, Forwarding from another MIDI Event...)
+# Dump Request command format used here is standard for KORG devices
+EVENT_SENDER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x10 0xf7" ports=0100010000000000 label="Current Prgrm Dump Request"
+
+# Program Parameter Dump Receiver
+# Dump Receive command format used here is standard for KORG devices
+EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x40 ^dump 0xf7" ports=0100010000000000 label="Current Program Dump received"
+
+#mode selectors bank 1
+#####################################################################################
+###	Mackie C4 related configs
+#####################################################################################
+
+#LED map 1 - single pointer
+MAP1/BYTEI 0:1 12:2 25:3 40:4 54:5 66:6 78:7 89:8 100:9 112:10 127:11
+
+#LED map 2 - pan like
+MAP2/BYTEI 17 18 19 20 21 22 23 24 25 26 27
+
+#LED map 3 - left to right fill
+MAP3/BYTEI 33 34 35 36 37 38 39 40 41 42 43
+
+#LED map 4 - spread like
+MAP4/BYTEI 49 50 51 52 53 54
+
+#LED map 5 - single pointer dotted
+MAP5/BYTEI 65 66 67 68 69 70 71 72 73 74 75
+
+#LED map 6 - pan like dotted
+MAP6/BYTEI 81 82 83 84 85 86 87 88 89 90 91
+
+#LED map 7 - left to right fill dotted
+MAP7/BYTEI 97 98 99 100 101 102 103 104 105 106 107
+
+#LED map 8 - spread like dotted
+MAP8/BYTEI 113 114 115 116 117 118
+
+#LED map 99 - pan-like, adjust for -99...99 value ranges
+MAP99/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -1:21 99:27 80:26 50:25 30:24 1:23 0:22
+
+#display cleaners
+EVENT_SENDER id= 4095 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x30 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x30 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4094 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x31 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x31 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4093 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x32 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x32 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+EVENT_SENDER id= 4092 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x33 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x33 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
+
+#LED cleaners
+EVENT_SENDER id= 4089 hw_id=4089 type=CC cc=32 chn=1 value=0
+EVENT_SENDER id= 4088 hw_id=4089 type=CC cc=33 chn=1 value=0
+EVENT_SENDER id= 4087 hw_id=4089 type=CC cc=34 chn=1 value=0
+EVENT_SENDER id= 4086 hw_id=4089 type=CC cc=35 chn=1 value=0
+EVENT_SENDER id= 4085 hw_id=4089 type=CC cc=36 chn=1 value=0
+EVENT_SENDER id= 4084 hw_id=4089 type=CC cc=37 chn=1 value=0
+EVENT_SENDER id= 4083 hw_id=4089 type=CC cc=38 chn=1 value=0
+EVENT_SENDER id= 4082 hw_id=4089 type=CC cc=39 chn=1 value=0
+EVENT_SENDER id= 4081 hw_id=4089 type=CC cc=40 chn=1 value=0
+EVENT_SENDER id= 4080 hw_id=4089 type=CC cc=41 chn=1 value=0
+EVENT_SENDER id= 4079 hw_id=4089 type=CC cc=42 chn=1 value=0
+EVENT_SENDER id= 4078 hw_id=4089 type=CC cc=43 chn=1 value=0
+EVENT_SENDER id= 4077 hw_id=4089 type=CC cc=44 chn=1 value=0
+EVENT_SENDER id= 4076 hw_id=4089 type=CC cc=45 chn=1 value=0
+EVENT_SENDER id= 4075 hw_id=4089 type=CC cc=46 chn=1 value=0
+EVENT_SENDER id= 4074 hw_id=4089 type=CC cc=47 chn=1 value=0
+EVENT_SENDER id= 4073 hw_id=4089 type=CC cc=48 chn=1 value=0
+EVENT_SENDER id= 4072 hw_id=4089 type=CC cc=49 chn=1 value=0
+EVENT_SENDER id= 4071 hw_id=4089 type=CC cc=50 chn=1 value=0
+EVENT_SENDER id= 4070 hw_id=4089 type=CC cc=51 chn=1 value=0
+EVENT_SENDER id= 4069 hw_id=4089 type=CC cc=52 chn=1 value=0
+EVENT_SENDER id= 4068 hw_id=4089 type=CC cc=53 chn=1 value=0
+EVENT_SENDER id= 4067 hw_id=4089 type=CC cc=54 chn=1 value=0
+EVENT_SENDER id= 4066 hw_id=4089 type=CC cc=55 chn=1 value=0
+EVENT_SENDER id= 4065 hw_id=4089 type=CC cc=56 chn=1 value=0
+EVENT_SENDER id= 4064 hw_id=4089 type=CC cc=57 chn=1 value=0
+EVENT_SENDER id= 4063 hw_id=4089 type=CC cc=58 chn=1 value=0
+EVENT_SENDER id= 4062 hw_id=4089 type=CC cc=59 chn=1 value=0
+EVENT_SENDER id= 4061 hw_id=4089 type=CC cc=60 chn=1 value=0
+EVENT_SENDER id= 4060 hw_id=4089 type=CC cc=61 chn=1 value=0
+EVENT_SENDER id= 4059 hw_id=4089 type=CC cc=62 chn=1 value=0
+EVENT_SENDER id= 4058 hw_id=4089 type=CC cc=63 chn=1 value=0
+EVENT_SENDER id= 4057 hw_id=4089 type=CC cc=64 chn=1 value=0
+
+#home button (Control Button on C4)
+EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10

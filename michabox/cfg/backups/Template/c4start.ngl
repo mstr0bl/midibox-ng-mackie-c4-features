@@ -3,6 +3,19 @@ COND =0   " Off  "
 COND =1   "  On  "
 COND_ELSE "on/off"
 
+COND_LABEL octave
+COND =0   " '16  "
+COND =1   "  '8  "
+COND_ELSE "  '4  "
+
+COND_LABEL wavform
+COND =0   " TRI  "
+COND =1   "SAW Up"
+COND =2   "SAW Dw"
+COND =3   " RECT "
+COND =4   " SINE "
+COND_ELSE "wavfrm"
+
 COND_LABEL note
 COND =0	  " C-1  "
 COND =1	  " C#-1 "
