@@ -51,7 +51,7 @@ EVENT_ENC id= 2 hw_id=2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=0 range=0:4 sy
 EVENT_SENDER id=102 fwd_id=RECEIVER:102 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^label 0xf7" ports=1000100000000000 label="^type"
 
 # LED ring controller
-EVENT_RECEIVER id=102 fwd_id=SENDER:202 bank=0 type=CC cc=32 chn=1 ports=1000100000000000
+EVENT_RECEIVER id=102 fwd_id=SENDER:202 bank=0 type=CC cc=32 chn=5 ports=0000100000000000
 EVENT_SENDER id= 202 range=map50  bank=0 type=CC cc=32 chn=1 
 
 # map 50 - to map 1-5 to match the type selectors LED ring pattern

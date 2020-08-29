@@ -1,0 +1,459 @@
+if ^section == 0
+ trigger SENDER:4095			#clear displays
+ delay_ms 300
+ trigger SENDER:4001			#dump request
+ delay_ms 750
+ trigger SENDER:1				#level param label print
+ trigger SENDER:25				#decay param label print
+ 
+ 
+ if ^bank == 1
+  trigger SENDER:9				#pitch param label print
+  trigger SENDER:17
+  trigger SENDER:120
+  
+  set_active (id)RECEIVER:41 0	#delay, audio in gain, acc. settings C4 encoders deactivators
+  set_active (id)RECEIVER:42 0
+  set_active (id)RECEIVER:43 0
+  set_active (id)RECEIVER:45 0
+  set_active (id)RECEIVER:46 0
+  set_active (id)RECEIVER:47 0
+  set_active (id)ENC:41 0		#delay, audio in gain, acc. settings dummy encoders deactivators
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:45 0
+  set_active (id)ENC:46 0
+  set_active (id)ENC:47 0
+  set_active (id)SENDER:141	0	#delay, audio in gain, acc. settings value printer deactivators
+  set_active (id)SENDER:142 0
+  set_active (id)SENDER:143 0
+  set_active (id)SENDER:145 0
+  set_active (id)SENDER:146 0
+  set_active (id)SENDER:147 0
+  set_active (id)RECEIVER:141 0	#delay, audio in gain,  acc. settings LED ring Receiver deactivators
+  set_active (id)RECEIVER:142 0
+  set_active (id)RECEIVER:143 0
+  set_active (id)RECEIVER:145 0
+  set_active (id)RECEIVER:146 0
+  set_active (id)RECEIVER:147 0
+  set_active (id)SENDER:341	0	#delay, audio in gain, acc. settings LED ring Sender deactivators
+  set_active (id)SENDER:342 0
+  set_active (id)SENDER:343 0
+  set_active (id)SENDER:345 0
+  set_active (id)SENDER:346 0
+  set_active (id)SENDER:347 0
+ 
+ elsif ^bank == 2
+  trigger SENDER:9				#pitch param label print
+  trigger SENDER:17
+  trigger SENDER:121
+  
+  set_active (id)RECEIVER:41 0	#delay, audio in gain, acc. settings C4 encoders deactivators
+  set_active (id)RECEIVER:42 0
+  set_active (id)RECEIVER:43 0
+  set_active (id)RECEIVER:45 0
+  set_active (id)RECEIVER:46 0
+  set_active (id)RECEIVER:47 0
+  set_active (id)ENC:41 0		#delay, audio in gain, acc. settings dummy encoders deactivators
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:45 0
+  set_active (id)ENC:46 0
+  set_active (id)ENC:47 0
+  set_active (id)SENDER:141	0	#delay, audio in gain, acc. settings value printer deactivators
+  set_active (id)SENDER:142 0
+  set_active (id)SENDER:143 0
+  set_active (id)SENDER:145 0
+  set_active (id)SENDER:146 0
+  set_active (id)SENDER:147 0
+  set_active (id)RECEIVER:141 0	#delay, audio in gain,  acc. settings LED ring Receiver deactivators
+  set_active (id)RECEIVER:142 0
+  set_active (id)RECEIVER:143 0
+  set_active (id)RECEIVER:145 0
+  set_active (id)RECEIVER:146 0
+  set_active (id)RECEIVER:147 0
+  set_active (id)SENDER:341	0	#delay, audio in gain, acc. settings LED ring Sender deactivators
+  set_active (id)SENDER:342 0
+  set_active (id)SENDER:343 0
+  set_active (id)SENDER:345 0
+  set_active (id)SENDER:346 0
+  set_active (id)SENDER:347 0
+ 
+ elsif ^bank == 3
+  trigger SENDER:33				#Delay, Audio Input Gain & Accent Settings Label printers
+  trigger SENDER:41
+  
+  
+  set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
+  set_active (id)RECEIVER:42 1
+  set_active (id)RECEIVER:43 1
+  set_active (id)RECEIVER:45 1
+  set_active (id)RECEIVER:46 1
+  set_active (id)RECEIVER:47 1
+  set_active (id)ENC:41 1		#delay, audio in gain, acc. settings dummy encoders activators
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:45 1
+  set_active (id)ENC:46 1
+  set_active (id)ENC:47 1
+  set_active (id)SENDER:141	1	#delay, audio in gain, acc. settings value printer activators
+  set_active (id)SENDER:142 1
+  set_active (id)SENDER:143 1
+  set_active (id)SENDER:145 1
+  set_active (id)SENDER:146 1
+  set_active (id)SENDER:147 1
+  set_active (id)RECEIVER:141 1	#delay, audio in gain,  acc. settings LED ring Receiver activators
+  set_active (id)RECEIVER:142 1
+  set_active (id)RECEIVER:143 1
+  set_active (id)RECEIVER:145 1
+  set_active (id)RECEIVER:146 1
+  set_active (id)RECEIVER:147 1
+  set_active (id)SENDER:341	1	#delay, audio in gain, acc. settings LED ring Sender activators
+  set_active (id)SENDER:342 1
+  set_active (id)SENDER:343 1
+  set_active (id)SENDER:345 1
+  set_active (id)SENDER:346 1
+  set_active (id)SENDER:347 1
+  
+  trigger (id)SENDER:141		#value printers for audio in gains and delay type need to be triggered manually
+  trigger (id)SENDER:142
+  trigger (id)SENDER:143
+  
+  trigger (id)SENDER:4078		#Clear LED Rings on Slots 2.4, 2.8, 3.5, 3.6
+  trigger (id)SENDER:4074
+  trigger (id)SENDER:4069
+  trigger (id)SENDER:4068
+  
+ elsif ^bank == 4
+ trigger SENDER:33				#Delay, Motion Sequence & Accent Settings Label printers
+ trigger SENDER:51
+ 
+ set_active (id)RECEIVER:9 0	#pitch param C4 encoder deactivators
+  set_active (id)RECEIVER:10 0
+  set_active (id)RECEIVER:11 0
+  set_active (id)RECEIVER:12 0
+  set_active (id)RECEIVER:13 0
+  set_active (id)RECEIVER:14 0
+  set_active (id)RECEIVER:15 0
+  set_active (id)RECEIVER:16 0
+  set_active (id)ENC:9 0		#pitch param dummy encoder deactivators
+  set_active (id)ENC:10 0
+  set_active (id)ENC:11 0
+  set_active (id)ENC:12 0
+  set_active (id)ENC:13 0
+  set_active (id)ENC:14 0
+  set_active (id)ENC:15 0
+  set_active (id)ENC:16 0
+  set_active (id)SENDER:109 0	#pitch param value printer deactivators
+  set_active (id)SENDER:110 0
+  set_active (id)SENDER:111 0
+  set_active (id)SENDER:112 0
+  set_active (id)SENDER:113 0
+  set_active (id)SENDER:114 0
+  set_active (id)SENDER:115 0
+  set_active (id)SENDER:116 0
+  set_active (id)RECEIVER:109 0	#pitch param LED ring Receiver activators
+  set_active (id)RECEIVER:110 0
+  set_active (id)RECEIVER:111 0
+  set_active (id)RECEIVER:112 0
+  set_active (id)RECEIVER:113 0
+  set_active (id)RECEIVER:114 0
+  set_active (id)RECEIVER:115 0
+  set_active (id)RECEIVER:116 0
+  set_active (id)SENDER:309 0	#pitch param LED ring Sender activators
+  set_active (id)SENDER:310 0
+  set_active (id)SENDER:311 0
+  set_active (id)SENDER:312 0
+  set_active (id)SENDER:313 0
+  set_active (id)SENDER:314 0
+  set_active (id)SENDER:315 0
+  set_active (id)SENDER:316 0
+  set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
+  set_active (id)RECEIVER:42 1
+  set_active (id)RECEIVER:43 1
+  set_active (id)RECEIVER:45 1
+  set_active (id)RECEIVER:46 1
+  set_active (id)RECEIVER:47 1
+  set_active (id)ENC:41 1		#delay, audio in gain, acc. settings dummy encoders activators
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:45 1
+  set_active (id)ENC:46 1
+  set_active (id)ENC:47 1
+  set_active (id)SENDER:141	1	#delay, audio in gain, acc. settings value printer activators
+  set_active (id)SENDER:142 1
+  set_active (id)SENDER:143 1
+  set_active (id)SENDER:145 1
+  set_active (id)SENDER:146 1
+  set_active (id)SENDER:147 1
+  set_active (id)RECEIVER:141 1	#delay, audio in gain,  acc. settings LED ring Receiver activators
+  set_active (id)RECEIVER:142 1
+  set_active (id)RECEIVER:143 1
+  set_active (id)RECEIVER:145 1
+  set_active (id)RECEIVER:146 1
+  set_active (id)RECEIVER:147 1
+  set_active (id)SENDER:341	1	#delay, audio in gain, acc. settings LED ring Sender activators
+  set_active (id)SENDER:342 1
+  set_active (id)SENDER:343 1
+  set_active (id)SENDER:345 1
+  set_active (id)SENDER:346 1
+  set_active (id)SENDER:347 1
+ 
+ trigger (id)SENDER:141			#value printers for audio in gains and delay type need to be triggered manually
+ trigger (id)SENDER:142
+ trigger (id)SENDER:143
+ 
+ elsif ^bank == 5
+ trigger SENDER:33				#Delay, Motion Sequence & Accent Settings Label printers
+ trigger SENDER:59
+ 
+ set_active (id)RECEIVER:9 0	#pitch param C4 encoder deactivators
+  set_active (id)RECEIVER:10 0
+  set_active (id)RECEIVER:11 0
+  set_active (id)RECEIVER:12 0
+  set_active (id)RECEIVER:13 0
+  set_active (id)RECEIVER:14 0
+  set_active (id)RECEIVER:15 0
+  set_active (id)RECEIVER:16 0
+  set_active (id)ENC:9 0		#pitch param dummy encoder deactivators
+  set_active (id)ENC:10 0
+  set_active (id)ENC:11 0
+  set_active (id)ENC:12 0
+  set_active (id)ENC:13 0
+  set_active (id)ENC:14 0
+  set_active (id)ENC:15 0
+  set_active (id)ENC:16 0
+  set_active (id)SENDER:109 0	#pitch param value printer deactivators
+  set_active (id)SENDER:110 0
+  set_active (id)SENDER:111 0
+  set_active (id)SENDER:112 0
+  set_active (id)SENDER:113 0
+  set_active (id)SENDER:114 0
+  set_active (id)SENDER:115 0
+  set_active (id)SENDER:116 0
+  set_active (id)RECEIVER:109 0	#pitch param LED ring Receiver activators
+  set_active (id)RECEIVER:110 0
+  set_active (id)RECEIVER:111 0
+  set_active (id)RECEIVER:112 0
+  set_active (id)RECEIVER:113 0
+  set_active (id)RECEIVER:114 0
+  set_active (id)RECEIVER:115 0
+  set_active (id)RECEIVER:116 0
+  set_active (id)SENDER:309 0	#pitch param LED ring Sender activators
+  set_active (id)SENDER:310 0
+  set_active (id)SENDER:311 0
+  set_active (id)SENDER:312 0
+  set_active (id)SENDER:313 0
+  set_active (id)SENDER:314 0
+  set_active (id)SENDER:315 0
+  set_active (id)SENDER:316 0
+  set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
+  set_active (id)RECEIVER:42 1
+  set_active (id)RECEIVER:43 1
+  set_active (id)RECEIVER:45 1
+  set_active (id)RECEIVER:46 1
+  set_active (id)RECEIVER:47 1
+  set_active (id)ENC:41 1		#delay, audio in gain, acc. settings dummy encoders activators
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:45 1
+  set_active (id)ENC:46 1
+  set_active (id)ENC:47 1
+  set_active (id)SENDER:141	1	#delay, audio in gain, acc. settings value printer activators
+  set_active (id)SENDER:142 1
+  set_active (id)SENDER:143 1
+  set_active (id)SENDER:145 1
+  set_active (id)SENDER:146 1
+  set_active (id)SENDER:147 1
+  set_active (id)RECEIVER:141 1	#delay, audio in gain,  acc. settings LED ring Receiver activators
+  set_active (id)RECEIVER:142 1
+  set_active (id)RECEIVER:143 1
+  set_active (id)RECEIVER:145 1
+  set_active (id)RECEIVER:146 1
+  set_active (id)RECEIVER:147 1
+  set_active (id)SENDER:341	1	#delay, audio in gain, acc. settings LED ring Sender activators
+  set_active (id)SENDER:342 1
+  set_active (id)SENDER:343 1
+  set_active (id)SENDER:345 1
+  set_active (id)SENDER:346 1
+  set_active (id)SENDER:347 1
+ 
+ trigger (id)SENDER:141			#value printers for audio in gains and delay type need to be triggered manually
+ trigger (id)SENDER:142
+ trigger (id)SENDER:143
+ 
+ elsif ^bank == 6
+ trigger SENDER:33				#Delay, Motion Sequence & Accent Settings Label printers
+ trigger SENDER:68
+ 
+ set_active (id)RECEIVER:9 0	#pitch param C4 encoder deactivators
+  set_active (id)RECEIVER:10 0
+  set_active (id)RECEIVER:11 0
+  set_active (id)RECEIVER:12 0
+  set_active (id)RECEIVER:13 0
+  set_active (id)RECEIVER:14 0
+  set_active (id)RECEIVER:15 0
+  set_active (id)RECEIVER:16 0
+  set_active (id)ENC:9 0		#pitch param dummy encoder deactivators
+  set_active (id)ENC:10 0
+  set_active (id)ENC:11 0
+  set_active (id)ENC:12 0
+  set_active (id)ENC:13 0
+  set_active (id)ENC:14 0
+  set_active (id)ENC:15 0
+  set_active (id)ENC:16 0
+  set_active (id)SENDER:109 0	#pitch param value printer deactivators
+  set_active (id)SENDER:110 0
+  set_active (id)SENDER:111 0
+  set_active (id)SENDER:112 0
+  set_active (id)SENDER:113 0
+  set_active (id)SENDER:114 0
+  set_active (id)SENDER:115 0
+  set_active (id)SENDER:116 0
+  set_active (id)RECEIVER:109 0	#pitch param LED ring Receiver activators
+  set_active (id)RECEIVER:110 0
+  set_active (id)RECEIVER:111 0
+  set_active (id)RECEIVER:112 0
+  set_active (id)RECEIVER:113 0
+  set_active (id)RECEIVER:114 0
+  set_active (id)RECEIVER:115 0
+  set_active (id)RECEIVER:116 0
+  set_active (id)SENDER:309 0	#pitch param LED ring Sender activators
+  set_active (id)SENDER:310 0
+  set_active (id)SENDER:311 0
+  set_active (id)SENDER:312 0
+  set_active (id)SENDER:313 0
+  set_active (id)SENDER:314 0
+  set_active (id)SENDER:315 0
+  set_active (id)SENDER:316 0
+  set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
+  set_active (id)RECEIVER:42 1
+  set_active (id)RECEIVER:43 1
+  set_active (id)RECEIVER:45 1
+  set_active (id)RECEIVER:46 1
+  set_active (id)RECEIVER:47 1
+  set_active (id)ENC:41 1		#delay, audio in gain, acc. settings dummy encoders activators
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:45 1
+  set_active (id)ENC:46 1
+  set_active (id)ENC:47 1
+  set_active (id)SENDER:141	1	#delay, audio in gain, acc. settings value printer activators
+  set_active (id)SENDER:142 1
+  set_active (id)SENDER:143 1
+  set_active (id)SENDER:145 1
+  set_active (id)SENDER:146 1
+  set_active (id)SENDER:147 1
+  set_active (id)RECEIVER:141 1	#delay, audio in gain,  acc. settings LED ring Receiver activators
+  set_active (id)RECEIVER:142 1
+  set_active (id)RECEIVER:143 1
+  set_active (id)RECEIVER:145 1
+  set_active (id)RECEIVER:146 1
+  set_active (id)RECEIVER:147 1
+  set_active (id)SENDER:341	1	#delay, audio in gain, acc. settings LED ring Sender activators
+  set_active (id)SENDER:342 1
+  set_active (id)SENDER:343 1
+  set_active (id)SENDER:345 1
+  set_active (id)SENDER:346 1
+  set_active (id)SENDER:347 1
+ 
+ trigger (id)SENDER:141			#value printers for audio in gains and delay type need to be triggered manually
+ trigger (id)SENDER:142
+ trigger (id)SENDER:143
+ 
+ elsif ^bank == 7
+ trigger SENDER:33				#Delay, Motion Sequence & Accent Settings Label printers
+ trigger SENDER:76
+ 
+ set_active (id)RECEIVER:9 0	#pitch param C4 encoder deactivators
+  set_active (id)RECEIVER:10 0
+  set_active (id)RECEIVER:11 0
+  set_active (id)RECEIVER:12 0
+  set_active (id)RECEIVER:13 0
+  set_active (id)RECEIVER:14 0
+  set_active (id)RECEIVER:15 0
+  set_active (id)RECEIVER:16 0
+  set_active (id)ENC:9 0		#pitch param dummy encoder deactivators
+  set_active (id)ENC:10 0
+  set_active (id)ENC:11 0
+  set_active (id)ENC:12 0
+  set_active (id)ENC:13 0
+  set_active (id)ENC:14 0
+  set_active (id)ENC:15 0
+  set_active (id)ENC:16 0
+  set_active (id)SENDER:109 0	#pitch param value printer deactivators
+  set_active (id)SENDER:110 0
+  set_active (id)SENDER:111 0
+  set_active (id)SENDER:112 0
+  set_active (id)SENDER:113 0
+  set_active (id)SENDER:114 0
+  set_active (id)SENDER:115 0
+  set_active (id)SENDER:116 0
+  set_active (id)RECEIVER:109 0	#pitch param LED ring Receiver activators
+  set_active (id)RECEIVER:110 0
+  set_active (id)RECEIVER:111 0
+  set_active (id)RECEIVER:112 0
+  set_active (id)RECEIVER:113 0
+  set_active (id)RECEIVER:114 0
+  set_active (id)RECEIVER:115 0
+  set_active (id)RECEIVER:116 0
+  set_active (id)SENDER:309 0	#pitch param LED ring Sender activators
+  set_active (id)SENDER:310 0
+  set_active (id)SENDER:311 0
+  set_active (id)SENDER:312 0
+  set_active (id)SENDER:313 0
+  set_active (id)SENDER:314 0
+  set_active (id)SENDER:315 0
+  set_active (id)SENDER:316 0
+  set_active (id)RECEIVER:41 1  #delay, audio in gain, acc. settings C4 encoders activators
+  set_active (id)RECEIVER:42 1
+  set_active (id)RECEIVER:43 1
+  set_active (id)RECEIVER:45 1
+  set_active (id)RECEIVER:46 1
+  set_active (id)RECEIVER:47 1
+  set_active (id)ENC:41 1		#delay, audio in gain, acc. settings dummy encoders activators
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:45 1
+  set_active (id)ENC:46 1
+  set_active (id)ENC:47 1
+  set_active (id)SENDER:141	1	#delay, audio in gain, acc. settings value printer activators
+  set_active (id)SENDER:142 1
+  set_active (id)SENDER:143 1
+  set_active (id)SENDER:145 1
+  set_active (id)SENDER:146 1
+  set_active (id)SENDER:147 1
+  set_active (id)RECEIVER:141 1	#delay, audio in gain,  acc. settings LED ring Receiver activators
+  set_active (id)RECEIVER:142 1
+  set_active (id)RECEIVER:143 1
+  set_active (id)RECEIVER:145 1
+  set_active (id)RECEIVER:146 1
+  set_active (id)RECEIVER:147 1
+  set_active (id)SENDER:341	1	#delay, audio in gain, acc. settings LED ring Sender activators
+  set_active (id)SENDER:342 1
+  set_active (id)SENDER:343 1
+  set_active (id)SENDER:345 1
+  set_active (id)SENDER:346 1
+  set_active (id)SENDER:347 1
+ 
+ trigger (id)SENDER:141			#value printers for audio in gains and delay type need to be triggered manually
+ trigger (id)SENDER:142
+ trigger (id)SENDER:143
+ 
+ trigger (id)SENDER:181			#value printers for motion sequence type selectors need to be triggered manually
+ trigger (id)SENDER:182
+ trigger (id)SENDER:183
+ trigger (id)SENDER:184
+ trigger (id)SENDER:185
+ trigger (id)SENDER:186
+ trigger (id)SENDER:187
+ trigger (id)SENDER:188
+  
+ endif
+ 
+endif
+
+
+if ^section == 10
+ load default
+endif

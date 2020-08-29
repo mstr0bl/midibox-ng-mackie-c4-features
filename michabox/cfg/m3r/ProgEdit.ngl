@@ -4,9 +4,9 @@ COND =1   "  On  "
 COND_ELSE "on/off"
 
 COND_LABEL mode
-COND =0   "MulSnd"
+COND =0   "Multi Sound  "
 COND =1   "  1   "
-COND =2   "Drums "
+COND =2   "       Drums "
 COND =3   "  3   "
 COND =4   "  4   "
 COND_ELSE " mode "
