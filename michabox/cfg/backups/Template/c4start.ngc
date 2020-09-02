@@ -43,16 +43,64 @@ EVENT_SENDER id= 16 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0
 #####################
 
 # Display 1 - bank 1
+EVENT_ENC id= 1 bank=1 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:127 syxdump_pos=4001:1
+EVENT_ENC id= 2 bank=1 fwd_id=SENDER:102 type=CC chn=5 cc=1 range=0:127 syxdump_pos=4001:2 
+EVENT_ENC id= 3 bank=1 fwd_id=SENDER:103 type=CC chn=5 cc=2 range=0:127 syxdump_pos=4001:3 
+EVENT_ENC id= 4 bank=1 fwd_id=SENDER:104 type=CC chn=5 cc=3 range=0:127 syxdump_pos=4001:4 
+EVENT_ENC id= 5 bank=1 fwd_id=SENDER:105 type=CC chn=5 cc=4 range=0:127 syxdump_pos=4001:5 		
+EVENT_ENC id= 6 bank=1 fwd_id=SENDER:106 type=CC chn=5 cc=5 range=0:127 syxdump_pos=4001:6  			
+EVENT_ENC id= 7 bank=1 fwd_id=SENDER:107 type=CC chn=5 cc=6 range=0:127 syxdump_pos=4001:7 
+EVENT_ENC id= 8 bank=1 fwd_id=SENDER:108 type=CC chn=5 cc=7 range=0:127 syxdump_pos=4001:9
 
 # Display 2 - bank 1
+EVENT_ENC id= 9  bank=1 fwd_id=SENDER:109 type=CC chn=5 cc=8  range=0:127 syxdump_pos=4001:10
+EVENT_ENC id= 10 bank=1 fwd_id=SENDER:110 type=CC chn=5 cc=9  range=0:127 syxdump_pos=4001:11
+EVENT_ENC id= 11 bank=1 fwd_id=SENDER:111 type=CC chn=5 cc=10 range=0:127 syxdump_pos=4001:12 
+EVENT_ENC id= 12 bank=1 fwd_id=SENDER:112 type=CC chn=5 cc=11 range=0:127 syxdump_pos=4001:13
+EVENT_ENC id= 13 bank=1 fwd_id=SENDER:113 type=CC chn=5 cc=12 range=0:127 syxdump_pos=4001:14 		
+EVENT_ENC id= 14 bank=1 fwd_id=SENDER:114 type=CC chn=5 cc=13 range=0:127 syxdump_pos=4001:15 			
+EVENT_ENC id= 15 bank=1 fwd_id=SENDER:115 type=CC chn=5 cc=14 range=0:127 syxdump_pos=4001:17
+EVENT_ENC id= 16 bank=1 fwd_id=SENDER:116 type=CC chn=5 cc=15 range=0:127 syxdump_pos=4001:18
 
 # Display 3 - bank 1
+EVENT_ENC id= 17 bank=1 fwd_id=SENDER:117 type=CC chn=5 cc=16 range=0:127 syxdump_pos=4001:19
+EVENT_ENC id= 18 bank=1 fwd_id=SENDER:118 type=CC chn=5 cc=17 range=0:127 syxdump_pos=4001:20
+EVENT_ENC id= 19 bank=1 fwd_id=SENDER:119 type=CC chn=5 cc=18 range=0:127 syxdump_pos=4001:21 
+EVENT_ENC id= 20 bank=1 fwd_id=SENDER:120 type=CC chn=5 cc=19 range=0:127 syxdump_pos=4001:22
+EVENT_ENC id= 21 bank=1 fwd_id=SENDER:121 type=CC chn=5 cc=20 range=0:127 syxdump_pos=4001:23 		
+EVENT_ENC id= 22 bank=1 fwd_id=SENDER:122 type=CC chn=5 cc=21 range=0:127 syxdump_pos=4001:25 			
+EVENT_ENC id= 23 bank=1 fwd_id=SENDER:123 type=CC chn=5 cc=22 range=0:127 syxdump_pos=4001:26
+EVENT_ENC id= 24 bank=1 fwd_id=SENDER:124 type=CC chn=5 cc=23 range=0:127 syxdump_pos=4001:27
 
 # Display 4 - bank 1
+EVENT_ENC id= 25 bank=1 fwd_id=SENDER:125 type=CC chn=5 cc=24 range=0:127 syxdump_pos=4001:28
+EVENT_ENC id= 26 bank=1 fwd_id=SENDER:126 type=CC chn=5 cc=25 range=0:127 syxdump_pos=4001:29
+EVENT_ENC id= 27 bank=1 fwd_id=SENDER:127 type=CC chn=5 cc=26 range=0:127 syxdump_pos=4001:30 
+EVENT_ENC id= 28 bank=1 fwd_id=SENDER:128 type=CC chn=5 cc=27 range=0:127 syxdump_pos=4001:31
+EVENT_ENC id= 29 bank=1 fwd_id=SENDER:129 type=CC chn=5 cc=28 range=0:127 syxdump_pos=4001:33 		
+EVENT_ENC id= 30 bank=1 fwd_id=SENDER:130 type=CC chn=5 cc=29 range=0:127 syxdump_pos=4001:34 			
+EVENT_ENC id= 31 bank=1 fwd_id=SENDER:131 type=CC chn=5 cc=30 range=0:127 syxdump_pos=4001:35
+EVENT_ENC id= 32 bank=1 fwd_id=SENDER:132 type=CC chn=5 cc=31 range=0:127 syxdump_pos=4001:36
 
 # Display 1 - bank 2
+EVENT_ENC id= 33 bank=2 fwd_id=SENDER:133 type=CC chn=5 cc=0  range=0:127 syxdump_pos=4001:37
+EVENT_ENC id= 34 bank=2 fwd_id=SENDER:134 type=CC chn=5 cc=1  range=0:127 syxdump_pos=4001:38
+EVENT_ENC id= 35 bank=2 fwd_id=SENDER:135 type=CC chn=5 cc=2  range=0:127 syxdump_pos=4001:39 
+EVENT_ENC id= 36 bank=2 fwd_id=SENDER:136 type=CC chn=5 cc=3  range=0:127 syxdump_pos=4001:41
+EVENT_ENC id= 37 bank=2 fwd_id=SENDER:137 type=CC chn=5 cc=4  range=0:127 syxdump_pos=4001:42 		
+EVENT_ENC id= 38 bank=2 fwd_id=SENDER:138 type=CC chn=5 cc=5  range=0:127 syxdump_pos=4001:43 			
+EVENT_ENC id= 39 bank=2 fwd_id=SENDER:139 type=CC chn=5 cc=6  range=0:127 syxdump_pos=4001:44
+EVENT_ENC id= 40 bank=2 fwd_id=SENDER:140 type=CC chn=5 cc=7  range=0:127 syxdump_pos=4001:45
 
 # Display 2 - bank 2
+EVENT_ENC id= 41 bank=2 fwd_id=SENDER:141 type=CC chn=5 cc=8  range=0:127 syxdump_pos=4001:46
+EVENT_ENC id= 42 bank=2 fwd_id=SENDER:142 type=CC chn=5 cc=9  range=0:127 syxdump_pos=4001:47
+EVENT_ENC id= 43 bank=2 fwd_id=SENDER:143 type=CC chn=5 cc=10 range=0:127 syxdump_pos=4001:49 
+EVENT_ENC id= 44 bank=2 fwd_id=SENDER:144 type=CC chn=5 cc=11 range=0:127 syxdump_pos=4001:50
+EVENT_ENC id= 45 bank=2 fwd_id=SENDER:145 type=CC chn=5 cc=12 range=0:127 syxdump_pos=4001:51 		
+EVENT_ENC id= 46 bank=2 fwd_id=SENDER:146 type=CC chn=5 cc=13 range=0:127 syxdump_pos=4001:52 			
+EVENT_ENC id= 47 bank=2 fwd_id=SENDER:147 type=CC chn=5 cc=14 range=0:127 syxdump_pos=4001:53
+EVENT_ENC id= 48 bank=2 fwd_id=SENDER:148 type=CC chn=5 cc=15 range=0:127 syxdump_pos=4001:54
 
 # Display 3 - bank 2
 
@@ -62,53 +110,88 @@ EVENT_SENDER id= 16 hw_id=9	bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0
 #Value Printers - MacDis#
 #########################
 
+# Enable Parameter Value printing in the lower C4 Display lines
+# Senders 107 & 108 are examples for printing Conditional Labels (see .ngl)
+
 # Display 1 - bank 1
-EVENT_SENDER id=101 fwd_id=SENDER:201 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=102 fwd_id=SENDER:202 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 63 ^macdis 0xf7"ports=1000100000000000
+EVENT_SENDER id=101 fwd_id=SENDER:201 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=102 fwd_id=SENDER:202 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 63 ^macdis 0xf7" ports=1000100000000000
 EVENT_SENDER id=103 fwd_id=SENDER:203 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 70 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=104 fwd_id=SENDER:204 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=105 fwd_id=SENDER:205 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^macdis 0xf7"   ports=1000100000000000
+EVENT_SENDER id=104 fwd_id=SENDER:204 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 77 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=105 fwd_id=SENDER:205 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^macdis 0xf7" ports=1000100000000000
 EVENT_SENDER id=106 fwd_id=SENDER:206 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 91 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=107 fwd_id=SENDER:207 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 98 ^label 0xf7" ports=1000100000000000 label="^wavform"
+EVENT_SENDER id=107 fwd_id=SENDER:207 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 98 ^label 0xf7"  ports=1000100000000000 label="^wavform"
 EVENT_SENDER id=108 fwd_id=SENDER:208 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 105 ^label 0xf7" ports=1000100000000000 label="^note"
 
 # Display 2 - bank 1
 EVENT_SENDER id=109 fwd_id=SENDER:209 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=110 fwd_id=SENDER:210 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7"ports=1000100000000000
-EVENT_SENDER id=111 fwd_id=SENDER:211 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=110 fwd_id=SENDER:210 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=111 fwd_id=SENDER:211 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7"  ports=1000100000000000
 EVENT_SENDER id=112 fwd_id=SENDER:212 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=113 fwd_id=SENDER:213 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"   ports=1000100000000000
-EVENT_SENDER id=114 fwd_id=SENDER:214 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=115 fwd_id=SENDER:215 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7" ports=1000100000000000 
+EVENT_SENDER id=113 fwd_id=SENDER:213 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=114 fwd_id=SENDER:214 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=115 fwd_id=SENDER:215 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
 EVENT_SENDER id=116 fwd_id=SENDER:216 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 3 - bank 1
 EVENT_SENDER id=117 fwd_id=SENDER:217 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=118 fwd_id=SENDER:218 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7"ports=1000100000000000
-EVENT_SENDER id=119 fwd_id=SENDER:219 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=118 fwd_id=SENDER:218 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=119 fwd_id=SENDER:219 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7"  ports=1000100000000000
 EVENT_SENDER id=120 fwd_id=SENDER:220 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=121 fwd_id=SENDER:221 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7"   ports=1000100000000000
-EVENT_SENDER id=122 fwd_id=SENDER:222 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=123 fwd_id=SENDER:223 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7" ports=1000100000000000 
+EVENT_SENDER id=121 fwd_id=SENDER:221 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=122 fwd_id=SENDER:222 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=123 fwd_id=SENDER:223 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7"  ports=1000100000000000 
 EVENT_SENDER id=124 fwd_id=SENDER:224 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 4 - bank 1
 EVENT_SENDER id=125 fwd_id=SENDER:225 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 56 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=126 fwd_id=SENDER:226 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 63 ^macdis 0xf7"ports=1000100000000000
-EVENT_SENDER id=127 fwd_id=SENDER:227 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 70 ^macdis 0xf7" ports=1000100000000000
+EVENT_SENDER id=126 fwd_id=SENDER:226 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=127 fwd_id=SENDER:227 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 70 ^macdis 0xf7"  ports=1000100000000000
 EVENT_SENDER id=128 fwd_id=SENDER:228 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 77 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=129 fwd_id=SENDER:229 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 84 ^macdis 0xf7"   ports=1000100000000000
-EVENT_SENDER id=130 fwd_id=SENDER:230 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 91 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=131 fwd_id=SENDER:231 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 98 ^macdis 0xf7" ports=1000100000000000 
+EVENT_SENDER id=129 fwd_id=SENDER:229 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=130 fwd_id=SENDER:230 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=131 fwd_id=SENDER:231 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 98 ^macdis 0xf7"  ports=1000100000000000 
 EVENT_SENDER id=132 fwd_id=SENDER:232 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 1 - bank 2
+EVENT_SENDER id=133 fwd_id=SENDER:233 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=134 fwd_id=SENDER:234 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=135 fwd_id=SENDER:235 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=136 fwd_id=SENDER:236 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=137 fwd_id=SENDER:237 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=138 fwd_id=SENDER:238 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=139 fwd_id=SENDER:239 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 98 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=140 fwd_id=SENDER:240 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 2 - bank 2
+EVENT_SENDER id=141 fwd_id=SENDER:241 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=142 fwd_id=SENDER:242 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=143 fwd_id=SENDER:243 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=144 fwd_id=SENDER:244 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=145 fwd_id=SENDER:245 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=146 fwd_id=SENDER:246 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=147 fwd_id=SENDER:247 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=148 fwd_id=SENDER:248 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 3 - bank 2
+EVENT_SENDER id=149 fwd_id=SENDER:249 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=150 fwd_id=SENDER:250 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=151 fwd_id=SENDER:251 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=152 fwd_id=SENDER:252 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=153 fwd_id=SENDER:253 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=154 fwd_id=SENDER:254 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=155 fwd_id=SENDER:255 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=156 fwd_id=SENDER:256 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 105 ^macdis 0xf7" ports=1000100000000000
 
 # Display 4 - bank 2
+EVENT_SENDER id=157 fwd_id=SENDER:257 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 56 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=158 fwd_id=SENDER:258 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 63 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=159 fwd_id=SENDER:259 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 70 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=160 fwd_id=SENDER:260 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 77 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=161 fwd_id=SENDER:261 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 84 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=162 fwd_id=SENDER:262 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 91 ^macdis 0xf7"  ports=1000100000000000
+EVENT_SENDER id=163 fwd_id=SENDER:263 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 98 ^macdis 0xf7"  ports=1000100000000000 
+EVENT_SENDER id=164 fwd_id=SENDER:264 bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 105 ^macdis 0xf7" ports=1000100000000000
 
 ######################
 #LED Ring Controllers#
@@ -213,8 +296,6 @@ EVENT_RECEIVER id= 61 bank=2 type=CC chn=1 cc=28 emu_enc_mode=C4Enc  emu_enc_hw_
 EVENT_RECEIVER id= 62 bank=2 type=CC chn=1 cc=29 emu_enc_mode=C4Enc  emu_enc_hw_id=62 
 EVENT_RECEIVER id= 63 bank=2 type=CC chn=1 cc=30 emu_enc_mode=C4Enc  emu_enc_hw_id=63 
 EVENT_RECEIVER id= 64 bank=2 type=CC chn=1 cc=31 emu_enc_mode=C4Enc  emu_enc_hw_id=64 
-
-# zeilen- und pageNavigatoren (ENC?)
 
 #####################################################################################
 ###	Target Platform related Configs

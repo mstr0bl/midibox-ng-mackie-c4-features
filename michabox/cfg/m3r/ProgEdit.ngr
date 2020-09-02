@@ -29,8 +29,9 @@ if ^section == 1
   trigger SENDER:33
   trigger SENDER:41
   
- 
- 
+  trigger (id)SENDER:4068		#Clear LED Rings on Slots 3.6, 4.6, 4.7
+  trigger (id)SENDER:4060
+  trigger (id)SENDER:4059
  
  elsif ^bank == 3
   log "bank = 3"
@@ -42,6 +43,10 @@ if ^section == 1
   log "bank = 4"
   trigger SENDER:65
   trigger SENDER:73
+  
+  trigger (id)SENDER:4068		#Clear LED Rings on Slots 3.6, 4.6, 4.7
+  trigger (id)SENDER:4060
+  trigger (id)SENDER:4059
   
  endif
  

@@ -71,8 +71,8 @@ EVENT_SENDER id= 34 hw_id=33	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 EVENT_SENDER id= 35 hw_id=33	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 14 ^label 0xf7" ports=1000100000000000 label="InVlSn"
 EVENT_SENDER id= 36 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 21 ^label 0xf7" ports=1000100000000000 label="TiKbTr"
 EVENT_SENDER id= 37 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 28 ^label 0xf7" ports=1000100000000000 label="TiVlSn"
-EVENT_SENDER id= 38 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label="      "
-EVENT_SENDER id= 39 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 38 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label="            "
+EVENT_SENDER id= 39 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^label 0xf7" ports=1000100000000000 label="      "
 EVENT_SENDER id= 40 hw_id=33 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="VDA   "
 
 # Display 4 bank 2 - VDF
@@ -81,8 +81,8 @@ EVENT_SENDER id= 42 hw_id=41	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 EVENT_SENDER id= 43 hw_id=41	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 14 ^label 0xf7" ports=1000100000000000 label="TmKbTr"
 EVENT_SENDER id= 44 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 21 ^label 0xf7" ports=1000100000000000 label="TmVelS"
 EVENT_SENDER id= 45 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 28 ^label 0xf7" ports=1000100000000000 label="InVelS"
-EVENT_SENDER id= 46 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 35 ^label 0xf7" ports=1000100000000000 label="      "
-EVENT_SENDER id= 47 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 42 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 46 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 35 ^label 0xf7" ports=1000100000000000 label="              "
+EVENT_SENDER id= 47 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 91 ^label 0xf7" ports=1000100000000000 label="                    "
 EVENT_SENDER id= 48 hw_id=41 	bank=2 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 49 ^label 0xf7" ports=1000100000000000 label="VDF   "
 
 #Display 3 bank 3 - PITCH EG
@@ -113,8 +113,8 @@ EVENT_SENDER id= 67 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 EVENT_SENDER id= 68 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 21 ^label 0xf7" ports=1000100000000000 label="DelTim"
 EVENT_SENDER id= 69 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 28 ^label 0xf7" ports=1000100000000000 label="Intens"
 EVENT_SENDER id= 70 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label="      "
-EVENT_SENDER id= 71 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Cutoff"
-EVENT_SENDER id= 72 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="MG    "
+EVENT_SENDER id= 71 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Cutoff MG    "
+EVENT_SENDER id= 72 hw_id=65	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 91 ^label 0xf7" ports=1000100000000000 label="      "
 
 #Display 4 bank 4 -Pitch MG
 EVENT_SENDER id= 73 			bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 0 ^label 0xf7" ports=1000100000000000 label="WavFrm"
@@ -123,8 +123,8 @@ EVENT_SENDER id= 75 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 
 EVENT_SENDER id= 76 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 21 ^label 0xf7" ports=1000100000000000 label="DelTim"
 EVENT_SENDER id= 77 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 28 ^label 0xf7" ports=1000100000000000 label="Intens"
 EVENT_SENDER id= 78 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 35 ^label 0xf7" ports=1000100000000000 label="      "
-EVENT_SENDER id= 79 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 42 ^label 0xf7" ports=1000100000000000 label="Pitch "
-EVENT_SENDER id= 80 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 49 ^label 0xf7" ports=1000100000000000 label="MG    "
+EVENT_SENDER id= 79 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 42 ^label 0xf7" ports=1000100000000000 label="Pitch  MG    "
+EVENT_SENDER id= 80 hw_id=73	bank=4 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x33 91 ^label 0xf7" ports=1000100000000000 label="                    "
 
 
 
@@ -139,20 +139,10 @@ EVENT_ENC id= 1 bank=0 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:89 syxdump_p
 EVENT_ENC id= 2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=1 range=0:99 syxdump_pos=4001:66
 EVENT_ENC id= 3 bank=0 fwd_id=SENDER:103 type=CC chn=5 cc=2 range=0:89 syxdump_pos=4001:49
 EVENT_ENC id= 4 bank=0 fwd_id=SENDER:104 type=CC chn=5 cc=3 range=0:89 syxdump_pos=4001:52
-
-##### MultiSound/Drum Switch Implementation#####
-#EVENT_ENC id= 5 bank=0 fwd_id=SENDER:105 type=CC if_equal=BUTTON:1000:1 chn=5 cc=0 range=map25 syxdump_pos=4001:12 label="Mode Switcher"			
-#EVENT_ENC id= 6 bank=0 fwd_id=SENDER:106 if_equal=ENC:5:2 type=CC chn=5 cc=0 range=0:3 syxdump_pos=4001:14  label="Drums"	
-
-#EVENT_RECEIVER id= 1000 fwd_id=BUTTON:1000 bank=0 type=NoteOn key=32 range=0:1 ports=1000100000000000
-#EVENT_BUTTON id= 1000 bank=0 if_equal_stop_on_match=RECEIVER:1000:1 button_mode=OnOff value=0
-
-MAP25/BYTE 0 2	
-
-#############################################################TO DO - Button for Mode Switch
-	
-#EVENT_ENC id= 7 bank=1 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:3 syxdump_pos=4001:14 label="Drums "
-#EVENT_ENC id= 8 bank=1 fwd_id=SENDER:108 type=CC chn=5 cc=7 range=0:89 label="Pos. 21"
+#EVENT_ENC id= 5 			
+#EVENT_ENC id= 6 	
+#EVENT_ENC id= 7 
+#EVENT_ENC id= 8 
 
 # Display 2 - VDA & VDF Attack and Decay Time
 EVENT_ENC id= 9  bank=0 fwd_id=SENDER:109 type=CC chn=5 cc=8 range=0:89 syxdump_pos=4001:73 
