@@ -533,7 +533,7 @@ extern s32 MBNG_EVENT_Dump(void);
 
 extern s32 MBNG_EVENT_MIDI_NotifyPackage(mios32_midi_port_t port, mios32_midi_package_t midi_package);
 extern s32 MBNG_EVENT_ReceiveSysEx(mios32_midi_port_t port, u8 midi_in);
-extern void Parse2MackieDisplayValue(u8 input, u8 *macdis_array);
+
 
 
 /////////////////////////////////////////////////////////////////////////////
