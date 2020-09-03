@@ -653,7 +653,7 @@ MAP23/BYTEI 0:0x11 1:0x1B
 MAP31/BYTEI 0:33 9:34 18:35 27:36 36:37 45:38 54:39 63:40 72:41 80:42 89:43
 
 # LED map 33 - three Options for Oscillator Octave Setting
-MAP33/BYTE -1:0x31 1:0x33 0:0x36
+MAP33/HWORD -1:0x31 1:0x33 0:0x36
 
 #LED map 99 - pan-like, adjust for -99...99 value ranges
 MAP99/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -1:21 99:27 80:26 50:25 30:24 1:23 0:22

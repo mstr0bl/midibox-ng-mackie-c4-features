@@ -4175,7 +4175,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     int receiver_ix = item->id & 0xfff;
 
     //MICHA
-        //MIOS32_MIDI_SendDebugMessage("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
+       // MIOS32_MIDI_SendDebugMessage("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
 
     if( debug_verbose_level >= DEBUG_VERBOSE_LEVEL_INFO ) {
       DEBUG_MSG("MBNG_EVENT_ItemReceive(RECEIVER:%d, %d)\n", receiver_ix, item->value);
@@ -4555,10 +4555,60 @@ static s32 MBNG_EVENT_NotifySyxDump(u16 from_receiver, u16 dump_pos, u8 value)
   // search in pool for events which listen to this receiver and dump_pos
   u8 *pool_ptr = (u8 *)&event_pool[0];
   u32 i;
+  u8 offset;
+  static u8 arr[7];
   for(i=0; i<event_pool_num_items; ++i) {
     mbng_event_pool_item_t *pool_item = (mbng_event_pool_item_t *)pool_ptr;
     if( pool_item->syxdump_pos.pos == dump_pos &&
 	pool_item->syxdump_pos.receiver == from_receiver ) {
+
+    			offset = dump_pos % 8;
+    	    	if(offset == 0){
+    	    		arr[0] = 0;
+    	    		arr[1] = 0;
+    	    		arr[2] = 0;
+    	    		arr[3] = 0;
+    	    		arr[4] = 0;
+    	    		arr[5] = 0;
+    	    		arr[6] = 0;
+    	    		if(value != 0){
+    	    			MIOS32_MIDI_SendDebugMessage("sign carrying byte on syxdumppos: %d - value: %d", dump_pos, value);
+    	    			if((value & 1) != 0){arr[0] = 1;}
+    	    			if((value & 2) != 0){arr[1] = 1;
+    	    			MIOS32_MIDI_SendDebugMessage("arr [1] set high");}
+    	    			if((value & 4) != 0){arr[2] = 1;}
+    	    			if((value & 8) != 0){arr[3] = 1;}
+    	    			if((value & 16) != 0){arr[4] = 1;}
+    	    			if((value & 32) != 0){arr[5] = 1;}
+    	    			if((value & 64) != 0){arr[6] = 1;}
+    	    		}
+    	    	}
+    	    	else if(offset == 1 && arr[0] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value += 128; arr[0] = 0;}
+    	    	    	else if(offset == 2 && arr[1] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value -= 128;
+    	    	    		arr[1] = 0;
+    	    	    		MIOS32_MIDI_SendDebugMessage("New value: %d", value);}
+    	    	    	else if(offset == 3 && arr[2] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value += 128; arr[2] = 0;}
+    	    	    	else if(offset == 4 && arr[3] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value += 128; arr[3] = 0;}
+    	    	    	else if(offset == 5 && arr[4] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value += 128; arr[4] = 0;}
+    	    	    	else if(offset == 6 && arr[5] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value -= 128; arr[5] = 0;}
+    	    	    	else if(offset == 7 && arr[6] == 1){
+    	    	    		MIOS32_MIDI_SendDebugMessage("Set high Bit on syxdumppos: %d - value: %d", dump_pos, value);
+    	    	    		value += 128; arr[6] = 0;}
+    	    	    	else{
+    	    	    		//MIOS32_MIDI_SendDebugMessage("else condition in notifysyx function");
+    	    	    	}
 
       mbng_event_item_t item;
       MBNG_EVENT_ItemCopy2User(pool_item, &item);
