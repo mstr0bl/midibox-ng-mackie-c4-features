@@ -380,69 +380,6 @@ EVENT_ENC id=102 bank=4  fwd_id=SENDER:1002 type=NRPN nrpn=357 nrpn_format=MsbOn
 EVENT_ENC id=103 bank=4 fwd_id=SENDER:1003 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
 #EVENT_ENC id=104
 
-###############################################################################
-#Delay Settings, Audio Input Gain Setter, Accent Level - bank 5 - 2nd display 
-###############################################################################
-
-# Input Gain Setters for Audio In 1 & 2
-EVENT_ENC id=105 bank=5  fwd_id=SENDER:1005 type=NRPN nrpn=360 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-EVENT_ENC id=106 bank=5  fwd_id=SENDER:1006 type=NRPN nrpn=361 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-
-#Delay Type Switch
-EVENT_ENC id=107 bank=5 fwd_id=SENDER:1007 type=NRPN nrpn=363 nrpn_format=MsbOnly range=0:2 value=0 chn=16 ports=0010001000000000
-#EVENT_ENC id=108
-
-# Delay Depth
-EVENT_ENC id=109 bank=5  fwd_id=SENDER:1009 type=NRPN nrpn=356 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:5 chn=16 ports=0010001000000000
-# Delay Time
-EVENT_ENC id=110 bank=5  fwd_id=SENDER:1010 type=NRPN nrpn=357 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:6 chn=16 ports=0010001000000000
-
-# Accent Level
-EVENT_ENC id=111 bank=5 fwd_id=SENDER:1011 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
-#EVENT_ENC id=112
-
-###############################################################################
-#Delay Settings, Audio Input Gain Setter, Accent Level - bank 6 - 2nd display 
-###############################################################################
-
-# Input Gain Setters for Audio In 1 & 2
-EVENT_ENC id=113 bank=6  fwd_id=SENDER:1013 type=NRPN nrpn=360 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-EVENT_ENC id=114 bank=6  fwd_id=SENDER:1014 type=NRPN nrpn=361 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-
-#Delay Type Switch
-EVENT_ENC id=115 bank=6 fwd_id=SENDER:1015 type=NRPN nrpn=363 nrpn_format=MsbOnly range=0:2 value=0 chn=16 ports=0010001000000000
-#EVENT_ENC id=116
-
-# Delay Depth
-EVENT_ENC id=117 bank=6  fwd_id=SENDER:1017 type=NRPN nrpn=356 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:5 chn=16 ports=0010001000000000
-# Delay Time
-EVENT_ENC id=118 bank=6  fwd_id=SENDER:1018 type=NRPN nrpn=357 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:6 chn=16 ports=0010001000000000
-
-# Accent Level
-EVENT_ENC id=119 bank=6 fwd_id=SENDER:1019 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
-#EVENT_ENC id=120
-
-###############################################################################
-#Delay Settings, Audio Input Gain Setter, Accent Level - bank 7 - 2nd display 
-###############################################################################
-
-# Input Gain Setters for Audio In 1 & 2
-EVENT_ENC id=121 bank=7  fwd_id=SENDER:1021 type=NRPN nrpn=360 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-EVENT_ENC id=122 bank=7  fwd_id=SENDER:1022 type=NRPN nrpn=361 nrpn_format=MsbOnly range=0:100 value=0 chn=16 ports=0010001000000000
-
-#Delay Type Switch
-EVENT_ENC id=123 bank=7 fwd_id=SENDER:1023 type=NRPN nrpn=363 nrpn_format=MsbOnly range=0:2 value=0 chn=16 ports=0010001000000000
-#EVENT_ENC id=124
-
-# Delay Depth
-EVENT_ENC id=125 bank=7  fwd_id=SENDER:1025 type=NRPN nrpn=356 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:5 chn=16 ports=0010001000000000
-# Delay Time
-EVENT_ENC id=126 bank=7  fwd_id=SENDER:1026 type=NRPN nrpn=357 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:6 chn=16 ports=0010001000000000
-
-# Accent Level
-EVENT_ENC id=127 bank=7 fwd_id=SENDER:1027 type=NRPN nrpn=362 nrpn_format=MsbOnly range=0:127 syxdump_pos=4001:9 chn=16 ports=0010001000000000
-#EVENT_ENC id=128
-
 #########################
 #Value Printers - MacDis#
 #########################
@@ -576,36 +513,6 @@ EVENT_SENDER id=1001 bank=4 fwd_id=RECEIVER:1001  type=SysEx stream="0xf0 0x00 0
 EVENT_SENDER id=1002 bank=4 fwd_id=RECEIVER:1002  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
 EVENT_SENDER id=1003 bank=4 fwd_id=RECEIVER:1003  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
 #EVENT_SENDER id=1004
-
-# Display 2 - Delay Settings, Audio Input Gain Setters, Accent Level - bank 5
-EVENT_SENDER id=1005 bank=5 fwd_id=RECEIVER:1005  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1006 bank=5 fwd_id=RECEIVER:1006  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1007 bank=5 fwd_id=RECEIVER:1007  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^label 0xf7" ports=1000100000000000 label="^deltyp"
-#EVENT_SENDER id=1008 
-EVENT_SENDER id=1009 bank=5 fwd_id=RECEIVER:1009  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=1010 bank=5 fwd_id=RECEIVER:1010  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=1011 bank=5 fwd_id=RECEIVER:1011  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
-#EVENT_SENDER id=1012
-
-# Display 2 - Delay Settings, Audio Input Gain Setters, Accent Level - bank 6
-EVENT_SENDER id=1013 bank=6 fwd_id=RECEIVER:1013  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1014 bank=6 fwd_id=RECEIVER:1014  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1015 bank=6 fwd_id=RECEIVER:1015  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^label 0xf7" ports=1000100000000000 label="^deltyp"
-#EVENT_SENDER id=1016 
-EVENT_SENDER id=1017 bank=6 fwd_id=RECEIVER:1017  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=1018 bank=6 fwd_id=RECEIVER:1018  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=1019 bank=6 fwd_id=RECEIVER:1019  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
-#EVENT_SENDER id=1020
-
-# Display 2 - Delay Settings, Audio Input Gain Setters, Accent Level - bank 7
-EVENT_SENDER id=1021 bank=7 fwd_id=RECEIVER:1021  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 56 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1022 bank=7 fwd_id=RECEIVER:1022  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" ports=1000100000000000
-EVENT_SENDER id=1023 bank=7 fwd_id=RECEIVER:1023  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^label 0xf7" ports=1000100000000000 label="^deltyp"
-#EVENT_SENDER id=1024 
-EVENT_SENDER id=1025 bank=7 fwd_id=RECEIVER:1025  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^macdis 0xf7"  ports=1000100000000000
-EVENT_SENDER id=1026 bank=7 fwd_id=RECEIVER:1026  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^macdis 0xf7"  ports=1000100000000000 
-EVENT_SENDER id=1027 bank=7 fwd_id=RECEIVER:1027  type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^macdis 0xf7"  ports=1000100000000000 
-#EVENT_SENDER id=1028
 
 #######################
 # LED Ring Controllers#
@@ -845,60 +752,6 @@ EVENT_SENDER id= 1103  bank=4 type=CC cc=46 chn=1 range=map3
 #EVENT_RECEIVER id=1004 
 #EVENT_SENDER id= 1104 
 
-# Display 2 - bank 5 - Audio Input 1 & 2 Gain, Delay, Accent Level modifiers
-EVENT_RECEIVER id=1005  bank=5 fwd_id=SENDER:1105  type=NRPN nrpn=360 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1105   bank=5 type=CC cc=40 chn=1 range=map3
-EVENT_RECEIVER id=1006  bank=5 fwd_id=SENDER:1106  type=NRPN nrpn=361 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1106   bank=5 type=CC cc=41 chn=1 range=map3
-EVENT_RECEIVER id=1007  bank=5 fwd_id=SENDER:1107  type=NRPN nrpn=363 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1107   bank=5 type=CC cc=42 chn=1 range=map33
-#EVENT_RECEIVER id=1008 
-#EVENT_SENDER id= 1108  
-EVENT_RECEIVER id=1009 bank=5 fwd_id=SENDER:1109  type=NRPN nrpn=356 chn=16 ports=0000001000000000
-EVENT_SENDER id=1109   bank=5 type=CC cc=44 chn=1 range=map3
-EVENT_RECEIVER id=1010 bank=5 fwd_id=SENDER:1110  type=NRPN nrpn=357 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1110  bank=5 type=CC cc=45 chn=1 range=map3
-EVENT_RECEIVER id=1011 bank=5 fwd_id=SENDER:1111  type=NRPN nrpn=362 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1111  bank=5 type=CC cc=46 chn=1 range=map3
-#EVENT_RECEIVER id=1012 
-#EVENT_SENDER id= 1112 
-
-# Display 2 - bank 6 - Audio Input 1 & 2 Gain, Delay, Accent Level modifiers
-EVENT_RECEIVER id=1013  bank=6 fwd_id=SENDER:1113  type=NRPN nrpn=360 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1113   bank=6 type=CC cc=40 chn=1 range=map3
-EVENT_RECEIVER id=1014  bank=6 fwd_id=SENDER:1114  type=NRPN nrpn=361 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1114   bank=6 type=CC cc=41 chn=1 range=map3
-EVENT_RECEIVER id=1015  bank=6 fwd_id=SENDER:1115  type=NRPN nrpn=363 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1115   bank=6 type=CC cc=42 chn=1 range=map33
-#EVENT_RECEIVER id=1016 
-#EVENT_SENDER id= 1116  
-EVENT_RECEIVER id=1017 bank=6 fwd_id=SENDER:1117  type=NRPN nrpn=356 chn=16 ports=0000001000000000
-EVENT_SENDER id=1117   bank=6 type=CC cc=44 chn=1 range=map3
-EVENT_RECEIVER id=1018 bank=6 fwd_id=SENDER:1118  type=NRPN nrpn=357 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1118  bank=6 type=CC cc=45 chn=1 range=map3
-EVENT_RECEIVER id=1019 bank=6 fwd_id=SENDER:1119  type=NRPN nrpn=362 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1119  bank=6 type=CC cc=46 chn=1 range=map3
-#EVENT_RECEIVER id=1020 
-#EVENT_SENDER id= 1120 
-
-# Display 2 - bank 7 - Audio Input 1 & 2 Gain, Delay, Accent Level modifiers
-EVENT_RECEIVER id=1021  bank=7 fwd_id=SENDER:1121  type=NRPN nrpn=360 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1121   bank=7 type=CC cc=40 chn=1 range=map3
-EVENT_RECEIVER id=1022  bank=7 fwd_id=SENDER:1122  type=NRPN nrpn=361 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1122   bank=7 type=CC cc=41 chn=1 range=map3
-EVENT_RECEIVER id=1023  bank=7 fwd_id=SENDER:1123  type=NRPN nrpn=363 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1123   bank=7 type=CC cc=42 chn=1 range=map33
-#EVENT_RECEIVER id=1024 
-#EVENT_SENDER id= 1124  
-EVENT_RECEIVER id=1025 bank=7 fwd_id=SENDER:1125  type=NRPN nrpn=356 chn=16 ports=0000001000000000
-EVENT_SENDER id=1125   bank=7 type=CC cc=44 chn=1 range=map3
-EVENT_RECEIVER id=1026 bank=7 fwd_id=SENDER:1126  type=NRPN nrpn=357 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1126  bank=7 type=CC cc=45 chn=1 range=map3
-EVENT_RECEIVER id=1027 bank=7 fwd_id=SENDER:1127  type=NRPN nrpn=362 chn=16 ports=0000001000000000
-EVENT_SENDER id= 1127  bank=7 type=CC cc=46 chn=1 range=map3
-#EVENT_RECEIVER id=1028 
-#EVENT_SENDER id= 1128 
-
 ##########################
 #Mackie Encoder Receivers#
 ##########################
@@ -1022,46 +875,6 @@ EVENT_RECEIVER id= 93 bank=2 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_
 EVENT_RECEIVER id= 94 bank=2 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=94 
 EVENT_RECEIVER id= 95 bank=2 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=95 
 EVENT_RECEIVER id= 96 bank=2 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=96 
-
-# Display 2 - 4rd page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 97  bank=4 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=97
-EVENT_RECEIVER id= 98  bank=4 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=98
-EVENT_RECEIVER id= 99  bank=4 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=99 
-#EVENT_RECEIVER id= 100 
-EVENT_RECEIVER id= 101  bank=4 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=101 
-EVENT_RECEIVER id= 102  bank=4 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=102 
-EVENT_RECEIVER id= 103  bank=4 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=103 
-#EVENT_RECEIVER id= 104  
-
-# Display 2 - 5th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 105  bank=5 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=105
-EVENT_RECEIVER id= 106  bank=5 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=106
-EVENT_RECEIVER id= 107  bank=5 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=107 
-#EVENT_RECEIVER id= 108 
-EVENT_RECEIVER id= 109  bank=5 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=109 
-EVENT_RECEIVER id= 110  bank=5 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=110 
-EVENT_RECEIVER id= 111  bank=5 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=111 
-#EVENT_RECEIVER id= 112 
-
-# Display 2 - 6th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 113  bank=6 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=113
-EVENT_RECEIVER id= 114  bank=6 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=114
-EVENT_RECEIVER id= 115  bank=6 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=115 
-#EVENT_RECEIVER id= 116 
-EVENT_RECEIVER id= 117  bank=6 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=117 
-EVENT_RECEIVER id= 118  bank=6 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=118 
-EVENT_RECEIVER id= 119  bank=6 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=119 
-#EVENT_RECEIVER id= 120 
-
-# Display 2 - 7th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 121  bank=7 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=121
-EVENT_RECEIVER id= 122  bank=7 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=122
-EVENT_RECEIVER id= 123  bank=7 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=123 
-#EVENT_RECEIVER id= 124 
-EVENT_RECEIVER id= 125  bank=7 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=125 
-EVENT_RECEIVER id= 126  bank=7 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=126 
-EVENT_RECEIVER id= 127  bank=7 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=127 
-#EVENT_RECEIVER id= 128 
 
 ############################
 ### LED Ring Controllers ###

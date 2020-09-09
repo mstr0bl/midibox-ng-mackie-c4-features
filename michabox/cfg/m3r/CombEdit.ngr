@@ -1,8 +1,9 @@
 if ^section == 0
  trigger SENDER:4095	#clear displays
  trigger SENDER:4089	#clear LED rings
- delay_ms 300
+ #delay_ms 300
  trigger SENDER:4090	#enter mode
+ delay_ms 700
  log "check section 0"
  trigger SENDER:3010	#corner note 
   

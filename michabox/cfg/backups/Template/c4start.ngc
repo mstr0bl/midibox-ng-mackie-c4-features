@@ -103,8 +103,24 @@ EVENT_ENC id= 47 bank=2 fwd_id=SENDER:147 type=CC chn=5 cc=14 range=0:127 syxdum
 EVENT_ENC id= 48 bank=2 fwd_id=SENDER:148 type=CC chn=5 cc=15 range=0:127 syxdump_pos=4001:54
 
 # Display 3 - bank 2
+EVENT_ENC id= 49 bank=2 fwd_id=SENDER:149 type=CC chn=5 cc=16 range=0:127 syxdump_pos=4001:55
+EVENT_ENC id= 50 bank=2 fwd_id=SENDER:150 type=CC chn=5 cc=17 range=0:127 syxdump_pos=4001:57
+EVENT_ENC id= 51 bank=2 fwd_id=SENDER:151 type=CC chn=5 cc=18 range=0:127 syxdump_pos=4001:58 
+EVENT_ENC id= 52 bank=2 fwd_id=SENDER:152 type=CC chn=5 cc=19 range=0:127 syxdump_pos=4001:59
+EVENT_ENC id= 53 bank=2 fwd_id=SENDER:153 type=CC chn=5 cc=20 range=0:127 syxdump_pos=4001:60 		
+EVENT_ENC id= 54 bank=2 fwd_id=SENDER:154 type=CC chn=5 cc=21 range=0:127 syxdump_pos=4001:61 			
+EVENT_ENC id= 55 bank=2 fwd_id=SENDER:155 type=CC chn=5 cc=22 range=0:127 syxdump_pos=4001:62
+EVENT_ENC id= 56 bank=2 fwd_id=SENDER:156 type=CC chn=5 cc=23 range=0:127 syxdump_pos=4001:63
 
 # Display 4 - bank 2
+EVENT_ENC id= 57 bank=1 fwd_id=SENDER:157 type=CC chn=5 cc=24 range=0:127 syxdump_pos=4001:65
+EVENT_ENC id= 58 bank=1 fwd_id=SENDER:158 type=CC chn=5 cc=25 range=0:127 syxdump_pos=4001:66
+EVENT_ENC id= 59 bank=1 fwd_id=SENDER:159 type=CC chn=5 cc=26 range=0:127 syxdump_pos=4001:67 
+EVENT_ENC id= 60 bank=1 fwd_id=SENDER:160 type=CC chn=5 cc=27 range=0:127 syxdump_pos=4001:68
+EVENT_ENC id= 61 bank=1 fwd_id=SENDER:161 type=CC chn=5 cc=28 range=0:127 syxdump_pos=4001:69 		
+EVENT_ENC id= 62 bank=1 fwd_id=SENDER:162 type=CC chn=5 cc=29 range=0:127 syxdump_pos=4001:70 			
+EVENT_ENC id= 63 bank=1 fwd_id=SENDER:163 type=CC chn=5 cc=30 range=0:127 syxdump_pos=4001:71
+EVENT_ENC id= 64 bank=1 fwd_id=SENDER:164 type=CC chn=5 cc=31 range=0:127 syxdump_pos=4001:73
 
 #########################
 #Value Printers - MacDis#
@@ -198,6 +214,22 @@ EVENT_SENDER id=164 fwd_id=SENDER:264 bank=2 type=SysEx stream="0xf0 0x00 0x00 0
 ######################
 
 # Display 1 - bank 1
+EVENT_RECEIVER id=101 fwd_id=SENDER:301 bank=1 type=CC cc=0 chn=5 ports=0000100000000000
+EVENT_SENDER id= 301  bank=1 type=CC cc=32 chn=1 range=map1
+EVENT_RECEIVER id=102 fwd_id=SENDER:302 bank=1 type=CC cc=1 chn=5 ports=0000100000000000
+EVENT_SENDER id= 302  bank=1 type=CC cc=33 chn=1 range=map2
+EVENT_RECEIVER id=103 fwd_id=SENDER:303 bank=1 type=CC cc=2 chn=5 ports=0000100000000000
+EVENT_SENDER id= 303  bank=1 type=CC cc=34 chn=1 range=map3
+EVENT_RECEIVER id=104 fwd_id=SENDER:304 bank=1 type=CC cc=3 chn=5 ports=0000100000000000
+EVENT_SENDER id= 304  bank=1 type=CC cc=35 chn=1 range=map4
+EVENT_RECEIVER id=105 fwd_id=SENDER:305 bank=1 type=CC cc=4 chn=5 ports=0000100000000000
+EVENT_SENDER id= 305  bank=1 type=CC cc=36 chn=1 range=map5
+EVENT_RECEIVER id=106 fwd_id=SENDER:306 bank=1 type=CC cc=5 chn=5 ports=0000100000000000
+EVENT_SENDER id= 306  bank=1 type=CC cc=37 chn=1 range=map6
+EVENT_RECEIVER id=107 fwd_id=SENDER:307 bank=1 type=CC cc=6 chn=5 ports=0000100000000000
+EVENT_SENDER id= 307  bank=1 type=CC cc=38 chn=1 range=map7
+EVENT_RECEIVER id=108 fwd_id=SENDER:308 bank=1 type=CC cc=7 chn=5 ports=0000100000000000
+EVENT_SENDER id= 308  bank=1 type=CC cc=39 chn=1 range=map8
 
 # Display 2 - bank 1
 
@@ -344,7 +376,7 @@ MAP7/BYTEI 97 98 99 100 101 102 103 104 105 106 107
 #LED map 8 - spread like dotted
 MAP8/BYTEI 113 114 115 116 117 118
 
-#LED map 99 - pan-like, adjust for -99...99 value ranges
+#LED map 99 - pan-like LED pattern, adjusted for -99...99 value ranges
 MAP99/HWORDI -99:17 -80:18 -60:19 -40:20 -20:21 -1:21 99:27 80:26 50:25 30:24 1:23 0:22
 
 #display cleaners
