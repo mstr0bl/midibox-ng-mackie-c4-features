@@ -1,23 +1,32 @@
 if ^section == 0
- log section 0 called
- delay_ms 1000
- #call screen cleaners
- trigger SENDER:4095
+ log "section 0 called"
+ trigger SENDER:4095        #call screen cleaners
+ trigger SENDER:4089        #call LED cleaners
+ trigger (id)SENDER:4001    #send dump request
+ delay_ms 750               #delay program execution to save CPU capacity for dump reception
  set ^section 1
 endif
 
 if ^section == 1
- set ^bank 1
- log home menu called
- #call screen cleaners
- trigger SENDER:4095
- #activate parameter label displayers
+ log "section 1 called"
+ 
+ if ^bank == 1
+    log "bank 1 selected"
+    trigger SENDER:1        #trigger parameter name printers
+    trigger SENDER:9 
+    trigger SENDER:17 
+    trigger SENDER:25 
+ elsif ^bank == 2
+    log "bank 2 selected"
+    trigger SENDER:33       #trigger parameter name printers
+    trigger SENDER:41 
+    trigger SENDER:49 
+    trigger SENDER:57    
+ endif
+
 endif
 
-if ^section == 2
- set ^bank 2
- log program edit mode called
- #call screen cleaners
- trigger SENDER:4095
- #activate parameter label displayers
+if ^section == 10
+ #this would be the place to call another script via the C4's Control Button
+ #LOAD default
 endif
