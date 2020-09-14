@@ -13,11 +13,11 @@ EVENT_SENDER id= 12 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 0 ^l
 EVENT_SENDER id= 13 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^label 0xf7" ports=1000100000001000 label="Push CONTROL at any time to navigate back in menu pages"
 
 # m3r select 
-EVENT_RECEIVER id= 3000 bank= 0 fwd_id=SENDER:3000 type=NoteOn chn=1 key= 40 range= 0:1 
+EVENT_RECEIVER id= 3000 bank= 0 fwd_id=SENDER:3000 type=NoteOn chn=1 key= 40 range= 0:1 ports=0000100000001000 
 EVENT_SENDER id= 3001 hw_id= 3000 if_equal_stop_on_match=RECEIVER:3000:1 type=Meta meta=RunSection:1
 
 # er-1 select
-EVENT_RECEIVER id= 3010 bank= 0 fwd_id=SENDER:3010 type=NoteOn chn=1 key= 44 range= 0:1
+EVENT_RECEIVER id= 3010 bank= 0 fwd_id=SENDER:3010 type=NoteOn chn=1 key= 44 range= 0:1 ports=0000100000001000 
 EVENT_SENDER id= 3010 if_equal_stop_on_match=RECEIVER:3010:1 type=Meta meta=RunSection:2
 
 

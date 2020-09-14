@@ -1,9 +1,9 @@
 RESET_HW
 
-#############################################################
-#This mode is equal to the Combination Play Mode#############
-#It is used to switch Programs and to access the other modes#
-#############################################################
+####################################################################################
+# This mode is equal to the Combination Play Mode ##################################
+# It is used to play and switch between Combinations and to access the other modes #
+####################################################################################
 
 #LED ring indicators
 EVENT_SENDER id=1 hw_id=1 type=CC cc=40 chn=1 value=107
@@ -17,26 +17,26 @@ EVENT_SENDER id= 11 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0x1c
 #Combination Play mode accessor (M3R's start-up screen)
 
 
-#pgrm mode select with simultaneous dump request for currently selected program
-EVENT_RECEIVER id= 3000 bank= 0 fwd_id=SENDER:3000 type=NoteOn chn=1 key= 40 range= 0:1 
+# Program Mode selector
+EVENT_RECEIVER id= 3000 bank= 0 fwd_id=SENDER:3000 type=NoteOn chn=1 key= 40 range= 0:1 ports=0000100000000000 
 EVENT_SENDER id= 3001 hw_id= 3000 if_equal_stop_on_match=RECEIVER:3000:1 type=Meta meta=RunSection:1
 
-#combination edit selector
-EVENT_RECEIVER id= 3010 bank= 0 fwd_id=SENDER:3010 type=NoteOn chn=1 key= 44 range= 0:1
+# Combination Edit selector
+EVENT_RECEIVER id= 3010 bank= 0 fwd_id=SENDER:3010 type=NoteOn chn=1 key= 44 range= 0:1 ports=0000100000000000 
 EVENT_SENDER id= 3010 if_equal_stop_on_match=RECEIVER:3010:1 type=Meta meta=RunSection:2
 
 
-#Program Selectors
-EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
+# Combination Selectors
+EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128 ports=0000100000000000 
 EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
-EVENT_ENC id=4040 hw_id=128 type=CC cc=22 chn=5 fwd_id=SENDER:4041 value=0
+EVENT_ENC id=4040 hw_id=128 type=CC cc=22 chn=5 fwd_id=SENDER:4041 value=0 ports=0000100000000000 
 EVENT_SENDER id=4041 type=ProgramChange fwd_id=SENDER:4001 ports=0100010000000000
 
 # Keyboard / Note triggering 
 ROUTER n= 1   src_port=USB1  src_chn= 1   dst_port=OUT2  dst_chn=17
 
 #home button (Control Button on C4) - goes back to top level selection screen
-EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091 ports=0000100000000000
 EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10
 
 #display cleaners

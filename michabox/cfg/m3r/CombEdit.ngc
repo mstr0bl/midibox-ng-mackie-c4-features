@@ -28,33 +28,34 @@ EVENT_SENDER id= 4 hw_id=1 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x
 #Type switcher###############
 ############################
 
-# receive C4's Encoder movement 
-EVENT_RECEIVER id= 1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1
-EVENT_RECEIVER id= 2 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=2
+# Both RECEIVERs listen to C4's 1.1 Encoder movement, but send messages to two different ENCs
+EVENT_RECEIVER id=1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=1 ports=0000100000000000
+EVENT_RECEIVER id=2 bank=0 type=CC chn=1 cc=0 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=2 ports=0000100000000000
 
-EVENT_ENC id= 1 hw_id=1 bank=0 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12 label="Type Selector"
+# Type Selector ENC
+EVENT_ENC id=1 hw_id=1 bank=0 fwd_id=SENDER:101 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12
 
-#value modifier
+# Value modifier (only if C4 Encoder 1.1 is pressed)
 EVENT_SENDER id=101 fwd_id=SENDER:201 bank=0 if_equal=BUTTON:1000:1 type=SysEx stream="0xf0 0x42 0x30 0x24 0x41 0 ^val 0x00 0xf7" ports=0100010000000000
 
-# meta - bank selector - depending on top left ENCs setting
+# Meta Event - retriggers Section to let NGR script re-iterate ENC 1's position
 EVENT_SENDER id=201 bank=0 type=Meta meta=RunSection:1
-# push type selector button to select
-EVENT_RECEIVER id=401 fwd_id=BUTTON:1000 type=NoteOn key=32 range=0:1 ports=1000100000000000
+
+# Reacts on C4 Encoder 1.1 press and imitates a button functionality 
+EVENT_RECEIVER id=401 fwd_id=BUTTON:1000 type=NoteOn key=32 range=0:1 ports=0000100000000000
 EVENT_BUTTON id=1000 bank=0 if_equal_stop_on_match=RECEIVER:401:1 button_mode=OnOff value=0
 
+# Controls visualisation elements (name print, LEDs)
+EVENT_ENC id= 2 hw_id=2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12
 
-# reacts on Slot 1.1 encoder too, but takes over the role for visualisation elements (name print, LEDs)
-EVENT_ENC id= 2 hw_id=2 bank=0 fwd_id=SENDER:102 type=CC chn=5 cc=0 range=0:4 syxdump_pos=4001:12 label="Visualiser"
-
-# prints name of the currently selected combi type
-EVENT_SENDER id=102 fwd_id=RECEIVER:102 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^label 0xf7" ports=1000100000000000 label="^type"
+# Prints name of the currently selected combi type
+EVENT_SENDER id=102 fwd_id=RECEIVER:102 bank=0 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x30 56 ^label 0xf7" ports=0000100000000000 label="^type"
 
 # LED ring controller
 EVENT_RECEIVER id=102 fwd_id=SENDER:202 bank=0 type=CC cc=32 chn=5 ports=0000100000000000
-EVENT_SENDER id= 202 range=map50  bank=0 type=CC cc=32 chn=1 
+EVENT_SENDER id=202 range=map50  bank=0 type=CC cc=32 chn=1 
 
-# map 50 - to map 1-5 to match the type selectors LED ring pattern
+# Map 50 - Maps incoming values 1-5 to match the type selectors LED ring pattern
 MAP50/BYTEI 0:114 1:115 2:116 3:117 4:118
 
 
@@ -156,7 +157,7 @@ EVENT_SENDER id=109 		  fwd_id=SENDER:209 bank=1 type=SysEx stream="0xf0 0x00 0x
 EVENT_SENDER id=110 		  fwd_id=SENDER:210 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 63 ^macdis 0xf7" syxdump_pos=4001:43 ports=1000100000000000
 EVENT_SENDER id=111 		  fwd_id=SENDER:211 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 70 ^macdis 0xf7" syxdump_pos=4001:46 ports=1000100000000000
 EVENT_SENDER id=112 			bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 77 ^label 0xf7"  ports=1000100000000000 label="                              "
-#EVENT_SENDER id=113 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^label 0xf7"  ports=1000100000000000 label="   M  "
+#EVENT_SENDER id=113 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 84 ^label 0xf7"  ports=1000100000000000 label="      "
 #EVENT_SENDER id=114 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 91 ^label 0xf7" ports=1000100000000000 label="      "
 #EVENT_SENDER id=115 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 98 ^label 0xf7"  ports=1000100000000000 label="      "
 #EVENT_SENDER id=116 hw_id=112 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 105 ^label 0xf7"  ports=1000100000000000 label="      "
@@ -196,38 +197,38 @@ EVENT_SENDER id=131			  bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 
 ##########################
 
 # Display 2 - bank 1 - Single Type
-EVENT_RECEIVER id= 9 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=9
-EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=10
-EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 
+EVENT_RECEIVER id= 9 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=9 ports=0000100000000000
+EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=10 ports=0000100000000000
+EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 ports=0000100000000000
 
 # Display 2 - Layer Type
-EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=17 
-EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=18 
-EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=19 
-EVENT_RECEIVER id= 20 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=20 
+EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=17 ports=0000100000000000
+EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=18 ports=0000100000000000
+EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=19 ports=0000100000000000
+EVENT_RECEIVER id= 20 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=20 ports=0000100000000000
 
 # display 3 - Layer Type
-EVENT_RECEIVER id= 25 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=25
-EVENT_RECEIVER id= 26 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=26
-EVENT_RECEIVER id= 27 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=27
-EVENT_RECEIVER id= 28 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=28
-EVENT_RECEIVER id= 29 bank=1 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=29
-EVENT_RECEIVER id= 30 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=30
+EVENT_RECEIVER id= 25 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=25 ports=0000100000000000
+EVENT_RECEIVER id= 26 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=26 ports=0000100000000000
+EVENT_RECEIVER id= 27 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=27 ports=0000100000000000
+EVENT_RECEIVER id= 28 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=28 ports=0000100000000000
+EVENT_RECEIVER id= 29 bank=1 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=29 ports=0000100000000000
+EVENT_RECEIVER id= 30 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=30 ports=0000100000000000
 
 # Display 2 - Split Type
-EVENT_RECEIVER id= 33 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=33 
-EVENT_RECEIVER id= 34 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=34 
-EVENT_RECEIVER id= 35 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=35 
-EVENT_RECEIVER id= 36 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=36 
+EVENT_RECEIVER id= 33 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=33 ports=0000100000000000
+EVENT_RECEIVER id= 34 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=34 ports=0000100000000000
+EVENT_RECEIVER id= 35 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=35 ports=0000100000000000
+EVENT_RECEIVER id= 36 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=36 ports=0000100000000000
 
 # Display 3 - Split Type
-EVENT_RECEIVER id= 41 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=41
-EVENT_RECEIVER id= 42 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=42
-EVENT_RECEIVER id= 43 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=43
-EVENT_RECEIVER id= 44 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=44
+EVENT_RECEIVER id= 41 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=41 ports=0000100000000000
+EVENT_RECEIVER id= 42 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=42 ports=0000100000000000
+EVENT_RECEIVER id= 43 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=43 ports=0000100000000000
+EVENT_RECEIVER id= 44 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=44 ports=0000100000000000
 
 # Display 4 - Split Type
-EVENT_RECEIVER id= 45 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=45
+EVENT_RECEIVER id= 45 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=45 ports=0000100000000000
 
 # Display 2 - Velocity Switch Type
 
@@ -246,12 +247,16 @@ EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x49 ^dump
 EVENT_SENDER id= 4090 bank=0 type=SysEx stream="0xf0 0x42 0x30 0x24 0x4e 0x01 0x10 0xf7 0xf0 0x42 0x30 0x24 0x19 0xf7" ports=0100010000000000 label="CombEdit Mode enter"
 
 #Bank Selectors
-EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 if_equal=ENC:1:4 type=NoteOn key=0x0a chn=1 range=0:1
+EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 if_equal=ENC:1:4 type=NoteOn key=0x0a chn=1 range=0:1 ports=0000100000000000
 EVENT_SENDER id=4042 if_equal_stop_on_match=RECEIVER:4042:1 type=Meta meta=IncBank meta=RunSection:1 
-EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 if_equal=ENC:1:4 type=NoteOn key=0x09 chn=1 range=0:1
+EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 if_equal=ENC:1:4 type=NoteOn key=0x09 chn=1 range=0:1 ports=0000100000000000
 EVENT_SENDER id=4043  if_equal_stop_on_match=RECEIVER:4043:1 type=Meta chn=1 meta=DecBank meta=RunSection:1
 
-
+# Combination Selectors
+EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128 ports=0000100000000000 
+EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
+EVENT_ENC id=4040 hw_id=128 type=CC cc=22 chn=5 fwd_id=SENDER:4041 value=0 ports=0000100000000000 
+EVENT_SENDER id=4041 type=ProgramChange fwd_id=SENDER:4001 ports=0100010000000000
 
 #display cleaners
 EVENT_SENDER id= 4095 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x30 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x30 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
@@ -295,5 +300,5 @@ EVENT_SENDER id= 4058 hw_id=4089 type=CC cc=63 chn=1 value=0
 EVENT_SENDER id= 4057 hw_id=4089 type=CC cc=64 chn=1 value=0
 
 #home button (Control Button on C4)
-EVENT_RECEIVER id= 4091  type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_RECEIVER id= 4091  type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091 ports=0000100000000000
 EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10

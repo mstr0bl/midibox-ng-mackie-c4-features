@@ -1,0 +1,11 @@
+if ^section == 0
+ trigger SENDER:10
+ trigger SENDER:12
+ trigger SENDER:14
+ trigger SENDER:16
+ trigger SENDER:11
+ trigger SENDER:13
+ trigger SENDER:15
+ #trigger SENDER:17
+ #trigger SENDER:1
+endif

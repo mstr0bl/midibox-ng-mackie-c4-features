@@ -904,163 +904,163 @@ EVENT_SENDER id= 1127  bank=7 type=CC cc=46 chn=1 range=map3
 ##########################
 
 # Display 1 - all pages - Level modifiers
-EVENT_RECEIVER id= 1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=C4Enc  emu_enc_hw_id=1
-EVENT_RECEIVER id= 2 bank=0 type=CC chn=1 cc=1 emu_enc_mode=C4Enc  emu_enc_hw_id=2
-EVENT_RECEIVER id= 3 bank=0 type=CC chn=1 cc=2 emu_enc_mode=C4Enc  emu_enc_hw_id=3 
-EVENT_RECEIVER id= 4 bank=0 type=CC chn=1 cc=3 emu_enc_mode=C4Enc  emu_enc_hw_id=4 
-EVENT_RECEIVER id= 5 bank=0 type=CC chn=1 cc=4 emu_enc_mode=C4Enc  emu_enc_hw_id=5 
-EVENT_RECEIVER id= 6 bank=0 type=CC chn=1 cc=5 emu_enc_mode=C4Enc  emu_enc_hw_id=6 
-EVENT_RECEIVER id= 7 bank=0 type=CC chn=1 cc=6 emu_enc_mode=C4Enc  emu_enc_hw_id=7 
-EVENT_RECEIVER id= 8 bank=0 type=CC chn=1 cc=7 emu_enc_mode=C4Enc  emu_enc_hw_id=8 
+EVENT_RECEIVER id= 1 bank=0 type=CC chn=1 cc=0 emu_enc_mode=C4Enc  emu_enc_hw_id=1 ports=0000100000000000
+EVENT_RECEIVER id= 2 bank=0 type=CC chn=1 cc=1 emu_enc_mode=C4Enc  emu_enc_hw_id=2 ports=0000100000000000
+EVENT_RECEIVER id= 3 bank=0 type=CC chn=1 cc=2 emu_enc_mode=C4Enc  emu_enc_hw_id=3 ports=0000100000000000
+EVENT_RECEIVER id= 4 bank=0 type=CC chn=1 cc=3 emu_enc_mode=C4Enc  emu_enc_hw_id=4 ports=0000100000000000
+EVENT_RECEIVER id= 5 bank=0 type=CC chn=1 cc=4 emu_enc_mode=C4Enc  emu_enc_hw_id=5 ports=0000100000000000
+EVENT_RECEIVER id= 6 bank=0 type=CC chn=1 cc=5 emu_enc_mode=C4Enc  emu_enc_hw_id=6 ports=0000100000000000
+EVENT_RECEIVER id= 7 bank=0 type=CC chn=1 cc=6 emu_enc_mode=C4Enc  emu_enc_hw_id=7 ports=0000100000000000
+EVENT_RECEIVER id= 8 bank=0 type=CC chn=1 cc=7 emu_enc_mode=C4Enc  emu_enc_hw_id=8 ports=0000100000000000
 
 # Display 2 - first page - pitch modifiers
-EVENT_RECEIVER id= 9  bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=9
-EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=10
-EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 
-EVENT_RECEIVER id= 12 bank=1 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=12 
-EVENT_RECEIVER id= 13 bank=1 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=13 
-EVENT_RECEIVER id= 14 bank=1 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=14 
-EVENT_RECEIVER id= 15 bank=1 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=15 
-EVENT_RECEIVER id= 16 bank=1 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=16 
+EVENT_RECEIVER id= 9  bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=9 ports=0000100000000000
+EVENT_RECEIVER id= 10 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=10 ports=0000100000000000
+EVENT_RECEIVER id= 11 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=11 ports=0000100000000000
+EVENT_RECEIVER id= 12 bank=1 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=12 ports=0000100000000000
+EVENT_RECEIVER id= 13 bank=1 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=13 ports=0000100000000000
+EVENT_RECEIVER id= 14 bank=1 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=14 ports=0000100000000000
+EVENT_RECEIVER id= 15 bank=1 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=15 ports=0000100000000000
+EVENT_RECEIVER id= 16 bank=1 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=16 ports=0000100000000000
 
 # Display 3 - first page - pitch mod modifiers for sounds 1/2
-EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=17
-EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=18
-EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=19 
-#EVENT_RECEIVER id= 20 bank=1 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=20 
-#EVENT_RECEIVER id= 21 bank=1 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=21 
-EVENT_RECEIVER id= 22 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=22 
-EVENT_RECEIVER id= 23 bank=1 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=23 
-EVENT_RECEIVER id= 24 bank=1 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=24 
+EVENT_RECEIVER id= 17 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=17 ports=0000100000000000
+EVENT_RECEIVER id= 18 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=18 ports=0000100000000000
+EVENT_RECEIVER id= 19 bank=1 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=19 ports=0000100000000000
+#EVENT_RECEIVER id= 20  
+#EVENT_RECEIVER id= 21  
+EVENT_RECEIVER id= 22 bank=1 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=22 ports=0000100000000000
+EVENT_RECEIVER id= 23 bank=1 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=23 ports=0000100000000000
+EVENT_RECEIVER id= 24 bank=1 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=24 ports=0000100000000000
 
 # Display 4 - all pages - decay modifiers
-EVENT_RECEIVER id= 25 bank=0 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=25
-EVENT_RECEIVER id= 26 bank=0 type=CC chn=1 cc=25 emu_enc_mode=C4Enc  emu_enc_hw_id=26
-EVENT_RECEIVER id= 27 bank=0 type=CC chn=1 cc=26 emu_enc_mode=C4Enc  emu_enc_hw_id=27 
-EVENT_RECEIVER id= 28 bank=0 type=CC chn=1 cc=27 emu_enc_mode=C4Enc  emu_enc_hw_id=28 
-EVENT_RECEIVER id= 29 bank=0 type=CC chn=1 cc=28 emu_enc_mode=C4Enc  emu_enc_hw_id=29 
-EVENT_RECEIVER id= 30 bank=0 type=CC chn=1 cc=29 emu_enc_mode=C4Enc  emu_enc_hw_id=30 
-EVENT_RECEIVER id= 31 bank=0 type=CC chn=1 cc=30 emu_enc_mode=C4Enc  emu_enc_hw_id=31 
-EVENT_RECEIVER id= 32 bank=0 type=CC chn=1 cc=31 emu_enc_mode=C4Enc  emu_enc_hw_id=32 
+EVENT_RECEIVER id= 25 bank=0 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=25 ports=0000100000000000
+EVENT_RECEIVER id= 26 bank=0 type=CC chn=1 cc=25 emu_enc_mode=C4Enc  emu_enc_hw_id=26 ports=0000100000000000
+EVENT_RECEIVER id= 27 bank=0 type=CC chn=1 cc=26 emu_enc_mode=C4Enc  emu_enc_hw_id=27 ports=0000100000000000
+EVENT_RECEIVER id= 28 bank=0 type=CC chn=1 cc=27 emu_enc_mode=C4Enc  emu_enc_hw_id=28 ports=0000100000000000
+EVENT_RECEIVER id= 29 bank=0 type=CC chn=1 cc=28 emu_enc_mode=C4Enc  emu_enc_hw_id=29 ports=0000100000000000
+EVENT_RECEIVER id= 30 bank=0 type=CC chn=1 cc=29 emu_enc_mode=C4Enc  emu_enc_hw_id=30 ports=0000100000000000
+EVENT_RECEIVER id= 31 bank=0 type=CC chn=1 cc=30 emu_enc_mode=C4Enc  emu_enc_hw_id=31 ports=0000100000000000
+EVENT_RECEIVER id= 32 bank=0 type=CC chn=1 cc=31 emu_enc_mode=C4Enc  emu_enc_hw_id=32 ports=0000100000000000
 
 # Display 3 - 2nd page - pitch mod modifiers for sounds 3/4
-EVENT_RECEIVER id= 33 bank=2 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=33
-EVENT_RECEIVER id= 34 bank=2 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=34
-EVENT_RECEIVER id= 35 bank=2 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=35 
-#EVENT_RECEIVER id= 36 bank=2 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=36 
-#EVENT_RECEIVER id= 37 bank=2 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=37 
-EVENT_RECEIVER id= 38 bank=2 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=38 
-EVENT_RECEIVER id= 39 bank=2 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=39 
-EVENT_RECEIVER id= 40 bank=2 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=40 
+EVENT_RECEIVER id= 33 bank=2 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=33 ports=0000100000000000
+EVENT_RECEIVER id= 34 bank=2 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=34 ports=0000100000000000
+EVENT_RECEIVER id= 35 bank=2 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=35 ports=0000100000000000
+#EVENT_RECEIVER id= 36 
+#EVENT_RECEIVER id= 37 
+EVENT_RECEIVER id= 38 bank=2 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=38 ports=0000100000000000
+EVENT_RECEIVER id= 39 bank=2 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=39 ports=0000100000000000
+EVENT_RECEIVER id= 40 bank=2 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=40 ports=0000100000000000
 
 # Display 2 - 3rd page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 41  bank=3 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=41
-EVENT_RECEIVER id= 42  bank=3 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=42
-EVENT_RECEIVER id= 43  bank=3 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=43 
-#EVENT_RECEIVER id= 44 bank=3 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=44 
-EVENT_RECEIVER id= 45  bank=3 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=45 
-EVENT_RECEIVER id= 46  bank=3 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=46 
-EVENT_RECEIVER id= 47  bank=3 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=47 
-#EVENT_RECEIVER id= 48 bank=3 type=CC chn=1 cc=15 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=48 
+EVENT_RECEIVER id= 41  bank=3 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=41 ports=0000100000000000
+EVENT_RECEIVER id= 42  bank=3 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=42 ports=0000100000000000
+EVENT_RECEIVER id= 43  bank=3 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=43 ports=0000100000000000
+#EVENT_RECEIVER id= 44 
+EVENT_RECEIVER id= 45  bank=3 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=45 ports=0000100000000000
+EVENT_RECEIVER id= 46  bank=3 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=46 ports=0000100000000000
+EVENT_RECEIVER id= 47  bank=3 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=47 ports=0000100000000000
+#EVENT_RECEIVER id= 48 
 
 # Display 3 - 2nd page - pitch mod modifiers for sounds 3/4
-EVENT_RECEIVER id= 49 bank=3 type=CC chn=1 cc=16 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=49
-EVENT_RECEIVER id= 50 bank=3 type=CC chn=1 cc=17 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=50
-EVENT_RECEIVER id= 51 bank=3 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=51 
-EVENT_RECEIVER id= 52 bank=3 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=52 
+EVENT_RECEIVER id= 49 bank=3 type=CC chn=1 cc=16 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=49 ports=0000100000000000
+EVENT_RECEIVER id= 50 bank=3 type=CC chn=1 cc=17 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=50 ports=0000100000000000
+EVENT_RECEIVER id= 51 bank=3 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=51 ports=0000100000000000
+EVENT_RECEIVER id= 52 bank=3 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=52 ports=0000100000000000
 #EVENT_RECEIVER id= 53 
 #EVENT_RECEIVER id= 54 
-EVENT_RECEIVER id= 55 bank=3 type=CC chn=1 cc=22 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=55 
-EVENT_RECEIVER id= 56 bank=3 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=56 
+EVENT_RECEIVER id= 55 bank=3 type=CC chn=1 cc=22 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=55 ports=0000100000000000
+EVENT_RECEIVER id= 56 bank=3 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=56 ports=0000100000000000
 
 # Display 3 - 4th page - Low Boost modifiers
-EVENT_RECEIVER id= 57 bank=4 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=57
-EVENT_RECEIVER id= 58 bank=4 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=58
-EVENT_RECEIVER id= 59 bank=4 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=59 
-EVENT_RECEIVER id= 60 bank=4 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=60 
-EVENT_RECEIVER id= 61 bank=4 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=61 
-EVENT_RECEIVER id= 62 bank=4 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=62 
-EVENT_RECEIVER id= 63 bank=4 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=63 
-EVENT_RECEIVER id= 64 bank=4 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=64 
+EVENT_RECEIVER id= 57 bank=4 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=57 ports=0000100000000000
+EVENT_RECEIVER id= 58 bank=4 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=58 ports=0000100000000000
+EVENT_RECEIVER id= 59 bank=4 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=59 ports=0000100000000000
+EVENT_RECEIVER id= 60 bank=4 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=60 ports=0000100000000000
+EVENT_RECEIVER id= 61 bank=4 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=61 ports=0000100000000000
+EVENT_RECEIVER id= 62 bank=4 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=62 ports=0000100000000000
+EVENT_RECEIVER id= 63 bank=4 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=63 ports=0000100000000000
+EVENT_RECEIVER id= 64 bank=4 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=64 ports=0000100000000000
 
 # Display 3 - 5th page - Pan modifiers
-EVENT_RECEIVER id= 65 bank=5 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=65
-EVENT_RECEIVER id= 66 bank=5 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=66
-EVENT_RECEIVER id= 67 bank=5 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=67 
-EVENT_RECEIVER id= 68 bank=5 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=68 
-EVENT_RECEIVER id= 69 bank=5 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=69 
-EVENT_RECEIVER id= 70 bank=5 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=70 
-EVENT_RECEIVER id= 71 bank=5 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=71 
-EVENT_RECEIVER id= 72 bank=5 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=72 
+EVENT_RECEIVER id= 65 bank=5 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=65 ports=0000100000000000
+EVENT_RECEIVER id= 66 bank=5 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=66 ports=0000100000000000
+EVENT_RECEIVER id= 67 bank=5 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=67 ports=0000100000000000
+EVENT_RECEIVER id= 68 bank=5 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=68 ports=0000100000000000
+EVENT_RECEIVER id= 69 bank=5 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=69 ports=0000100000000000
+EVENT_RECEIVER id= 70 bank=5 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=70 ports=0000100000000000
+EVENT_RECEIVER id= 71 bank=5 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=71 ports=0000100000000000
+EVENT_RECEIVER id= 72 bank=5 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=72 ports=0000100000000000
 
 # Display 3 - 6th page/bank - Pan modifiers
-EVENT_RECEIVER id= 73 bank=6 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=73
-EVENT_RECEIVER id= 74 bank=6 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=74
-EVENT_RECEIVER id= 75 bank=6 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=75 
-EVENT_RECEIVER id= 76 bank=6 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=76 
-EVENT_RECEIVER id= 77 bank=6 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=77 
-EVENT_RECEIVER id= 78 bank=6 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=78 
-EVENT_RECEIVER id= 79 bank=6 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=79 
-EVENT_RECEIVER id= 80 bank=6 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=80
+EVENT_RECEIVER id= 73 bank=6 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=73 ports=0000100000000000
+EVENT_RECEIVER id= 74 bank=6 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=74 ports=0000100000000000
+EVENT_RECEIVER id= 75 bank=6 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=75 ports=0000100000000000
+EVENT_RECEIVER id= 76 bank=6 type=CC chn=1 cc=19 emu_enc_mode=C4Enc  emu_enc_hw_id=76 ports=0000100000000000
+EVENT_RECEIVER id= 77 bank=6 type=CC chn=1 cc=20 emu_enc_mode=C4Enc  emu_enc_hw_id=77 ports=0000100000000000
+EVENT_RECEIVER id= 78 bank=6 type=CC chn=1 cc=21 emu_enc_mode=C4Enc  emu_enc_hw_id=78 ports=0000100000000000
+EVENT_RECEIVER id= 79 bank=6 type=CC chn=1 cc=22 emu_enc_mode=C4Enc  emu_enc_hw_id=79 ports=0000100000000000
+EVENT_RECEIVER id= 80 bank=6 type=CC chn=1 cc=23 emu_enc_mode=C4Enc  emu_enc_hw_id=80 ports=0000100000000000
 
 # Display 3 - 7th page/bank - Motion Sequence Type modifiers
-EVENT_RECEIVER id= 81 bank=7 type=CC chn=1 cc=16 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=81
-EVENT_RECEIVER id= 82 bank=7 type=CC chn=1 cc=17 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=82
-EVENT_RECEIVER id= 83 bank=7 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=83 
-EVENT_RECEIVER id= 84 bank=7 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=84 
-EVENT_RECEIVER id= 85 bank=7 type=CC chn=1 cc=20 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=85 
-EVENT_RECEIVER id= 86 bank=7 type=CC chn=1 cc=21 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=86 
-EVENT_RECEIVER id= 87 bank=7 type=CC chn=1 cc=22 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=87 
-EVENT_RECEIVER id= 88 bank=7 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=88
+EVENT_RECEIVER id= 81 bank=7 type=CC chn=1 cc=16 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=81 ports=0000100000000000
+EVENT_RECEIVER id= 82 bank=7 type=CC chn=1 cc=17 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=82 ports=0000100000000000
+EVENT_RECEIVER id= 83 bank=7 type=CC chn=1 cc=18 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=83 ports=0000100000000000
+EVENT_RECEIVER id= 84 bank=7 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=84 ports=0000100000000000
+EVENT_RECEIVER id= 85 bank=7 type=CC chn=1 cc=20 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=85 ports=0000100000000000
+EVENT_RECEIVER id= 86 bank=7 type=CC chn=1 cc=21 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=86 ports=0000100000000000
+EVENT_RECEIVER id= 87 bank=7 type=CC chn=1 cc=22 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=87 ports=0000100000000000
+EVENT_RECEIVER id= 88 bank=7 type=CC chn=1 cc=23 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=88 ports=0000100000000000
 
 # Display 2 - second page - pitch modifiers
-EVENT_RECEIVER id= 89 bank=2 type=CC chn=1 cc=8 emu_enc_mode=C4Enc   emu_enc_hw_id=89
-EVENT_RECEIVER id= 90 bank=2 type=CC chn=1 cc=9 emu_enc_mode=C4Enc   emu_enc_hw_id=90
-EVENT_RECEIVER id= 91 bank=2 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=91 
-EVENT_RECEIVER id= 92 bank=2 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=92 
-EVENT_RECEIVER id= 93 bank=2 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=93 
-EVENT_RECEIVER id= 94 bank=2 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=94 
-EVENT_RECEIVER id= 95 bank=2 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=95 
-EVENT_RECEIVER id= 96 bank=2 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=96 
+EVENT_RECEIVER id= 89 bank=2 type=CC chn=1 cc=8 emu_enc_mode=C4Enc   emu_enc_hw_id=89 ports=0000100000000000
+EVENT_RECEIVER id= 90 bank=2 type=CC chn=1 cc=9 emu_enc_mode=C4Enc   emu_enc_hw_id=90 ports=0000100000000000
+EVENT_RECEIVER id= 91 bank=2 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=91 ports=0000100000000000
+EVENT_RECEIVER id= 92 bank=2 type=CC chn=1 cc=11 emu_enc_mode=C4Enc  emu_enc_hw_id=92 ports=0000100000000000
+EVENT_RECEIVER id= 93 bank=2 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=93 ports=0000100000000000
+EVENT_RECEIVER id= 94 bank=2 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=94 ports=0000100000000000
+EVENT_RECEIVER id= 95 bank=2 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=95 ports=0000100000000000
+EVENT_RECEIVER id= 96 bank=2 type=CC chn=1 cc=15 emu_enc_mode=C4Enc  emu_enc_hw_id=96 ports=0000100000000000
 
 # Display 2 - 4rd page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 97  bank=4 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=97
-EVENT_RECEIVER id= 98  bank=4 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=98
-EVENT_RECEIVER id= 99  bank=4 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=99 
+EVENT_RECEIVER id= 97  bank=4 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=97 ports=0000100000000000
+EVENT_RECEIVER id= 98  bank=4 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=98 ports=0000100000000000
+EVENT_RECEIVER id= 99  bank=4 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=99 ports=0000100000000000
 #EVENT_RECEIVER id= 100 
-EVENT_RECEIVER id= 101  bank=4 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=101 
-EVENT_RECEIVER id= 102  bank=4 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=102 
-EVENT_RECEIVER id= 103  bank=4 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=103 
+EVENT_RECEIVER id= 101  bank=4 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=101 ports=0000100000000000
+EVENT_RECEIVER id= 102  bank=4 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=102 ports=0000100000000000
+EVENT_RECEIVER id= 103  bank=4 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=103 ports=0000100000000000
 #EVENT_RECEIVER id= 104  
 
 # Display 2 - 5th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 105  bank=5 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=105
-EVENT_RECEIVER id= 106  bank=5 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=106
-EVENT_RECEIVER id= 107  bank=5 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=107 
+EVENT_RECEIVER id= 105  bank=5 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=105 ports=0000100000000000
+EVENT_RECEIVER id= 106  bank=5 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=106 ports=0000100000000000
+EVENT_RECEIVER id= 107  bank=5 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=107 ports=0000100000000000
 #EVENT_RECEIVER id= 108 
-EVENT_RECEIVER id= 109  bank=5 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=109 
-EVENT_RECEIVER id= 110  bank=5 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=110 
-EVENT_RECEIVER id= 111  bank=5 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=111 
+EVENT_RECEIVER id= 109  bank=5 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=109 ports=0000100000000000
+EVENT_RECEIVER id= 110  bank=5 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=110 ports=0000100000000000
+EVENT_RECEIVER id= 111  bank=5 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=111 ports=0000100000000000
 #EVENT_RECEIVER id= 112 
 
 # Display 2 - 6th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 113  bank=6 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=113
-EVENT_RECEIVER id= 114  bank=6 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=114
-EVENT_RECEIVER id= 115  bank=6 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=115 
+EVENT_RECEIVER id= 113  bank=6 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=113 ports=0000100000000000
+EVENT_RECEIVER id= 114  bank=6 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=114 ports=0000100000000000
+EVENT_RECEIVER id= 115  bank=6 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=115 ports=0000100000000000
 #EVENT_RECEIVER id= 116 
-EVENT_RECEIVER id= 117  bank=6 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=117 
-EVENT_RECEIVER id= 118  bank=6 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=118 
-EVENT_RECEIVER id= 119  bank=6 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=119 
+EVENT_RECEIVER id= 117  bank=6 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=117 ports=0000100000000000
+EVENT_RECEIVER id= 118  bank=6 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=118 ports=0000100000000000
+EVENT_RECEIVER id= 119  bank=6 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=119 ports=0000100000000000
 #EVENT_RECEIVER id= 120 
 
 # Display 2 - 7th page - audio in gain 1 & 2, delay, accent level modifiers
-EVENT_RECEIVER id= 121  bank=7 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=121
-EVENT_RECEIVER id= 122  bank=7 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=122
-EVENT_RECEIVER id= 123  bank=7 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=123 
+EVENT_RECEIVER id= 121  bank=7 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=121 ports=0000100000000000
+EVENT_RECEIVER id= 122  bank=7 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=122 ports=0000100000000000
+EVENT_RECEIVER id= 123  bank=7 type=CC chn=1 cc=10 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=123 ports=0000100000000000 
 #EVENT_RECEIVER id= 124 
-EVENT_RECEIVER id= 125  bank=7 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=125 
-EVENT_RECEIVER id= 126  bank=7 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=126 
-EVENT_RECEIVER id= 127  bank=7 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=127 
+EVENT_RECEIVER id= 125  bank=7 type=CC chn=1 cc=12 emu_enc_mode=C4Enc  emu_enc_hw_id=125 ports=0000100000000000
+EVENT_RECEIVER id= 126  bank=7 type=CC chn=1 cc=13 emu_enc_mode=C4Enc  emu_enc_hw_id=126 ports=0000100000000000
+EVENT_RECEIVER id= 127  bank=7 type=CC chn=1 cc=14 emu_enc_mode=C4Enc  emu_enc_hw_id=127 ports=0000100000000000
 #EVENT_RECEIVER id= 128 
 
 ############################
@@ -1090,19 +1090,19 @@ EVENT_SENDER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x10 0xf7" p
 EVENT_RECEIVER id= 4001 bank=0 type=SysEx stream="0xf0 0x42 0x3f 0x51 0x40 ^dump 0xf7" ports=0010001000000000 label="Current Program Dump received"
 
 #Bank Selectors
-EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 type=NoteOn key=0x0a chn=1 range=0:1
+EVENT_RECEIVER id=4042 fwd_id=SENDER:4042 type=NoteOn key=0x0a chn=1 range=0:1 ports=0000100000000000
 EVENT_SENDER id=4042 if_equal_stop_on_match=RECEIVER:4042:1 type=Meta meta=IncBank meta=RunSection:0
-EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 type=NoteOn key=0x09 chn=1 range=0:1
+EVENT_RECEIVER id=4043 fwd_id=SENDER:4043 type=NoteOn key=0x09 chn=1 range=0:1 ports=0000100000000000
 EVENT_SENDER id=4043 if_equal_stop_on_match=RECEIVER:4043:1 type=Meta meta=DecBank meta=RunSection:0
 
 #Program Selectors
-EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
-EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
+EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128 ports=0000100000000000
+EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128 ports=0000100000000000
 EVENT_ENC id=4040 hw_id=128 type=NRPN nrpn=22 chn=5 fwd_id=SENDER:4041 value=0
 EVENT_SENDER id=4041 type=ProgramChange fwd_id=SENDER:4001 chn=16 ports=0010001000000000
 
 #home button (Control Button on C4)
-EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091
+EVENT_RECEIVER id= 4091 type=NoteOn chn=1 key= 15 range=0:1 fwd_id=SENDER:4091 ports=0000100000000000
 EVENT_SENDER id= 4091 if_equal_stop_on_match=RECEIVER:4091:1 type=Meta meta=RunSection:10
 
 # LED map 2 - Panning type pattern
