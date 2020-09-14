@@ -79,6 +79,24 @@ if ^section == 1
   set_active (id)RECEIVER:43 0
   set_active (id)RECEIVER:44 0
   set_active (id)RECEIVER:45 0
+  set_active (id)ENC:33 0		#Split Mode dummy ENC activators
+  set_active (id)ENC:34 0
+  set_active (id)ENC:35 0
+  set_active (id)ENC:36 0
+  set_active (id)ENC:41 0
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:44 0
+  set_active (id)ENC:45 0
+  set_active (id)RECEIVER:49 0		#Velocity Switch Mode C4 ENC activators
+  set_active (id)RECEIVER:50 0
+  set_active (id)RECEIVER:51 0
+  set_active (id)RECEIVER:52 0
+  set_active (id)RECEIVER:57 0
+  set_active (id)RECEIVER:58 0
+  set_active (id)RECEIVER:59 0
+  set_active (id)RECEIVER:60 0
+  set_active (id)RECEIVER:61 0
 
  elsif ENC:1 == 1
   log "section 1 enc 1 - Layer Mode"
@@ -86,6 +104,8 @@ if ^section == 1
   trigger SENDER:1			#type and combi name headline
   trigger SENDER:17			#Param Name Printers
   trigger SENDER:25
+  
+  trigger (id)SENDER:4092	#clear 4th display
   
   set_active (id)RECEIVER:9 0	#Single Mode C4 ENC activators
   set_active (id)RECEIVER:10 0
@@ -137,6 +157,33 @@ if ^section == 1
   set_active (id)RECEIVER:43 0
   set_active (id)RECEIVER:44 0
   set_active (id)RECEIVER:45 0
+  set_active (id)ENC:33 0		#Split Mode dummy ENC activators
+  set_active (id)ENC:34 0
+  set_active (id)ENC:35 0
+  set_active (id)ENC:36 0
+  set_active (id)ENC:41 0
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:44 0
+  set_active (id)ENC:45 0
+  set_active (id)RECEIVER:49 0		#Velocity Switch Mode C4 ENC activators
+  set_active (id)RECEIVER:50 0
+  set_active (id)RECEIVER:51 0
+  set_active (id)RECEIVER:52 0
+  set_active (id)RECEIVER:57 0
+  set_active (id)RECEIVER:58 0
+  set_active (id)RECEIVER:59 0
+  set_active (id)RECEIVER:60 0
+  set_active (id)RECEIVER:61 0
+  set_active (id)ENC:49 0		#Velocity Switch Mode dummy ENC activators
+  set_active (id)ENC:50 0
+  set_active (id)ENC:51 0
+  set_active (id)ENC:52 0
+  set_active (id)ENC:57 0
+  set_active (id)ENC:58 0
+  set_active (id)ENC:59 0
+  set_active (id)ENC:60 0
+  set_active (id)ENC:61 0
   
  elsif ENC:1 == 2
   log "section 1 enc 2 - Split Mode"
@@ -195,12 +242,41 @@ if ^section == 1
   set_active (id)RECEIVER:43 1
   set_active (id)RECEIVER:44 1
   set_active (id)RECEIVER:45 1
-  
+  set_active (id)ENC:33 1		#Split Mode dummy ENC activators
+  set_active (id)ENC:34 1
+  set_active (id)ENC:35 1
+  set_active (id)ENC:36 1
+  set_active (id)ENC:41 1
+  set_active (id)ENC:42 1
+  set_active (id)ENC:43 1
+  set_active (id)ENC:44 1
+  set_active (id)ENC:45 1
+  set_active (id)RECEIVER:49 0		#Velocity Switch Mode C4 ENC activators
+  set_active (id)RECEIVER:50 0
+  set_active (id)RECEIVER:51 0
+  set_active (id)RECEIVER:52 0
+  set_active (id)RECEIVER:57 0
+  set_active (id)RECEIVER:58 0
+  set_active (id)RECEIVER:59 0
+  set_active (id)RECEIVER:60 0
+  set_active (id)RECEIVER:61 0
+  set_active (id)ENC:49 0		#Velocity Switch Mode dummy ENC activators
+  set_active (id)ENC:50 0
+  set_active (id)ENC:51 0
+  set_active (id)ENC:52 0
+  set_active (id)ENC:57 0
+  set_active (id)ENC:58 0
+  set_active (id)ENC:59 0
+  set_active (id)ENC:60 0
+  set_active (id)ENC:61 0
   
   
  elsif ENC:1 == 3
   log "section 1 enc 3 - Vel. Switch Mode"
   
+  trigger SENDER:49				#Param Name Printers
+  trigger SENDER:57
+  
   set_active (id)RECEIVER:9 0	#Single Mode C4 ENC activators
   set_active (id)RECEIVER:10 0
   set_active (id)RECEIVER:11 0
@@ -252,11 +328,44 @@ if ^section == 1
   set_active (id)RECEIVER:43 0
   set_active (id)RECEIVER:44 0
   set_active (id)RECEIVER:45 0
+  set_active (id)ENC:33 0		#Split Mode dummy ENC activators
+  set_active (id)ENC:34 0
+  set_active (id)ENC:35 0
+  set_active (id)ENC:36 0
+  set_active (id)ENC:41 0
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:44 0
+  set_active (id)ENC:45 0
+  set_active (id)RECEIVER:49 1		#Velocity Switch Mode C4 ENC activators
+  set_active (id)RECEIVER:50 1
+  set_active (id)RECEIVER:51 1
+  set_active (id)RECEIVER:52 1
+  set_active (id)RECEIVER:57 1
+  set_active (id)RECEIVER:58 1
+  set_active (id)RECEIVER:59 1
+  set_active (id)RECEIVER:60 1
+  set_active (id)RECEIVER:61 1
+  set_active (id)ENC:49 1		#Velocity Switch Mode dummy ENC activators
+  set_active (id)ENC:50 1
+  set_active (id)ENC:51 1
+  set_active (id)ENC:52 1
+  set_active (id)ENC:57 1
+  set_active (id)ENC:58 1
+  set_active (id)ENC:59 1
+  set_active (id)ENC:60 1
+  set_active (id)ENC:61 1
 
   
  elsif ENC:1 == 4
   log "section 1 enc 4 - Multi Mode"
   
+  trigger (id)SENDER:4094
+  trigger (id)SENDER:4093
+  trigger (id)SENDER:4092
+  delay_ms 50
+  trigger SENDER:65
+  
   set_active (id)RECEIVER:9 0	#Single Mode C4 ENC activators
   set_active (id)RECEIVER:10 0
   set_active (id)RECEIVER:11 0
@@ -308,6 +417,33 @@ if ^section == 1
   set_active (id)RECEIVER:43 0
   set_active (id)RECEIVER:44 0
   set_active (id)RECEIVER:45 0
+  set_active (id)ENC:33 0		#Split Mode dummy ENC activators
+  set_active (id)ENC:34 0
+  set_active (id)ENC:35 0
+  set_active (id)ENC:36 0
+  set_active (id)ENC:41 0
+  set_active (id)ENC:42 0
+  set_active (id)ENC:43 0
+  set_active (id)ENC:44 0
+  set_active (id)ENC:45 0
+  set_active (id)RECEIVER:49 0		#Velocity Switch Mode C4 ENC activators
+  set_active (id)RECEIVER:50 0
+  set_active (id)RECEIVER:51 0
+  set_active (id)RECEIVER:52 0
+  set_active (id)RECEIVER:57 0
+  set_active (id)RECEIVER:58 0
+  set_active (id)RECEIVER:59 0
+  set_active (id)RECEIVER:60 0
+  set_active (id)RECEIVER:61 0
+  set_active (id)ENC:49 0		#Velocity Switch Mode dummy ENC activators
+  set_active (id)ENC:50 0
+  set_active (id)ENC:51 0
+  set_active (id)ENC:52 0
+  set_active (id)ENC:57 0
+  set_active (id)ENC:58 0
+  set_active (id)ENC:59 0
+  set_active (id)ENC:60 0
+  set_active (id)ENC:61 0
   
  else
   log "unknown"

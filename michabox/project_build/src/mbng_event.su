@@ -75,13 +75,13 @@ mbng_event.c:2019:5:MBNG_EVENT_ItemSearchByIdAndPrint	96	static
 mbng_event.c:425:5:MBNG_EVENT_PoolItemsPrint	88	static
 mbng_event.c:3256:5:MBNG_EVENT_SendOptimizedNRPN	56	static
 mbng_event.c:3337:5:MBNG_EVENT_SendSysExStream	328	static
-mbng_event.c:4628:5:MBNG_EVENT_UpdateLCD	160	static
-mbng_event.c:4669:5:MBNG_EVENT_Dump	88	static
+mbng_event.c:4656:5:MBNG_EVENT_UpdateLCD	160	static
+mbng_event.c:4697:5:MBNG_EVENT_Dump	88	static
 mbng_event.c:3520:5:MBNG_EVENT_ExecMeta	104	static
 mbng_event.c:3882:5:MBNG_EVENT_ItemSend	56	static
 mbng_event.c:4376:5:MBNG_EVENT_ItemForwardToRadioGroup	104	static
 mbng_event.c:4089:5:MBNG_EVENT_ItemReceive	32	static
-mbng_event.c:4553:12:MBNG_EVENT_NotifySyxDump	104	static
+mbng_event.c:4553:12:MBNG_EVENT_NotifySyxDump	96	static
 mbng_event.c:4522:5:MBNG_EVENT_Refresh	88	static
 mbng_event.c:852:5:MBNG_EVENT_SelectedBankSet	16	static
 mbng_event.c:4047:5:MBNG_EVENT_ItemSendVirtual	48	static
@@ -89,5 +89,5 @@ mbng_event.c:4308:5:MBNG_EVENT_ItemForward	88	static
 mbng_event.c:1643:5:MBNG_EVENT_ItemSetActive	16	static
 mbng_event.c:902:5:MBNG_EVENT_HwIdBankSet	96	static
 mbng_event.c:4444:5:MBNG_EVENT_NotifySendValue	24	static
-mbng_event.c:4696:5:MBNG_EVENT_MIDI_NotifyPackage	472	static
-mbng_event.c:4999:5:MBNG_EVENT_ReceiveSysEx	336	static
+mbng_event.c:4724:5:MBNG_EVENT_MIDI_NotifyPackage	472	static
+mbng_event.c:5027:5:MBNG_EVENT_ReceiveSysEx	336	static

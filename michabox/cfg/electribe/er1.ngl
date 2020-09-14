@@ -5,7 +5,7 @@ COND =2   "TrgHld"
 COND_ELSE " else "
 
 COND_LABEL deltyp
-COND =0   "NonLin      "
+COND =0   "Normal      "
 COND =1   "MotSeq      "
 COND =2   "Tempo       "
 COND_ELSE " else       "

@@ -118,6 +118,28 @@ EVENT_SENDER id= 46 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35
 EVENT_SENDER id= 47 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Upper  "
 EVENT_SENDER id= 48 hw_id=41 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="      "
 
+# Display 2 - Velocity Switch Mode
+EVENT_SENDER id= 49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 50 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 51 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 52 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 53 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 54 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 55 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 42 ^label 0xf7" ports=1000100000000000 label="Soft   "
+EVENT_SENDER id= 56 hw_id=49 bank=1 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x31 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+# Display 3 - Velocity Switch Mode
+EVENT_SENDER id= 57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 0 ^label 0xf7" ports=1000100000000000 label="Progr."
+EVENT_SENDER id= 58 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 7 ^label 0xf7" ports=1000100000000000 label="Level"
+EVENT_SENDER id= 59 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 14 ^label 0xf7" ports=1000100000000000 label=" Pan  "
+EVENT_SENDER id= 60 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 21 ^label 0xf7" ports=1000100000000000 label="Damper"
+EVENT_SENDER id= 61 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 28 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 62 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 35 ^label 0xf7" ports=1000100000000000 label="      "
+EVENT_SENDER id= 63 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 42 ^label 0xf7" ports=1000100000000000 label="Loud   "
+EVENT_SENDER id= 64 hw_id=57 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 49 ^label 0xf7" ports=1000100000000000 label="      "
+
+EVENT_SENDER id= 65 type=SysEx stream="0xf0 0x00 0x00 0x66 0x17 0x32 0 ^label 0xf7" ports=1000100000000000 label="The Multi Type Configuration has not been implemented"
+
 ##########
 #Encoders#
 ##########
@@ -143,6 +165,36 @@ EVENT_ENC id=27  bank=1 fwd_id=SENDER:127 type=CC chn=5 cc=18 range=0:13 syxdump
 EVENT_ENC id=28  bank=1 fwd_id=SENDER:128 type=CC chn=5 cc=19 range=0:1 syxdump_pos=4001:65
 EVENT_ENC id=29  bank=1 fwd_id=SENDER:129 type=NRPN chn=5 nrpn=20 range=-24:24 syxdump_pos=4001:57
 EVENT_ENC id=30  bank=1 fwd_id=SENDER:130 type=NRPN chn=5 nrpn=21 range=-50:50 syxdump_pos=4001:58
+
+# Display 2 - Split Type
+EVENT_ENC id=33  bank=1 fwd_id=SENDER:133 type=CC chn=5 cc=8 range=0:99 syxdump_pos=4001:42
+EVENT_ENC id=34  bank=1 fwd_id=SENDER:134 type=CC chn=5 cc=9 range=0:99 syxdump_pos=4001:43
+EVENT_ENC id=35  bank=1 fwd_id=SENDER:135 type=CC chn=5 cc=10 range=0:13 syxdump_pos=4001:46
+EVENT_ENC id=36  bank=1 fwd_id=SENDER:136 type=CC chn=5 cc=11 range=0:1 syxdump_pos=4001:52
+
+# Display 3 - Split Type
+EVENT_ENC id=41  bank=1 fwd_id=SENDER:141 type=CC chn=5 cc=16 range=0:99 syxdump_pos=4001:54
+EVENT_ENC id=42  bank=1 fwd_id=SENDER:142 type=CC chn=5 cc=17 range=0:99 syxdump_pos=4001:55
+EVENT_ENC id=43  bank=1 fwd_id=SENDER:143 type=CC chn=5 cc=18 range=0:13 syxdump_pos=4001:59
+EVENT_ENC id=44  bank=1 fwd_id=SENDER:144 type=CC chn=5 cc=19 range=0:1 syxdump_pos=4001:65
+
+# Display 4 - Split Type
+EVENT_ENC id=45  bank=1 fwd_id=SENDER:145 type=CC chn=5 cc=24 range=0:127 syxdump_pos=4001:47
+
+# Display 2 - Velocity Switch Type
+EVENT_ENC id=49  bank=1 fwd_id=SENDER:149 type=CC chn=5 cc=8 range=0:99 syxdump_pos=4001:42
+EVENT_ENC id=50  bank=1 fwd_id=SENDER:150 type=CC chn=5 cc=9 range=0:99 syxdump_pos=4001:43
+EVENT_ENC id=51  bank=1 fwd_id=SENDER:151 type=CC chn=5 cc=10 range=0:13 syxdump_pos=4001:46
+EVENT_ENC id=52  bank=1 fwd_id=SENDER:152 type=CC chn=5 cc=11 range=0:1 syxdump_pos=4001:52
+
+# Display 3 - Velocity Switch Type
+EVENT_ENC id=57  bank=1 fwd_id=SENDER:157 type=CC chn=5 cc=16 range=0:99 syxdump_pos=4001:54
+EVENT_ENC id=58  bank=1 fwd_id=SENDER:158 type=CC chn=5 cc=17 range=0:99 syxdump_pos=4001:55
+EVENT_ENC id=59  bank=1 fwd_id=SENDER:159 type=CC chn=5 cc=18 range=0:13 syxdump_pos=4001:59
+EVENT_ENC id=60  bank=1 fwd_id=SENDER:160 type=CC chn=5 cc=19 range=0:1 syxdump_pos=4001:65
+
+# Display 4 - Velocity Switch Type
+EVENT_ENC id=61  bank=1 fwd_id=SENDER:161 type=CC chn=5 cc=24 range=0:127 syxdump_pos=4001:50
 
 #########################
 #Value Printers - MacDis#
@@ -231,9 +283,19 @@ EVENT_RECEIVER id= 44 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_e
 EVENT_RECEIVER id= 45 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=45 ports=0000100000000000
 
 # Display 2 - Velocity Switch Type
+EVENT_RECEIVER id= 49 bank=1 type=CC chn=1 cc=8 emu_enc_mode=C4Enc  emu_enc_hw_id=49 ports=0000100000000000
+EVENT_RECEIVER id= 50 bank=1 type=CC chn=1 cc=9 emu_enc_mode=C4Enc  emu_enc_hw_id=50 ports=0000100000000000
+EVENT_RECEIVER id= 51 bank=1 type=CC chn=1 cc=10 emu_enc_mode=C4Enc  emu_enc_hw_id=51 ports=0000100000000000
+EVENT_RECEIVER id= 52 bank=1 type=CC chn=1 cc=11 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=52 ports=0000100000000000
 
 # Display 3 - Velocity Switch Type
+EVENT_RECEIVER id= 57 bank=1 type=CC chn=1 cc=16 emu_enc_mode=C4Enc  emu_enc_hw_id=57 ports=0000100000000000
+EVENT_RECEIVER id= 58 bank=1 type=CC chn=1 cc=17 emu_enc_mode=C4Enc  emu_enc_hw_id=58 ports=0000100000000000
+EVENT_RECEIVER id= 59 bank=1 type=CC chn=1 cc=18 emu_enc_mode=C4Enc  emu_enc_hw_id=59 ports=0000100000000000
+EVENT_RECEIVER id= 60 bank=1 type=CC chn=1 cc=19 emu_enc_mode=Inc01_Dec7F  emu_enc_hw_id=60 ports=0000100000000000
 
+# Display 4 - Velocity Switch Type
+EVENT_RECEIVER id= 61 bank=1 type=CC chn=1 cc=24 emu_enc_mode=C4Enc  emu_enc_hw_id=61 ports=0000100000000000
 
 
 ################################################################
@@ -257,6 +319,9 @@ EVENT_RECEIVER id=4040 type=NoteOn key=0x14 range=0:1 emu_enc_mode=Inc01_Dec41 e
 EVENT_RECEIVER id=4041 type=NoteOn key=0x13 range=64:65 emu_enc_mode=Inc01_Dec41 emu_enc_hw_id=128
 EVENT_ENC id=4040 hw_id=128 type=CC cc=22 chn=5 fwd_id=SENDER:4041 value=0 ports=0000100000000000 
 EVENT_SENDER id=4041 type=ProgramChange fwd_id=SENDER:4001 ports=0100010000000000
+
+# Keyboard / Note triggering 
+ROUTER n= 1   src_port=USB1  src_chn= 1   dst_port=OUT2  dst_chn=17
 
 #display cleaners
 EVENT_SENDER id= 4095 hw_id=4095 type=SysEx stream="0xf0 0x0 0x0 0x66 0x17 0x30 0x00 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7 0xf0 0x0 0x0 0x66 0x17 0x30 0x38 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0xf7" ports=1000100000000000
