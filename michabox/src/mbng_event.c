@@ -3339,14 +3339,12 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
   u8 *stream_in = item->stream;
   u32 stream_size = item->stream_size;
   s16 item_value = item->value;
-  //initialize array and pointer for the 6-field Display values
+  //initialize array for the 6-field Display values
   u8 macdis_array[6];
 
   //prefill last two fields with blank spaces
   macdis_array[4] = 0x20;
   macdis_array[5] = 0x20;
-
-  //macdis_array = (u8 *)malloc(sizeof(u8)*6);
 
 
 #define STREAM_MAX_SIZE 256
@@ -3404,13 +3402,12 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
 	}
       } break;
       case MBNG_EVENT_SYSEX_VAR_MACDIS: {
-    	  //TO-DO insert function to add the right stream information
-    	 // MIOS32_MIDI_SendDebugMessage("item_value hex = %x - item_value dec = %d",item_value,item_value);
-    	 // Parse2MackieDisplayValue(item_value & 0x7f, macdis_array);
+    	  //analyze incoming value for positivity/negativity and number of decimal fields
     	  int i, j, rest;
     	  short fields;
     	  u32 num = item_value;
 
+    	  //print single "0" in 4th display field
     	  if(item_value == 0){
     		  macdis_array[0] = 0x20;
     		  macdis_array[1] = 0x20;
@@ -3457,14 +3454,13 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
 
     	fields = 3 - fields;
 
+    	  //number of loops equals number of decimal fields of incoming value
+    	  //ASCII value for each decimal field is added to the array
     	  for(i=3;i>=fields;i--){
 
-    			 // MIOS32_MIDI_SendDebugMessage("i counter = %d",i);
     			  if(num != 0){
-    			      		  //MIOS32_MIDI_SendDebugMessage("item_value dec = %d - num_value dec = %d",item_value,num);
     			      		  rest = num%10;
     			      		  num /= 10;
-//    			      		MIOS32_MIDI_SendDebugMessage("rest = %d // num = %d", rest, num);
 
     			      		  switch(rest){
     			      		  case 0: macdis_array[i] = 0x30; break;
@@ -3480,18 +3476,14 @@ s32 MBNG_EVENT_SendSysExStream(mios32_midi_port_t port, mbng_event_item_t *item)
     			      		  default: macdis_array[i] = 0x2d;break;
     			      		  }
     			      	  }
-
     	  }
      }
 
-    	 // u8 testsysex[9] = {0xf0, 0x42, 0x30, 0x24, 0x41, 0x1b, 0xc8, 0x00, 0xf7};
     	  for(j=0;j<6;j++){
 
     		  MBNG_EVENT_ADD_STREAM(macdis_array[j]);
     	  }
 
-
-    	  //free(macdis_array);
       } break;
       default: {}
       }
@@ -4230,7 +4222,8 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
 	}
 	break;
 
-	  //Mackie C4 special case
+	  //Mackie C4 Control special case
+	  //considers different encoder rotation accelerations
       case MBNG_EVENT_ENC_MODE_C4ENC:
     	  if( item->value != 0x00 ) {
     		  if(item->value < 0x40){
@@ -4240,8 +4233,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     			  case 0x08: incrementer = 4; break;
     			  case 0x0c: incrementer = 8; break;
     			  case 0x0f: incrementer = 12; break;
-    			  default: //MIOS32_MIDI_SendDebugMessage("enc mode c4 item value < 0x40 default case");
-    				  incrementer = 1; break;
+    			  default:   incrementer = 1; break;
     			  }
     		  }
     		  else{
@@ -4251,8 +4243,7 @@ s32 MBNG_EVENT_ItemReceive(mbng_event_item_t *item, u16 value, u8 from_midi, u8 
     			  case 0x48: incrementer = -4; break;
     			  case 0x4c: incrementer = -8; break;
     			  case 0x4f: incrementer = -12; break;
-    			  default: //MIOS32_MIDI_SendDebugMessage("enc mode c4 item value > 0x40 default case");
-    				  incrementer = -1; break;
+    			  default:   incrementer = -1; break;
     			  }
     		  }
     	  	}
